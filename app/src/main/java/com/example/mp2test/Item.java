@@ -7,6 +7,7 @@ public abstract class Item {
     double value;
     String name = "";
     boolean used;
+    boolean indestructible;
 
     /**
      * The default Constructor for Item. Gives it a default value of nothing and "Dohickey" for the name.
@@ -16,6 +17,7 @@ public abstract class Item {
         this.value = 0.0;
         this.name = "Dohickey";
         boolean used = false;
+        boolean indestructible = true;
     }
 
     /**
@@ -24,7 +26,7 @@ public abstract class Item {
      * @param name - The name of the item. DOES NOT DETERMINE THE ITEMS TYPE
      * @param randomizeValue - Determines whether this item has a randomized value. If true, it will add a random value from 0-50 THEN subtract a random value from 0-50. Otherwise, it will  be the value given.
      */
-    Item(double value, String name, boolean randomizeValue) {
+    Item(double value, String name, boolean randomizeValue, boolean indestructible) {
         if (randomizeValue) {
             Random randomValue = new Random(System.currentTimeMillis());
             this.value = value + (double)randomValue.nextInt(50) - (double)randomValue.nextInt(50);
@@ -33,6 +35,7 @@ public abstract class Item {
             this.value = value;
         }
         this.name = name;
+        this.indestructible = indestructible;
         boolean used = false;
     }
 
@@ -54,6 +57,22 @@ public abstract class Item {
         return name;
     }
 
+    public boolean getIndestructible() {
+        return indestructible;
+    }
+
+    public boolean getUsed() {
+        return used;
+    }
+
+    public void setIndestructible(boolean indestructible) {
+        this.indestructible = indestructible;
+    }
+
+    public void setUsed(boolean used) {
+        this.used = used;
+    }
+
     /**
      * Set the value of the item in terms of money
      * @param value - The amount the Item is worth in terms of money
@@ -71,7 +90,7 @@ public abstract class Item {
     }
 
     //Abstract Methods
-    public abstract void useItem();
-    public abstract void sellItem();
+    public abstract double useItem(Item itemTarget, Member memberTarget);
+    public abstract double sellItem();
 
 }
