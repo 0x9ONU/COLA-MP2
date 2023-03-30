@@ -95,6 +95,10 @@ public class Weapon extends Item{
         this.bulletValue = bulletValue;
     }
 
+    public String getTypeString() {
+        return typeConvert[type];
+    }
+
     //Abstract Methods
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
@@ -158,6 +162,8 @@ public class Weapon extends Item{
         }
     }
 
+    //IMPLEMENT RELOAD
+
     @Override
     public double sellItem() {
         super.setUsed(true);
@@ -169,5 +175,6 @@ public class Weapon extends Item{
         typeConvert[1] = "Shotgun";
         typeConvert[2] = "Rifle";
     }
+
 
 }
