@@ -10,5 +10,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //TEST CODE
+        Weapon testWeapon = new Weapon();
+        Inventory testInventory = new Inventory();
+
+        testInventory.addItem(testWeapon);
     }
 }

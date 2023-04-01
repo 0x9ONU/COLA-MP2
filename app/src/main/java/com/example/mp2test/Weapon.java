@@ -151,7 +151,7 @@ public class Weapon extends Item{
             int chance = rand.nextInt(100);
             if (chance >= 75) {
                 //Splash text of how you killed the animal
-                memberTarget.dead();
+                memberTarget.die();
                 return 10.0 + rand.nextInt(300);
             }
             else {

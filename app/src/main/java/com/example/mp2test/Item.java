@@ -39,6 +39,13 @@ public abstract class Item {
         boolean used = false;
     }
 
+    Item(Item i) {
+        this.value = i.getValue();
+        this.name = i.getName();
+        this.used = i.getUsed();
+        this.indestructible = i.getIndestructible();
+    }
+
     //Getters and Setters
 
     /**
