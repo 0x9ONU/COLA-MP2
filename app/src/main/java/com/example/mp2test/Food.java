@@ -2,11 +2,11 @@ package com.example.mp2test;
 
 public class Food extends Item{
 
-    static int numberOfFood = 3;
-    int type;
-    int healthValue;
-    int pounds;
-    int spoiled;
+    private static int numberOfFood = 3;
+    private int type;
+    private int healthValue;
+    private int pounds;
+    private int spoiled;
     String[] typeConvert = new String[numberOfFood];
 
     Food() {
@@ -83,11 +83,11 @@ public class Food extends Item{
 
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        //Member.heal(int healthValue); Implement function here
+        memberTarget.heal(healthValue);
         return 0.0;
     }
     @Override
     public double sellItem() {
-        return super.value * pounds;
+        return super.getValue() * pounds;
     }
 }

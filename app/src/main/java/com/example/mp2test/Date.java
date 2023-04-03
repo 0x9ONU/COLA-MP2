@@ -2,13 +2,13 @@ package com.example.mp2test;
 
 public class Date {
     //attributes
-    int CurrentDay;
-    int CurrentMonth;
-    int CurrentYear;
-    int GoalDay;
-    int GoalMonth;
-    int GoalYear;
-    int DayCounter;
+    private int CurrentDay;
+    private int CurrentMonth;
+    private int CurrentYear;
+    private int GoalDay;
+    private int GoalMonth;
+    private int GoalYear;
+    private int DayCounter;
     //constructors
 
     public Date(int currentDay, int currentMonth, int currentYear) {

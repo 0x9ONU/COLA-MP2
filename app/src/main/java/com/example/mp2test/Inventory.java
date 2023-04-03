@@ -108,6 +108,14 @@ public class Inventory {
         }
     }
 
+    public boolean giveItem(Item item, Inventory inv) {
+        if (inv.getItemsLength() == inv.getMaxItemCount()) {
+            //Splash text why you cannot give an item
+            return false;
+        }
+        return true;
+    }
+
     public boolean takeItem(int itemIndex, Inventory inv) {
         if (maxItemCount == getItemsLength()) {
             //Splash text why you cannot take an item

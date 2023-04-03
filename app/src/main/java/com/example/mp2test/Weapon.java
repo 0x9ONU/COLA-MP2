@@ -183,7 +183,7 @@ public class Weapon extends Item {
     @Override
     public double sellItem() {
         super.setUsed(true);
-        return value + (bulletValue * ammo);
+        return super.getValue() + (bulletValue * ammo);
     }
 
     private void setupArray() {

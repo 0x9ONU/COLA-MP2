@@ -7,13 +7,14 @@ package com.example.mp2test;
  */
 public class Member {
     //instance methods
-    String name;
-    int health;
-    double money;
+    private String name;
+    private int health;
+    private int maxHealth;
+    private double money;
     Inventory inventory;
-    boolean human;
-    boolean friendly;
-    boolean alive;
+    private boolean human;
+    private boolean friendly;
+    private boolean alive;
 
     //constructors
     public Member() {
@@ -54,6 +55,10 @@ public class Member {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public int getMaxHealth() {return this.maxHealth; }
+
+    public void setMaxHealth(int maxHealth) {this.maxHealth = maxHealth;}
 
     /**
      * gets the member's name
@@ -141,6 +146,10 @@ public class Member {
         this.money += money;
     }
 
+    public void decrementMoney(double money) {
+        this.money =- money;
+    }
+
     //other methods
 
     /**
@@ -156,8 +165,8 @@ public class Member {
      */
     public void heal() {
         //this value can be changed later
-        if (this.health + 10 > 100) {
-            this.health = 100;
+        if (this.health + 10 > maxHealth) {
+            this.health = maxHealth;
         }
         else {
             this.health +=10;
@@ -170,8 +179,8 @@ public class Member {
      */
     public void heal(int health) {
         //this assumes that the max health is 100 for a member
-        if (this.health + health > 100) {
-            this.health = 100;
+        if (this.health + health > maxHealth) {
+            this.health = maxHealth;
         }
         else {
             this.health += health;

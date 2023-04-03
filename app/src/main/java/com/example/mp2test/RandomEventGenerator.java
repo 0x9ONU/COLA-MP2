@@ -4,11 +4,11 @@ import java.lang.Math;
 import java.util.Random;
 
 public class RandomEventGenerator {
-    String[] GoodRandomEvents = {"Kiss",""}; // 10
-    String[] BadRandomEvents = {"Volcano",""}; // 10
-    int RandomNumber;
-    double ProbabilityMultiplier;
-    Random rand = new Random();
+    private String[] GoodRandomEvents = {"Kiss",""}; // 10
+    private String[] BadRandomEvents = {"Volcano",""}; // 10
+    private int RandomNumber;
+    private double ProbabilityMultiplier;
+    private Random rand = new Random();
 
     //constructor
     public RandomEventGenerator() {

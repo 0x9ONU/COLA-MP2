@@ -76,10 +76,32 @@ public class Shop {
             return false;
         }
         finally {
-            double valueTemp = seller.inventory.getItem(index).getValue();
+            double receivingMoney = seller.inventory.getItem(index).getValue();
             seller.inventory.removeItem(index);
-            seller.incrementMoney(valueTemp);
+            seller.incrementMoney(receivingMoney);
             return true;
+        }
+    }
+
+    public boolean buyItem(Member buyer, int index) {
+        try {
+            shopInventory.getItem(index).getValue();
+        }
+        catch (IndexOutOfBoundsException e) {
+            //Splash text why that item does not exist
+            return false;
+        }
+        finally {
+            double payment = shopInventory.getItem(index).getValue();
+            if (buyer.getMoney() < payment) {
+                //Splash text why you do not have enough money to buy that item
+                return false;
+            }
+            else {
+                buyer.decrementMoney(payment);
+                shopInventory.giveItem(index, buyer.inventory);
+                return true;
+            }
         }
     }
 }

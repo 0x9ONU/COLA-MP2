@@ -4,8 +4,8 @@ import java.util.Random;
 //The defualt Item Class that is meant to be the super class to all items in the game
 public abstract class Item {
     //Data Members
-    double value;
-    String name = "";
+    private double value;
+    private String name = "";
     boolean used;
     boolean indestructible;
     String inventoryIdentifier = null;
