@@ -13,7 +13,7 @@ public class Inventory {
 
     Inventory(int maxItemCount, Member memberIdentifier) {
         this.maxItemCount = maxItemCount;
-        this.memberIdentifier = Member.toString();
+        this.memberIdentifier = Member.getName();
     }
 
     //getters
@@ -62,7 +62,7 @@ public class Inventory {
     //Member Functions
 
     public boolean giveItem(int itemIndex, Inventory inv) {
-        if (items.size() == maxItemCount || inv.getItemsLength() == inv.getMaxItemCount()) {
+        if (inv.getItemsLength() == inv.getMaxItemCount()) {
             //Splash text why you cannot give an item
             return false;
         }
@@ -73,13 +73,10 @@ public class Inventory {
             //Splash text why you do not have that index of item in your inventory
             return false;
         }
-        finally {
-            removeItem(itemIndex);
+            items.remove(itemIndex);
             return true;
-        }
     }
 
     public boolean takeItem(int itemIndex, Inventory inv) {
-
     }
 }

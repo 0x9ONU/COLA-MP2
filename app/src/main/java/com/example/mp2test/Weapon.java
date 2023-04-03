@@ -117,18 +117,18 @@ public class Weapon extends Item{
                         return 0.0;
                     }
                 } else {
-                    if (memberTarget.getFriendly() && memberTarget.getHuman()) {
+                    if (memberTarget.isFriendly() && memberTarget.isHuman()) {
                         //Splash text for why you cannot shoot a friendly person
                         return 0.0;
-                    } else if (memberTarget.getFriendly() && !memberTarget.getHuman()) {
+                    } else if (memberTarget.isFriendly() && !memberTarget.isHuman()) {
                         //Splash text for why you cannot shoot a friendly dog
                         return 0.0;
-                    } else if (memberTarget.getHuman()) {
+                    } else if (memberTarget.isHuman()) {
                         //return murder(memberTarget);
                         //Implement later. For now: Splash text why murdering people is bad regardless if they are bad or not.
                         return 0.0;
                     } else {
-                        return hunt(memberTarget)
+                        return hunt(memberTarget);
                     }
                 }
             }
