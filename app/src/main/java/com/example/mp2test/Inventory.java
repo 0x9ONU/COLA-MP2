@@ -61,16 +61,32 @@ public class Inventory {
         items.add(newItem);
     }
 
-    public void addItem(Item item) {
-        item.setInventoryIdentifier(memberIdentifier);
-        items.add(item);
+    public boolean addItem(Item item) {
+        try {
+            items.add(item);
+        }
+        catch (IndexOutOfBoundsException e) {
+            //Splash Text why you are out of bounds
+            return false;
+        }
+        items.get(getItemsLength()-1).inventoryIdentifier = memberIdentifier;
+        return true;
+
     }
 
     public void removeItem() {
         items.remove(getItemsLength()-1);
     }
-    public void removeItem(int index) {
+    public boolean removeItem(int index) {
+        try {
+            items.remove(getItemsLength()-1);
+        }
+        catch(IndexOutOfBoundsException e) {
+            //SPlash text why you are out of bounds
+            return false;
+        }
         items.remove(index);
+        return true;
     }
     //Member Functions
 

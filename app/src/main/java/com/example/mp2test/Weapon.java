@@ -125,7 +125,7 @@ public class Weapon extends Item {
                         return 0.0;
                     } else if (memberTarget.isHuman()) {
                         //return murder(memberTarget);
-                        //Implement later. For now: Splash text why murdering people
+                        //Implement later. For now: Splash text why murdering people is bad
                         return 0.0;
                     } else {
                         return hunt(memberTarget);

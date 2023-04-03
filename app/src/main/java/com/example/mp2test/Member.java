@@ -9,6 +9,7 @@ public class Member {
     //instance methods
     String name;
     int health;
+    double money;
     Inventory inventory;
     boolean human;
     boolean friendly;
@@ -23,15 +24,17 @@ public class Member {
         this.human = true;
         this.friendly = true;
         this.alive = true;
+        this.money = 0;
     }
 
-    public Member(int health, Inventory inventory, String name, boolean human, boolean friendly) {
+    public Member(int health, Inventory inventory, String name, boolean human, boolean friendly, int money) {
         this.health = health;
         this.inventory = inventory;
         this.name = name;
         this.human = human;
         this.friendly = friendly;
         this.alive = true;
+        this.money = money;
     }
 
     //getters and setters
@@ -124,6 +127,18 @@ public class Member {
      */
     public boolean isAlive() {
         return alive;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    public void incrementMoney(double money) {
+        this.money += money;
     }
 
     //other methods
