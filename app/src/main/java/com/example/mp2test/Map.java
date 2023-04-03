@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.mp2test;
 
 public class Map {
     int playerLocationX;                                                                            //will hold player's X cord

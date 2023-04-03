@@ -13,7 +13,7 @@ public class Inventory {
 
     Inventory(int maxItemCount, Member memberIdentifier) {
         this.maxItemCount = maxItemCount;
-        this.memberIdentifier = Member.getName();
+        this.memberIdentifier = memberIdentifier.getName();
     }
 
     //getters

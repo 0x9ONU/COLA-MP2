@@ -56,7 +56,7 @@ public class Member {
      * gets the member's name
      * @return the member's name
      */
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
