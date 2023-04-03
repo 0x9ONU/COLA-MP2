@@ -83,7 +83,7 @@ public class Food extends Item{
 
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        //Member.heal(); Implement function here
+        //Member.heal(int healthValue); Implement function here
         return 0.0;
     }
     @Override

@@ -8,6 +8,7 @@ public abstract class Item {
     String name = "";
     boolean used;
     boolean indestructible;
+    String inventoryIdentifier = null;
 
     /**
      * The default Constructor for Item. Gives it a default value of nothing and "Dohickey" for the name.
@@ -95,6 +96,9 @@ public abstract class Item {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setInventoryIdentifier(String inventoryIdentifier) {this.inventoryIdentifier = inventoryIdentifier; }
+    public String getInventoryIdentifer() {return inventoryIdentifier; }
 
     //Abstract Methods
     public abstract double useItem(Item itemTarget, Member memberTarget);

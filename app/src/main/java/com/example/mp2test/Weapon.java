@@ -2,7 +2,7 @@ package com.example.mp2test;
 
 import java.util.Random;
 
-public class Weapon extends Item{
+public class Weapon extends Item {
     static int numberOfWeapons = 3;
     int type;
     int wear;
@@ -125,7 +125,7 @@ public class Weapon extends Item{
                         return 0.0;
                     } else if (memberTarget.getHuman()) {
                         //return murder(memberTarget);
-                        //Implement later. For now: Splash text why murdering people is bad regardless if they are bad or not.
+                        //Implement later. For now: Splash text why murdering people
                         return 0.0;
                     } else {
                         return hunt(memberTarget)
@@ -162,7 +162,23 @@ public class Weapon extends Item{
         }
     }
 
-    //IMPLEMENT RELOAD
+    public boolean reload() {
+        if (ammo == 0) {
+            //Splash text why you are out of ammo
+            return false;
+        }
+        if (bulletCount == maxBulletCount) {
+            //Splash text why your weapon is full
+            return false;
+        }
+        int numberOfBulletsReloaded = maxBulletCount - bulletCount;
+        if (ammo < numberOfBulletsReloaded) {
+            numberOfBulletsReloaded = ammo;
+        }
+        ammo -= numberOfBulletsReloaded;
+        bulletCount += numberOfBulletsReloaded;
+        return true;
+    }
 
     @Override
     public double sellItem() {
