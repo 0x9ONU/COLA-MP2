@@ -1,7 +1,7 @@
 package com.example.mp2test;
 import java.util.ArrayList;
 
-public class  Inventory {
+public class Inventory {
     private ArrayList<Item> items = new ArrayList<Item>();
     private int maxItemCount;
     private String memberIdentifier;
@@ -13,7 +13,7 @@ public class  Inventory {
 
     Inventory(int maxItemCount, Member memberIdentifier) {
         this.maxItemCount = maxItemCount;
-        this.memberIdentifier = Member.toString();
+        this.memberIdentifier = Member.getName();
     }
 
     //getters
@@ -70,7 +70,6 @@ public class  Inventory {
         items.remove(getItemsLength()-1);
     }
     public void removeItem(int index) {
-        getItem(index).setInventoryIdentifier(null);
         items.remove(index);
     }
     //Member Functions
@@ -107,6 +106,7 @@ public class  Inventory {
         }
         finally {
             inv.removeItem(itemIndex);
+            return true;
         }
     }
 }
