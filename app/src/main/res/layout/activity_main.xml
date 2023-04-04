@@ -11,11 +11,12 @@
         android:layout_width="912dp"
         android:layout_height="573dp"
 
-        android:visibility="invisible"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/istockphoto_1125945611_612x612"
-        tools:layout_editor_absoluteY="-149dp" />
+        app:srcCompat="@drawable/istockphoto_1125945611_612x612" />
 
     <TextView
         android:id="@+id/title2"
@@ -25,11 +26,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:visibility="invisible"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/subtitle"
@@ -39,70 +40,96 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:visibility="invisible"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/Month"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintTop_toBottomOf="@+id/Month" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="226dp"
-        android:layout_height="111dp"
+        android:layout_width="189dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="2dp"
         android:background="#00FFFFFF"
         android:text="Adventure Time"
         android:textAlignment="center"
         android:textColor="#7A3838"
         android:textSize="24sp"
-        android:visibility="invisible"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/AmmoValue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#FFFFFF"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        app:layout_constraintVertical_bias="0.142"
+        app:rippleColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/OXEN"
-        android:layout_width="257dp"
+        android:layout_width="0dp"
         android:layout_height="154dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="240dp" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/TongueValue"
+        app:layout_constraintEnd_toStartOf="@+id/OXEN2"
+        app:layout_constraintStart_toEndOf="@+id/YokeBack"
+        app:layout_constraintTop_toTopOf="@+id/TongueValue"
+        app:layout_constraintVertical_bias="0.818"
+        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463" />
 
     <ImageView
         android:id="@+id/wagon"
-        android:layout_width="257dp"
+        android:layout_width="0dp"
         android:layout_height="225dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/covered_wagon_american_frontier_clip_art_others_8076e205f20d3ec50fef044f5f274740"
-        tools:layout_editor_absoluteX="428dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_marginEnd="111dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/AmmunitionButton"
+        app:layout_constraintEnd_toStartOf="@+id/ShopNext"
+        app:layout_constraintStart_toEndOf="@+id/OXEN2"
+        app:layout_constraintTop_toTopOf="@+id/AmmunitionButton"
+        app:layout_constraintVertical_bias="0.893"
+        app:srcCompat="@drawable/covered_wagon_american_frontier_clip_art_others_8076e205f20d3ec50fef044f5f274740" />
 
     <ImageView
         android:id="@+id/OXEN2"
-        android:layout_width="249dp"
+        android:layout_width="0dp"
         android:layout_height="109dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/cattle_bull_clip_art_christmas_cliparts_oxen_2458931795fe74796371da23c684a8c8"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="258dp" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/TongueAmount"
+        app:layout_constraintEnd_toStartOf="@+id/wagon"
+        app:layout_constraintStart_toEndOf="@+id/OXEN"
+        app:layout_constraintTop_toBottomOf="@+id/TongueAmount"
+        app:srcCompat="@drawable/cattle_bull_clip_art_christmas_cliparts_oxen_2458931795fe74796371da23c684a8c8" />
 
     <ImageView
         android:id="@+id/OXEN3"
-        android:layout_width="221dp"
-        android:layout_height="105dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="302dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="17dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/AmmoValue"
+        app:layout_constraintStart_toEndOf="@+id/FoodButton"
+        app:layout_constraintTop_toBottomOf="@+id/Julybutton"
+        app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs" />
 
     <ImageView
         android:id="@+id/OXEN4"
         android:layout_width="150dp"
-        android:layout_height="66dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/pngwing_com"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="329dp" />
+        android:layout_height="0dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/OXEN3"
+        app:layout_constraintEnd_toEndOf="@+id/TongueValue"
+        app:layout_constraintStart_toStartOf="@+id/MoreInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/Food"
+        app:srcCompat="@drawable/pngwing_com" />
 
     <TextView
         android:id="@+id/textView2"
@@ -120,15 +147,16 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
         android:text="From: Booneville, Missouri Age: 13"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -138,9 +166,11 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Julybutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintTop_toTopOf="@+id/Julybutton"
+        app:layout_constraintVertical_bias="0.675" />
 
     <Button
         android:id="@+id/Nextbutton"
@@ -152,7 +182,8 @@
         android:textColor="#FFFFFF"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="791dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/Month"
@@ -171,19 +202,22 @@
         android:id="@+id/MarchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
         android:text="March"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Stuff" />
 
     <Button
         android:id="@+id/AprilButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:text="April"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintBottom_toTopOf="@+id/NumYoke"
+        app:layout_constraintStart_toStartOf="@+id/MayButton"
+        app:layout_constraintTop_toTopOf="@+id/NumYoke" />
 
     <Button
         android:id="@+id/MayButton"
@@ -193,43 +227,54 @@
         android:text="May"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="145dp" />
+        app:layout_constraintTop_toBottomOf="@+id/AprilButton" />
 
     <Button
         android:id="@+id/JuneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:text="June"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintStart_toStartOf="@+id/MayButton"
+        app:layout_constraintTop_toBottomOf="@+id/MayButton" />
 
     <Button
         android:id="@+id/Julybutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="138dp"
         android:text="July"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="238dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/JuneButton"
+        app:layout_constraintTop_toBottomOf="@+id/YokeInfo" />
 
     <Button
         android:id="@+id/MonthMore"
-        android:layout_width="141dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="33dp"
         android:text="More Information"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/TongueAmount"
+        app:layout_constraintEnd_toStartOf="@+id/OXEN4"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/TongueAmount" />
 
     <Button
         android:id="@+id/BackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
         android:text="Back"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintStart_toStartOf="@+id/YokeBack"
+        app:layout_constraintTop_toBottomOf="@+id/MoreInfoText" />
 
     <TextView
         android:id="@+id/MoreInfoText"
@@ -238,9 +283,10 @@
         android:text="More Information"
         android:textAlignment="center"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/AxleAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintTop_toTopOf="@+id/AxleAmount" />
 
     <TextView
         android:id="@+id/Shop"
@@ -249,27 +295,34 @@
         android:layout_marginTop="16dp"
         android:text="Shop"
         android:textSize="34sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/OxenYoke"
-        android:layout_width="144dp"
+        android:layout_width="0dp"
         android:layout_height="88dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="43dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/Bullet"
+        app:layout_constraintEnd_toEndOf="@+id/Food"
+        app:layout_constraintStart_toEndOf="@+id/AprilButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463" />
 
     <Button
         android:id="@+id/OxenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:text="Oxen"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/NumYoke"
+        app:layout_constraintEnd_toEndOf="@+id/Shirt"
+        app:layout_constraintTop_toBottomOf="@+id/NumYoke" />
 
     <ImageView
         android:id="@+id/Clothes"
@@ -277,86 +330,108 @@
         android:layout_height="83dp"
         android:layout_marginEnd="104dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/pngitem_159722"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:srcCompat="@drawable/pngitem_159722" />
 
     <Button
         android:id="@+id/ClothesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:text="Clothes"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="690dp"
-        tools:layout_editor_absoluteY="126dp" />
+        app:layout_constraintStart_toEndOf="@+id/wagon"
+        app:layout_constraintTop_toBottomOf="@+id/Clothes" />
 
     <ImageView
         android:id="@+id/Food"
         android:layout_width="132dp"
-        android:layout_height="124dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="34dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/daco_3644451"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/FoodButton"
+        app:layout_constraintEnd_toEndOf="@+id/Stuff"
+        app:layout_constraintStart_toStartOf="@+id/TongueAmount"
+        app:layout_constraintTop_toTopOf="@+id/ClothesValue"
+        app:srcCompat="@drawable/daco_3644451" />
 
     <Button
         android:id="@+id/FoodButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="Food"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintStart_toStartOf="@+id/OXEN"
+        app:layout_constraintTop_toTopOf="@+id/TongueAmount" />
 
     <ImageView
         android:id="@+id/Spare"
         android:layout_width="153dp"
         android:layout_height="136dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginEnd="236dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TongueAmount"
+        app:layout_constraintStart_toStartOf="@+id/TongueValue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.621"
-        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63"
-        tools:layout_editor_absoluteX="386dp" />
+        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63" />
 
     <ImageView
         android:id="@+id/Ammo"
         android:layout_width="211dp"
-        android:layout_height="114dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="60dp"
+        android:layout_marginBottom="22dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/AmmunitionButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintTop_toTopOf="@+id/Spare"
+        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86" />
 
     <Button
         android:id="@+id/SparePartsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="1dp"
         android:text="Spare Parts"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="398dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintStart_toEndOf="@+id/OXEN"
+        app:layout_constraintTop_toTopOf="@+id/OXEN3" />
 
     <Button
         android:id="@+id/AmmunitionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
         android:text="Ammunition"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="698dp"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/MoreInfoText"
+        app:layout_constraintEnd_toEndOf="@+id/Ammo" />
 
     <Button
         android:id="@+id/ShopNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="7dp"
         android:background="#00FFFFFF"
         android:text="Next"
         android:textColor="#FFFFFF"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="796dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wagon"
+        app:layout_constraintTop_toBottomOf="@+id/MoreInfoText" />
 
     <TextView
         android:id="@+id/Balance"
@@ -365,10 +440,11 @@
         android:text="Balance:"
         android:textSize="24sp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/AmmoAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="121dp" />
+        app:layout_constraintTop_toBottomOf="@+id/AmmoAmount" />
 
     <TextView
         android:id="@+id/BalanceAmount"
@@ -377,18 +453,21 @@
         android:text="$800"
         android:textSize="24sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="470dp"
-        tools:layout_editor_absoluteY="121dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/AmmoAmount"
+        app:layout_constraintEnd_toEndOf="@+id/FoodValue"
+        app:layout_constraintStart_toEndOf="@+id/FoodValue"
+        app:layout_constraintTop_toBottomOf="@+id/AmmoAmount" />
 
     <TextView
         android:id="@+id/YokeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:text="There are 2 oxen ina yoke. It is recomended to have at least 3 yokes."
         android:textSize="20sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="74dp" />
+        app:layout_constraintStart_toEndOf="@+id/Shirt"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 
     <TextView
         android:id="@+id/NumYoke"
@@ -397,57 +476,71 @@
         android:text="Number of desired Yokes to purchase:"
         android:textSize="20sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="121dp" />
+        app:layout_constraintEnd_toEndOf="@+id/Shirt"
+        app:layout_constraintStart_toEndOf="@+id/Shirt"
+        app:layout_constraintTop_toTopOf="@+id/Balance" />
 
     <EditText
         android:id="@+id/NumDesiredYokes"
-        android:layout_width="503dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
+        android:layout_marginStart="2dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter the number of yokes you would like to purchase"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="391dp"
-        tools:layout_editor_absoluteY="117dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/AmmoAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NumYoke"
+        app:layout_constraintTop_toBottomOf="@+id/AmmoAmount" />
 
     <Button
         android:id="@+id/YokeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="29dp"
         android:text="Back"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/BackButton"
+        app:layout_constraintEnd_toStartOf="@+id/OXEN"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/Shirt"
-        android:layout_width="182dp"
+        android:layout_width="0dp"
         android:layout_height="175dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/pngitem_159722"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintBottom_toTopOf="@+id/NumYoke"
+        app:layout_constraintEnd_toEndOf="@+id/sandwich"
+        app:layout_constraintStart_toStartOf="@+id/Bullet"
+        app:layout_constraintTop_toTopOf="@+id/NumYoke"
+        app:srcCompat="@drawable/pngitem_159722" />
 
     <TextView
         android:id="@+id/ClothesInfo"
-        android:layout_width="515dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:text="You'll need warm clothing in the mountains.  I recommend taking at least 2 sets of clothes per person."
         android:textSize="16sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintBottom_toTopOf="@+id/AmmoAmount"
+        app:layout_constraintEnd_toEndOf="@+id/PartsInfo"
+        app:layout_constraintStart_toEndOf="@+id/OxenButton"
+        app:layout_constraintTop_toTopOf="@+id/AmmoAmount" />
 
     <TextView
         android:id="@+id/AmountClothes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:text="How many sets of clothes would you like to purchase:"
         android:textSize="20sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/WheelAmount"
+        app:layout_constraintStart_toStartOf="@+id/ClothesInfo" />
 
     <EditText
         android:id="@+id/ClothesValue"
@@ -457,17 +550,22 @@
         android:inputType="textPersonName"
         android:text="Enter Value Here"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="159dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/startButton"
+        app:layout_constraintStart_toEndOf="@+id/OxenButton"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <ImageView
         android:id="@+id/sandwich"
-        android:layout_width="157dp"
+        android:layout_width="0dp"
         android:layout_height="141dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/daco_3644451"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/OxenYoke"
+        app:layout_constraintEnd_toEndOf="@+id/Food"
+        app:layout_constraintStart_toStartOf="@+id/Bullet"
+        app:layout_constraintTop_toBottomOf="@+id/OxenYoke"
+        app:srcCompat="@drawable/daco_3644451" />
 
     <TextView
         android:id="@+id/FoodInfo"
@@ -477,8 +575,9 @@
         android:text="I recommend you take at least 200 pounds of food for each person in your party.  You'll need flour, sugar, salt, pepper, bacon, coffee, and meat."
         android:textSize="16sp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/NumDesiredYokes"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintTop_toTopOf="@+id/NumDesiredYokes" />
 
     <TextView
         android:id="@+id/FoodAmount"
@@ -487,38 +586,51 @@
         android:text="How many pounds of food would you like to buy at the current time?"
         android:textSize="20sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="148dp" />
+        app:layout_constraintEnd_toEndOf="@+id/Spare"
+        app:layout_constraintStart_toEndOf="@+id/Spare"
+        app:layout_constraintTop_toBottomOf="@+id/NumYoke" />
 
     <EditText
         android:id="@+id/FoodValue"
         android:layout_width="262dp"
         android:layout_height="43dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="124dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter amount of pounds here."
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="171dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Food"
+        app:layout_constraintEnd_toStartOf="@+id/Ammo"
+        app:layout_constraintStart_toStartOf="@+id/Food"
+        app:layout_constraintTop_toTopOf="@+id/Food" />
 
     <ImageView
         android:id="@+id/Bullet"
-        android:layout_width="208dp"
+        android:layout_width="0dp"
         android:layout_height="131dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="192dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/TongueValue"
+        app:layout_constraintEnd_toStartOf="@+id/title2"
+        app:layout_constraintStart_toStartOf="@+id/MarchButton"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86" />
 
     <TextView
         android:id="@+id/AmmoInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:text="Ammunition is sold in boxes of 20 bullets."
         android:textSize="16sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintBottom_toTopOf="@+id/FoodInfo"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/FoodInfo" />
 
     <TextView
         android:id="@+id/AmmoAmount"
@@ -527,8 +639,10 @@
         android:text="How many boxes would you like to purchase at the current time?"
         android:textSize="20sp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="111dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/Clothes"
+        app:layout_constraintEnd_toEndOf="@+id/BalanceAmount"
+        app:layout_constraintStart_toEndOf="@+id/BalanceAmount"
+        app:layout_constraintTop_toBottomOf="@+id/Clothes" />
 
     <EditText
         android:id="@+id/AmmoValue"
@@ -538,81 +652,122 @@
         android:inputType="textPersonName"
         android:text="Enter Number of Boxes Here"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="141dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/WheelAmount"
+        app:layout_constraintEnd_toEndOf="@+id/NumYoke"
+        app:layout_constraintStart_toEndOf="@+id/NumYoke"
+        app:layout_constraintTop_toBottomOf="@+id/WheelAmount" />
 
     <ImageView
         android:id="@+id/Stuff"
-        android:layout_width="236dp"
-        android:layout_height="146dp"
-        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="54dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ClothesValue"
+        app:layout_constraintEnd_toEndOf="@+id/AxelValue"
+        app:layout_constraintStart_toStartOf="@+id/BackButton"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
+        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63" />
 
     <TextView
         android:id="@+id/PartsInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:text="It is a great idea to have a few extra spare parts for your wagon."
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="72dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/Stuff"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/WheelAmount"
-        android:layout_width="589dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
         android:text="How many extra wagon wheels would you like to purchase at this time?"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="114dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/AmmoAmount"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/OXEN3"
+        app:layout_constraintTop_toBottomOf="@+id/AmmoAmount" />
 
     <EditText
         android:id="@+id/WheelValue"
         android:layout_width="287dp"
         android:layout_height="45dp"
+        android:layout_marginStart="231dp"
+        android:layout_marginEnd="231dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter number of wheels here."
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="@+id/AmmoAmount"
+        app:layout_constraintStart_toStartOf="@+id/sandwich"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <TextView
         android:id="@+id/AxleAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:text="How many extra wagon axles would you like to purchase at the current time?"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="215dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/AxelValue"
+        app:layout_constraintStart_toStartOf="@+id/AxelValue" />
 
     <EditText
         android:id="@+id/AxelValue"
-        android:layout_width="260dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="49dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter number of axels here."
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="242dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/OXEN4"
+        app:layout_constraintEnd_toStartOf="@+id/Spare"
+        app:layout_constraintStart_toStartOf="@+id/JuneButton"
+        app:layout_constraintTop_toTopOf="@+id/JuneButton" />
 
     <TextView
         android:id="@+id/TongueAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:text="How many extra wagon tongues would you like to purchase at the current time?"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="287dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/OXEN3"
+        app:layout_constraintStart_toStartOf="@+id/MoreInfoText"
+        app:layout_constraintTop_toTopOf="@+id/OXEN3" />
 
     <EditText
         android:id="@+id/TongueValue"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter number of tongues here."
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="318dp" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/OXEN2"
+        app:layout_constraintEnd_toEndOf="@+id/SparePartsButton"
+        app:layout_constraintStart_toStartOf="@+id/TongueAmount"
+        app:layout_constraintTop_toBottomOf="@+id/Food" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
