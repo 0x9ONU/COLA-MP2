@@ -15,27 +15,47 @@ public class Member {
     private boolean human;
     private boolean friendly;
     private boolean alive;
+    private int xCoordinate;
+    private int yCoordinate;
+
 
     //constructors
+
+    /**
+     * default constructor for the member class, basically just used to show default values
+     */
     public Member() {
         this.name = "default name";
-        // I'm just using a staring base line for health starting at 100, probably change later
-        // Also setting friendly and human to true by default
         this.health = 100;
         this.human = true;
         this.friendly = true;
         this.alive = true;
         this.money = 0;
+        this.xCoordinate = 0;
+        this.yCoordinate = 0;
+        this.maxHealth = 100;
     }
 
+    /**
+     * The constructor that will primarily be used for the Member class, member will by default always be (0,0), and will by default always be alive
+     * @param health the Member's starting health and maxHealth value
+     * @param inventory the Member's starting inventory
+     * @param name the Member's name
+     * @param human true if member is human, false if member is another species
+     * @param friendly true if the member if friendly to the player, false if they are not friendly and will attack
+     * @param money the member's starting amount of money
+     */
     public Member(int health, Inventory inventory, String name, boolean human, boolean friendly, int money) {
         this.health = health;
+        this.maxHealth = health;
         this.inventory = inventory;
         this.name = name;
         this.human = human;
         this.friendly = friendly;
         this.alive = true;
         this.money = money;
+        this.xCoordinate = 0;
+        this.yCoordinate = 0;
     }
 
     //getters and setters
@@ -56,8 +76,16 @@ public class Member {
         this.health = health;
     }
 
+    /**
+     * returns the max health value of the member (by default its 100)
+     * @return the int value for the max health of the member
+     */
     public int getMaxHealth() {return this.maxHealth; }
 
+    /**
+     * changes the max health of the member
+     * @param maxHealth the member's new max health
+     */
     public void setMaxHealth(int maxHealth) {this.maxHealth = maxHealth;}
 
     /**
@@ -128,24 +156,40 @@ public class Member {
 
     /**
      * Tells whether the member is alive or not
-     * @return
+     * @return true if the member is alive, false if they're dead
      */
     public boolean isAlive() {
         return alive;
     }
 
+    /**
+     * gets the member's current amount of money
+     * @return the member's current amount of money
+     */
     public double getMoney() {
         return money;
     }
 
+    /**
+     * changes the member's money to the amount provided
+     * @param money the member's new amount of money
+     */
     public void setMoney(double money) {
         this.money = money;
     }
 
+    /**
+     * gives the member a certain amount of money
+     * @param money the amount of money added to the member's total amount
+     */
     public void incrementMoney(double money) {
         this.money += money;
     }
 
+    /**
+     * takes away a certain amount of money from the member
+     * @param money the amount of money taken away from the member
+     */
     public void decrementMoney(double money) {
         this.money =- money;
     }
@@ -210,14 +254,13 @@ public class Member {
     }
 
     /**
-     * moves the member to a specific spot on the map
-     * @param x the member's new x-coordinate of their position
-     * @param y the member's new y-coordinate of their position
+     * moves the member by an amount across the map
+     * @param x the horizontal movement of the member
+     * @param y the vertical movement of the member
      */
     public void move(int x, int y) {
-        // I have no idea what to do with this cause I don't have a map
-        // will have to be implemented later
-        System.out.println("This has to be implemented later once the member class gets set up with the map class.");
+        this.xCoordinate += x;
+        this.yCoordinate += y;
     }
 
     /**
