@@ -11,9 +11,9 @@ public class Map {
     int playerLocationY;                                                                            //will hold player's Y cord
     int wagonLocationX;                                                                             //will hold wagon's X cord
     int wagonLocationY;                                                                             //will hold wagon's Y cord
-    int[] monumentLocationX;                                                                        //will hold all monument X cords (need hardcoded)
-    int[] monumentLocationY;                                                                        //will hold all monument Y cords (need hardcoded)
-
+    final int[] monumentLocationX = {60,100,120};                                                   //will hold all monument X cords (need hardcoded)
+    final int[] monumentLocationY = {20,40,80};                                                     //will hold all monument Y cords (need hardcoded)
+    final String[] monumentNames = {"Chimney Rock", "River", "Homestead"};                          //holds all monument names
     /**
      * Basic constructor for Map
      */
@@ -110,8 +110,8 @@ public class Map {
      * @param YChange the change in Y
      */
     public void MovePlayer(int XChange, int YChange) {
-        playerLocationX += XChange;
-        playerLocationY += YChange;
+        playerLocationX += XChange;                                                                 //adds the value to the playerlocationX
+        playerLocationY += YChange;                                                                 //adds the value to the playerlocationY
     }
 
     /**
@@ -120,23 +120,24 @@ public class Map {
      * @param YChange the change in Y
      */
     public void MoveWagon(int XChange, int YChange) {
-        wagonLocationY += YChange;
-        wagonLocationX += XChange;
+        wagonLocationY += YChange;                                                                  //adds the value to the wagonlocationX
+        wagonLocationX += XChange;                                                                  //adds the value to the wagonLocaitonY
     }
 
     /**
-     * checks if the player is at a monument
-     * @return true only if the player is at a monument
+     * checks if the player is at a monument and returns the name of the monument or "none" if they
+     * aren't at a monument
+     * @return name of a monument or none
      */
-    public boolean CheckMonument() {
+    public String CheckMonument() {
         for (int i = 0; i < monumentLocationX.length; i ++) {
             for (int j = 0; j < monumentLocationY.length; j++) {
-                if (monumentLocationX[i] == playerLocationX && monumentLocationY[j] == playerLocationY) {
-                    return true;
+                if (monumentLocationX[i] == playerLocationX && monumentLocationY[j] == playerLocationY) {  //checks if the player is at the right x and y coordinates
+                    return monumentNames[i];
                 }
             }
         }
-        return false;
+        return "none";
     }
 
     /**
@@ -145,7 +146,7 @@ public class Map {
      * @return true only if the player is at a shop
      */
     public boolean CheckShop(Shop Shopname) {
-        if (Shopname.getX() == playerLocationX && Shopname.getX() == playerLocationY ) {
+        if (Shopname.getX() == playerLocationX && Shopname.getX() == playerLocationY ) {            // checks if the player is at the right x and y coordinates
             return true;
         } else {
             return false;
