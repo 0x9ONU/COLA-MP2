@@ -126,8 +126,7 @@ public class Map {
 
     /**
      * checks if the player is at a monument
-     * @return true if the player is at a monument
-     * @return false if the player is not a monument
+     * @return true only if the player is at a monument
      */
     public boolean CheckMonument() {
         for (int i = 0; i < monumentLocationX.length; i ++) {
@@ -142,9 +141,8 @@ public class Map {
 
     /**
      * checks if the player is at a shop
-     * @param Shopname
-     * @return true if the player is at a shop
-     * @return false if the player is not at a shop
+     * @param Shopname the name of a shop
+     * @return true only if the player is at a shop
      */
     public boolean CheckShop(Shop Shopname) {
         if (Shopname.getX() == playerLocationX && Shopname.getX() == playerLocationY ) {
