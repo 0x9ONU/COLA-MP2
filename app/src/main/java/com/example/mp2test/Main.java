@@ -74,7 +74,7 @@ public class Main {
                 System.out.println("You enter the " + shop1.getName() + ".");
                 System.out.println("You have the options to buy...");
                 for (int i = 0; i < shop1Inventory.getItemsLength(); i++) {
-                    System.out.println(i + ": ")
+                    System.out.println(i + ": " + shop1Inventory.getItem(i));
                 }
                 System.out.println("To buy an item, put the number in front of said item and click enter, otherwise press any letter and enter to leave the shop.");
 
