@@ -73,7 +73,33 @@ public class MainActivity extends AppCompatActivity {
         final TextView infoYoke = findViewById(R.id.YokeInfo);
         final TextView yokeNumQues = findViewById(R.id.NumYoke);
         final EditText numYoke = findViewById(R.id.NumDesiredYokes);
+        final Button shopBack = findViewById(R.id.YokeBack);
 
+        final ImageView clothing = findViewById(R.id.Shirt);
+        final TextView infoClothes = findViewById(R.id.ClothesInfo);
+        final TextView clothesQues = findViewById(R.id.AmountClothes);
+        final EditText numClothes = findViewById(R.id.ClothesValue);
+
+        final ImageView beef = findViewById(R.id.sandwich);
+        final TextView infoFood = findViewById(R.id.FoodInfo);
+        final TextView foodQues = findViewById(R.id.FoodAmount);
+        final EditText numFood = findViewById(R.id.FoodValue);
+
+        final ImageView bullet = findViewById(R.id.Bullet);
+        final TextView infoAmmo = findViewById(R.id.AmmoInfo);
+        final TextView ammoQues = findViewById(R.id.AmmoAmount);
+        final EditText numAmmo = findViewById(R.id.AmmoValue);
+
+        final ImageView stuff = findViewById(R.id.Stuff);
+        final TextView infoParts = findViewById(R.id.PartsInfo);
+        final TextView wheelQues = findViewById(R.id.WheelAmount);
+        final EditText numWheel = findViewById(R.id.WheelValue);
+        final TextView axelQues = findViewById(R.id.AxleAmount);
+        final EditText numAxel = findViewById(R.id.AxelValue);
+        final TextView tongueQues = findViewById(R.id.TongueAmount);
+        final EditText numTongue = findViewById(R.id.TongueValue);
+
+        shopBack.setVisibility(View.GONE);
         balance.setVisibility(View.GONE);
         balanceAmount.setVisibility(View.GONE);
         infoYoke.setVisibility(View.GONE);
@@ -331,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 infoYoke.setVisibility(View.VISIBLE);
                 yokeNumQues.setVisibility(View.VISIBLE);
                 numYoke.setVisibility(View.VISIBLE);
-                member.set??();
+                //member.set??();
 
             }
         });
@@ -340,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                wep.setAmmo();
+                //wep.setAmmo();
             }
         });
 
@@ -348,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -356,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -364,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 

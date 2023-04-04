@@ -411,6 +411,15 @@
         tools:layout_editor_absoluteX="391dp"
         tools:layout_editor_absoluteY="117dp" />
 
+    <Button
+        android:id="@+id/YokeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="362dp" />
+
     <ImageView
         android:id="@+id/Shirt"
         android:layout_width="182dp"
@@ -429,15 +438,6 @@
         android:visibility="invisible"
         tools:layout_editor_absoluteX="217dp"
         tools:layout_editor_absoluteY="83dp" />
-
-    <Button
-        android:id="@+id/YokeBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="795dp"
-        tools:layout_editor_absoluteY="358dp" />
 
     <TextView
         android:id="@+id/AmountClothes"
@@ -459,15 +459,6 @@
         android:visibility="invisible"
         tools:layout_editor_absoluteX="212dp"
         tools:layout_editor_absoluteY="159dp" />
-
-    <Button
-        android:id="@+id/ShirtBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="358dp" />
 
     <ImageView
         android:id="@+id/sandwich"
@@ -510,15 +501,6 @@
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="171dp" />
 
-    <Button
-        android:id="@+id/FoodBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="358dp" />
-
     <ImageView
         android:id="@+id/Bullet"
         android:layout_width="208dp"
@@ -559,30 +541,13 @@
         tools:layout_editor_absoluteX="233dp"
         tools:layout_editor_absoluteY="141dp" />
 
-    <Button
-        android:id="@+id/AmmoBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="358dp" />
-
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/Stuff"
         android:layout_width="236dp"
         android:layout_height="146dp"
         app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63"
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="54dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="360dp" />
 
     <TextView
         android:id="@+id/PartsInfo"
