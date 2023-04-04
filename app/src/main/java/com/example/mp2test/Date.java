@@ -108,7 +108,9 @@ public class Date {
      * @param currentDay the day from 0-31 you want the player to be at
      */
     public void setCurrentDay(int currentDay) {
-        CurrentDay = currentDay;
+        if (currentDay < 30) {
+            CurrentDay = currentDay;
+        }
     }
 
     /**
@@ -116,7 +118,7 @@ public class Date {
      * @param currentMonth the month from 0-12 you want the player to be at
      */
     public void setCurrentMonth(int currentMonth) {
-        CurrentMonth = currentMonth;
+        if (currentMonth < 12) {CurrentMonth = currentMonth;}
     }
 
     /**
@@ -132,14 +134,14 @@ public class Date {
      * @param goalDay the day from 0-31 you want the player to complete by
      */
     public void setGoalDay(int goalDay) {
-        GoalDay = goalDay;
+        if (goalDay < 30) {GoalDay = goalDay;}
     }
     /**
      * sets the goal Month to a value
      * @param goalMonth the day from 0-0-12 you want the player to complete by
      */
     public void setGoalMonth(int goalMonth) {
-        GoalMonth = goalMonth;
+        if (goalMonth < 12) {GoalMonth = goalMonth;}
     }
 
     /**
@@ -155,21 +157,32 @@ public class Date {
      * @param dayCounter the amount of days the player has been on the trail
      */
     public void setDayCounter(int dayCounter) {
-        DayCounter = dayCounter;
+        if (dayCounter > 0) {DayCounter = dayCounter;}
     }
 
     /**
      * increases the current day by 1
      */
     public void IncrementCurrentDay() {
-        CurrentDay += 1;
+        if (CurrentDay > 30) {
+            IncrementCurrentMonth();
+            CurrentDay = 0;
+        }
+        else {
+            CurrentDay +=1;
+        }
     }
 
     /**
      * increases the current month by 1
      */
     public void IncrementCurrentMonth() {
-        CurrentMonth += 1;
+        if (CurrentDay > 11) {
+            IncrementCurrentYear();
+            CurrentMonth = 0;
+        } else {
+            CurrentMonth += 1;
+        }
     }
 
     /**
