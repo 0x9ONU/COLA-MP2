@@ -1,6 +1,11 @@
-package com.example.mp2test;
+/**
+ * File Name: Member.java
+ * Author: Ashton Beresford
+ * Date: 4/1/23
+ * Description: The class that controls the Members: which are basically any living thing in the story that can be interacted with
+ */
 
-//added an boolean instance variable for "alive", which tells whether the member is dead or not
+package com.example.mp2test;
 
 /**
  * Acts as a class to be used for each instance of an "party" member in the group's wagon
@@ -272,10 +277,14 @@ public class Member {
         return "Member{" +
                 "name='" + name + '\'' +
                 ", health=" + health +
+                ", maxHealth=" + maxHealth +
+                ", money=" + money +
                 ", inventory=" + inventory +
                 ", human=" + human +
                 ", friendly=" + friendly +
                 ", alive=" + alive +
+                ", xCoordinate=" + xCoordinate +
+                ", yCoordinate=" + yCoordinate +
                 '}';
     }
 }

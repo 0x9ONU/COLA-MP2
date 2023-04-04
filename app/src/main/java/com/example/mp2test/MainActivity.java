@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Date date = new Date();
     Member member = new Member();
     RandomEventGenerator reg = new RandomEventGenerator();
-    Wagon wag = new Wagon();
+    Wagon wag = new Wagon(member);
     Weapon wep = new Weapon();
 
 
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Used to set all our Id's in the xml file to a variable we can work with
         final Button start = findViewById(R.id.startButton);
         final ImageView wagon = findViewById(R.id.wagon);
         final ImageView Oxen = findViewById(R.id.OXEN);
@@ -73,7 +74,30 @@ public class MainActivity extends AppCompatActivity {
         final TextView infoYoke = findViewById(R.id.YokeInfo);
         final TextView yokeNumQues = findViewById(R.id.NumYoke);
         final EditText numYoke = findViewById(R.id.NumDesiredYokes);
+        final Button shopBack = findViewById(R.id.YokeBack);
+        final ImageView clothing = findViewById(R.id.Shirt);
+        final TextView infoClothes = findViewById(R.id.ClothesInfo);
+        final TextView clothesQues = findViewById(R.id.AmountClothes);
+        final EditText numClothes = findViewById(R.id.ClothesValue);
+        final ImageView beef = findViewById(R.id.sandwich);
+        final TextView infoFood = findViewById(R.id.FoodInfo);
+        final TextView foodQues = findViewById(R.id.FoodAmount);
+        final EditText numFood = findViewById(R.id.FoodValue);
+        final ImageView bullet = findViewById(R.id.Bullet);
+        final TextView infoAmmo = findViewById(R.id.AmmoInfo);
+        final TextView ammoQues = findViewById(R.id.AmmoAmount);
+        final EditText numAmmo = findViewById(R.id.AmmoValue);
+        final ImageView stuff = findViewById(R.id.Stuff);
+        final TextView infoParts = findViewById(R.id.PartsInfo);
+        final TextView wheelQues = findViewById(R.id.WheelAmount);
+        final EditText numWheel = findViewById(R.id.WheelValue);
+        final TextView axelQues = findViewById(R.id.AxleAmount);
+        final EditText numAxel = findViewById(R.id.AxelValue);
+        final TextView tongueQues = findViewById(R.id.TongueAmount);
+        final EditText numTongue = findViewById(R.id.TongueValue);
 
+        //Sets the title scene and what the user sees right away
+        shopBack.setVisibility(View.GONE);
         balance.setVisibility(View.GONE);
         balanceAmount.setVisibility(View.GONE);
         infoYoke.setVisibility(View.GONE);
@@ -105,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         ammo.setVisibility(View.GONE);
         spares.setVisibility(View.GONE);
 
+        //When the Adventure Time button is clicked the game starts and moves to Hattie Campbells
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 wagon.setVisibility(View.GONE);
@@ -331,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                 infoYoke.setVisibility(View.VISIBLE);
                 yokeNumQues.setVisibility(View.VISIBLE);
                 numYoke.setVisibility(View.VISIBLE);
-                member.set??();
+                //member.set??();
 
             }
         });
@@ -340,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                wep.setAmmo();
+                //wep.setAmmo();
             }
         });
 
@@ -348,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -356,7 +381,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -364,7 +389,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
