@@ -6,13 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="912dp"
+        android:layout_height="573dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/istockphoto_1125945611_612x612"
+        tools:layout_editor_absoluteY="-150dp" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oregon Trail MVP/MP2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coders Of The Lost Ark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="176dp"
+        android:layout_height="94dp"
+        android:text="Adventure Time"
+        android:textAlignment="center"
+        android:textColor="#AA4141"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="226dp"
+        android:layout_height="111dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FFFFFF"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <ImageView
+        android:id="@+id/OXEN"
+        android:layout_width="257dp"
+        android:layout_height="154dp"
+        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <ImageView
+        android:id="@+id/wagon"
+        android:layout_width="257dp"
+        android:layout_height="225dp"
+        app:srcCompat="@drawable/covered_wagon_american_frontier_clip_art_others_8076e205f20d3ec50fef044f5f274740"
+        tools:layout_editor_absoluteX="428dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <ImageView
+        android:id="@+id/OXEN2"
+        android:layout_width="249dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/cattle_bull_clip_art_christmas_cliparts_oxen_2458931795fe74796371da23c684a8c8"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <ImageView
+        android:id="@+id/OXEN3"
+        android:layout_width="221dp"
+        android:layout_height="105dp"
+        app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="302dp" />
+
+    <ImageView
+        android:id="@+id/OXEN4"
+        android:layout_width="150dp"
+        android:layout_height="66dp"
+        app:srcCompat="@drawable/pngwing_com"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="329dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
