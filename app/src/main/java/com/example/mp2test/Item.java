@@ -33,6 +33,7 @@ public abstract class Item {
      * @param value - The amount of the Item is worth in terms of money
      * @param name - The name of the item. DOES NOT DETERMINE THE ITEMS TYPE
      * @param randomizeValue - Determines whether this item has a randomized value. If true, it will add a random value from 0-50 THEN subtract a random value from 0-50. Otherwise, it will  be the value given.
+     * @param indestructible - Determines whether the item is breakable or not
      */
     Item(double value, String name, boolean randomizeValue, boolean indestructible) {
         if (randomizeValue) {
