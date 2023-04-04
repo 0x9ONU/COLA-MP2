@@ -11,10 +11,11 @@
         android:layout_width="912dp"
         android:layout_height="573dp"
 
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/istockphoto_1125945611_612x612"
-        tools:layout_editor_absoluteY="-150dp" />
+        tools:layout_editor_absoluteY="-149dp" />
 
     <TextView
         android:id="@+id/title2"
@@ -22,7 +23,9 @@
         android:layout_height="wrap_content"
         android:text="Oregon Trail MVP/MP2"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
         android:textSize="34sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,29 +37,22 @@
         android:layout_height="wrap_content"
         android:text="Coders Of The Lost Ark"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
         android:textSize="16sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="50dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="176dp"
-        android:layout_height="94dp"
-        android:text="Adventure Time"
-        android:textAlignment="center"
-        android:textColor="#AA4141"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp" />
 
     <Button
         android:id="@+id/startButton"
         android:layout_width="226dp"
         android:layout_height="111dp"
-        android:text="Button"
+        android:background="#00FFFFFF"
+        android:text="Adventure Time"
+        android:textAlignment="center"
+        android:textColor="#7A3838"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +63,7 @@
         android:id="@+id/OXEN"
         android:layout_width="257dp"
         android:layout_height="154dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="240dp" />
@@ -75,6 +72,7 @@
         android:id="@+id/wagon"
         android:layout_width="257dp"
         android:layout_height="225dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/covered_wagon_american_frontier_clip_art_others_8076e205f20d3ec50fef044f5f274740"
         tools:layout_editor_absoluteX="428dp"
         tools:layout_editor_absoluteY="170dp" />
@@ -83,6 +81,7 @@
         android:id="@+id/OXEN2"
         android:layout_width="249dp"
         android:layout_height="109dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/cattle_bull_clip_art_christmas_cliparts_oxen_2458931795fe74796371da23c684a8c8"
         tools:layout_editor_absoluteX="254dp"
         tools:layout_editor_absoluteY="258dp" />
@@ -91,6 +90,7 @@
         android:id="@+id/OXEN3"
         android:layout_width="221dp"
         android:layout_height="105dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs"
         tools:layout_editor_absoluteX="269dp"
         tools:layout_editor_absoluteY="302dp" />
@@ -99,8 +99,146 @@
         android:id="@+id/OXEN4"
         android:layout_width="150dp"
         android:layout_height="66dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/pngwing_com"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="329dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hattie Campbell"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="From: Booneville, Missouri Age: 13"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="777dp"
+        android:layout_height="311dp"
+        android:text="Hattie is one of three surviving (out of seven) children of Charles and Augusta Campbell, who reside on a farm just outside a small town on the Missouri River. Charles has become increasingly unhappy with the growing number of people settling in Missouri crowding up farmland, the high taxes, and the bouts of swamp fever that kills folks every summer, including four of his daughters last year in 1846. Back in January, her father suddenly announced that he’s arranged passage for taking the riverboat up to Independence, from where they would travel to Oregon. Hattie’s father talks about a place for the family to start a new life, with mild winters and all the land they could ever want for, free for the taking as part of America’s “Manifest Destiny” in spreading democracy all the way to the Pacific. However, Hattie’s mother tells her that they’d be heading into the wilderness on a frightfully long journey with no turning back, leaving behind all of their dear friends in Booneville.In March her father sold the house, chickens, three horses, and a cow to a neighbor for $65, which when added to the $800 they have saved and the riverboat passage already arranged, is enough to get them to Oregon. Her mother is collecting packets of seeds from friends and gathering family keepsakes, such as her wedding dress, her parent’s Bible and washbasin, and a favorite doll and dress of each of her departed children. Hattie is allowed to take along a small satchel, with space for a folded dress, leggings, her hairbrush, two petticoats, etc. Her journal – given as a birthday present by her Aunt Jane as a place to record her private thoughts – fits in the satchel’s wide pocket along with three pencils. Hattie is encouraged by her aunt to record things daily – both the good and the bad – because this will be the adventure of her lifetime. "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/Nextbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#00FFFFFF"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="791dp" />
+
+    <TextView
+        android:id="@+id/Month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Month"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/MarchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="March"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <Button
+        android:id="@+id/AprilButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="April"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <Button
+        android:id="@+id/MayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="May"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <Button
+        android:id="@+id/JuneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="June"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/Julybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="July"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/MonthMore"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:text="More Information"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <Button
+        android:id="@+id/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/ShopNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="796dp"
+        tools:layout_editor_absoluteY="362dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
