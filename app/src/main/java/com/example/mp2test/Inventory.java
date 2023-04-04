@@ -2,7 +2,7 @@
  * File Name: Inventory.java
  * Author: Ethan Berei
  * Date: 4/1/23
- * Description: The class responsible for holding and keeping all objects within
+ * Description: The class responsible for holding and keeping all Item objects within for every Member.
  */
 
 package com.example.mp2test;
