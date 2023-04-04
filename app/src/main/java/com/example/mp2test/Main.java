@@ -1,8 +1,6 @@
 package com.example.mp2test;
 
 import java.util.*;
-import java.awt.*;
-import java.awt.event.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,17 +20,74 @@ public class Main {
         //the player starts out with 10 pounds of food, worth $1 per pound
         Food rations = new Food("rations", 1, false, false, 0, 10);
         playerInventory.addItem(rations);
+        //the player starts with $100
+        player.incrementMoney(100);
+        //creates the shops and shopkeepers along the trails
+        Member shopKeeper1 = new Member();
+        shopKeeper1.incrementMoney(25);
+        Inventory shop1Inventory = new Inventory();
+        Food shop1Food = new Food("Supplies", 2, true, false, 1, 100);
+        shop1Inventory.addItem(shop1Food);
+        Shop shop1 = new Shop(80, 60, "Still Close to Missouri Saloon", shop1Inventory, shopKeeper1);
+
+        //make shop2 stuff here
 
         //scanner for user input/responses
         Scanner in = new Scanner(System.in);
 
         //Section for the actual game code
         System.out.println("The Oregon Trail Game");
+        System.out.println("In memory of Hattie Campbell");
         System.out.println();
-        System.out.println("press any key to Start");
-        System.out.println(in.nextLine());
-        System.out.println("woah");
+        System.out.println("Press enter to Start");
 
+        //waits for user input then continues the game
+        in.nextLine();
+        System.out.println("You start your journey on the Oregon Trail on March 31, 1849 In Missouri.");
+        System.out.println("You bring 10 pounds of food and $100.");
+        System.out.println("Press enter to begin your journey");
+        in.nextLine();
+
+        /*Day 1*/
+
+        //sets day to day 1
+        date.IncrementCurrentDay();
+        date.IncrementdayCounter();
+
+        System.out.println("Day 1");
+        //moves the player to their day1 location
+        mp.MovePlayer(60, 20);
+        //checks if the player is in the location of a shop or monument
+        if (mp.CheckMonument().equals("none") && !mp.CheckShop(shop1)) {
+            //displays a message if there's no shop or monument at the player's location
+            System.out.println("This is a very uneventful day");
+        }
+        else if (mp.CheckShop(shop1)) {
+            //Allows the player to interact with the shop if their is a shop at the player's location
+            System.out.print("You manage to find the " + shop1.getName() + "");
+            System.out.println("Would you like to Enter?");
+            System.out.print("Press y to enter, or any other letter to ignore and pass by the shop. Then hit enter.");
+            String decision = in.nextLine();
+
+            if (decision.equals("y") || decision.equals("Y")) {
+                //enters the shop if the player types "y"
+                System.out.println("You enter the " + shop1.getName() + ".");
+                System.out.println("You have the options to buy...");
+                for (int i = 0; i < shop1Inventory.getItemsLength(); i++) {
+                    System.out.println(i + ": ")
+                }
+                System.out.println("To buy an item, put the number in front of said item and click enter, otherwise press any letter and enter to leave the shop.");
+
+            }
+            else {
+                System.out.println("You leave the shop.");
+            }
+        }
+        else {
+            //tells the player if they're passing by a monument
+            System.out.println("You pass by the " + mp.CheckMonument() + " today.");
+        }
+        System.out.println(""); //fill this print statement in a bit
 
     }
 }

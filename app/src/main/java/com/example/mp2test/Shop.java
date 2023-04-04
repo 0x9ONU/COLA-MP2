@@ -30,7 +30,7 @@ public class Shop {
      * @param x to hold an inserted x value
      * @param y to hold an inserted y value
      * @param name to hold an inserted shop name
-     * @param shopInventory to hold an inserted inventory (may need to be a creeate inventory method)
+     * @param shopInventory to hold an inserted inventory (may need to be a create inventory method)
      *
      */
     Shop(int x, int y, String name, Inventory shopInventory) {
