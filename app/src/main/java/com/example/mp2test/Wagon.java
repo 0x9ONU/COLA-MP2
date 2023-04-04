@@ -1,3 +1,10 @@
+/**
+ * File Name: Wagon.java
+ * Author: Ashton Beresford
+ * Date: 4/2/23
+ * Description: The class that controls the wagon, which also keeps track of the game score and the speed at which the player is moving
+ */
+
 package com.example.mp2test;
 
 public class Wagon {
@@ -7,10 +14,15 @@ public class Wagon {
     private int score;
 
     //constructors
-    public Wagon() {
+
+    /**
+     * default (and only) constructor for wagon, sets the speed to 1 and score to 0 by default
+     */
+    public Wagon(Member memberIdentifier) {
         //setting speed automatically to 1, probably change automatic value later
         this.speed = 1;
         this.score = 0;
+        this.inventory = new Inventory(100, memberIdentifier);
     }
 
     //getters and setters

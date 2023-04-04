@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Date date = new Date();
     Member member = new Member();
     RandomEventGenerator reg = new RandomEventGenerator();
-    Wagon wag = new Wagon();
+    Wagon wag = new Wagon(member);
     Weapon wep = new Weapon();
 
 
