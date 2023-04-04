@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -67,7 +68,17 @@ public class MainActivity extends AppCompatActivity {
         final ImageView sandwich = findViewById(R.id.Food);
         final ImageView ammo = findViewById(R.id.Ammo);
         final ImageView spares = findViewById(R.id.Spare);
+        final TextView balance = findViewById(R.id.Balance);
+        final TextView balanceAmount = findViewById(R.id.BalanceAmount);
+        final TextView infoYoke = findViewById(R.id.YokeInfo);
+        final TextView yokeNumQues = findViewById(R.id.NumYoke);
+        final EditText numYoke = findViewById(R.id.NumDesiredYokes);
 
+        balance.setVisibility(View.GONE);
+        balanceAmount.setVisibility(View.GONE);
+        infoYoke.setVisibility(View.GONE);
+        yokeNumQues.setVisibility(View.GONE);
+        numYoke.setVisibility(View.GONE);
         month.setVisibility(View.GONE);
         shopNext.setVisibility(View.GONE);
         march.setVisibility(View.GONE);
@@ -153,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
                 shirt.setVisibility(View.VISIBLE);
                 ammo.setVisibility(View.VISIBLE);
                 spares.setVisibility(View.VISIBLE);
+                balance.setVisibility(View.VISIBLE);
+                balanceAmount.setVisibility(View.VISIBLE);
 
             }
         });
@@ -184,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
                 shirt.setVisibility(View.VISIBLE);
                 ammo.setVisibility(View.VISIBLE);
                 spares.setVisibility(View.VISIBLE);
+                balance.setVisibility(View.VISIBLE);
+                balanceAmount.setVisibility(View.VISIBLE);
             }
         });
 
@@ -214,6 +229,8 @@ public class MainActivity extends AppCompatActivity {
                 shirt.setVisibility(View.VISIBLE);
                 ammo.setVisibility(View.VISIBLE);
                 spares.setVisibility(View.VISIBLE);
+                balance.setVisibility(View.VISIBLE);
+                balanceAmount.setVisibility(View.VISIBLE);
             }
         });
 
@@ -244,6 +261,8 @@ public class MainActivity extends AppCompatActivity {
                 shirt.setVisibility(View.VISIBLE);
                 ammo.setVisibility(View.VISIBLE);
                 spares.setVisibility(View.VISIBLE);
+                balance.setVisibility(View.VISIBLE);
+                balanceAmount.setVisibility(View.VISIBLE);
             }
         });
 
@@ -274,6 +293,8 @@ public class MainActivity extends AppCompatActivity {
                 shirt.setVisibility(View.VISIBLE);
                 ammo.setVisibility(View.VISIBLE);
                 spares.setVisibility(View.VISIBLE);
+                balance.setVisibility(View.VISIBLE);
+                balanceAmount.setVisibility(View.VISIBLE);
             }
         });
 
@@ -305,30 +326,44 @@ public class MainActivity extends AppCompatActivity {
 
         yoke.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                balance.setVisibility(View.GONE);
+                balanceAmount.setVisibility(View.GONE);
+                infoYoke.setVisibility(View.VISIBLE);
+                yokeNumQues.setVisibility(View.VISIBLE);
+                numYoke.setVisibility(View.VISIBLE);
                 member.set??();
+
             }
         });
 
         ammunition.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                balance.setVisibility(View.GONE);
+                balanceAmount.setVisibility(View.GONE);
                 wep.setAmmo();
             }
         });
 
         clothes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                balance.setVisibility(View.GONE);
+                balanceAmount.setVisibility(View.GONE);
                 itm.set??();
             }
         });
 
         food.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                balance.setVisibility(View.GONE);
+                balanceAmount.setVisibility(View.GONE);
                 itm.set??();
             }
         });
 
         parts.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                balance.setVisibility(View.GONE);
+                balanceAmount.setVisibility(View.GONE);
                 itm.set??();
             }
         });

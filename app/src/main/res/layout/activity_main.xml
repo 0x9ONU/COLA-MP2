@@ -395,17 +395,17 @@
         android:layout_height="wrap_content"
         android:text="Number of desired Yokes to purchase:"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="118dp" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="121dp" />
 
     <EditText
         android:id="@+id/NumDesiredYokes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="503dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="0"
-        tools:layout_editor_absoluteX="558dp"
-        tools:layout_editor_absoluteY="108dp" />
+        android:text="Enter the number of yokes you would like to purchase"
+        tools:layout_editor_absoluteX="391dp"
+        tools:layout_editor_absoluteY="117dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
