@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Nextbutton" type="id" />
+    <item name="textView4" type="id" />
+    <item name="textView3" type="id" />
+    <item name="textView2" type="id" />
+    <item name="Month" type="id" />
+    <item name="ShopNext" type="id" />
+    <item name="MarchButton" type="id" />
+    <item name="AprilButton" type="id" />
+    <item name="MayButton" type="id" />
+    <item name="JuneButton" type="id" />
+    <item name="Julybutton" type="id" />
+    <item name="MonthMore" type="id" />
+    <item name="BackButton" type="id" />
+    <item name="MoreInfoText" type="id" />
+    <item name="OxenButton" type="id" />
+    <item name="AmmunitionButton" type="id" />
+    <item name="ClothesButton" type="id" />
+    <item name="FoodButton" type="id" />
+    <item name="SparePartsButton" type="id" />
+    <item name="Shop" type="id" />
+    <item name="OxenYoke" type="id" />
+    <item name="Clothes" type="id" />
+    <item name="Food" type="id" />
+    <item name="Ammo" type="id" />
+    <item name="Spare" type="id" />
+    <item name="Balance" type="id" />
+    <item name="BalanceAmount" type="id" />
+    <item name="YokeInfo" type="id" />
+    <item name="NumYoke" type="id" />
+    <item name="NumDesiredYokes" type="id" />
+</resources>
