@@ -1,3 +1,10 @@
+/**
+ * File Name: Weapon.java
+ * Author: Ethan Berei
+ * Date: 3/31/23
+ * Description: The class responsible for holding weapons and combat within COLA's Oregon Trail Game
+ */
+
 package com.example.mp2test;
 
 import java.util.Random;
@@ -182,7 +189,6 @@ public class Weapon extends Item {
 
     @Override
     public double sellItem() {
-        super.setUsed(true);
         return super.getValue() + (bulletValue * ammo);
     }
 

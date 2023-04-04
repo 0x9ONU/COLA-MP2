@@ -1,3 +1,10 @@
+/**
+ * File Name: Item.java
+ * Author: Ethan Berei
+ * Date: 3/30/23
+ * Description: The top of the hierarchy for all the items for COLA's Oregon Trail Game. Has abstract methods that must be implemented in its subclasses
+ */
+
 package com.example.mp2test;
 import java.util.Random;
 
@@ -30,7 +37,7 @@ public abstract class Item {
     Item(double value, String name, boolean randomizeValue, boolean indestructible) {
         if (randomizeValue) {
             Random randomValue = new Random(System.currentTimeMillis());
-            this.value = value + (double)randomValue.nextInt(50) - (double)randomValue.nextInt(50);
+            this.value = value + (double)randomValue.nextInt(5) - (double)randomValue.nextInt(5);
         }
         else {
             this.value = value;
@@ -100,8 +107,10 @@ public abstract class Item {
     public void setInventoryIdentifier(String inventoryIdentifier) {this.inventoryIdentifier = inventoryIdentifier; }
     public String getInventoryIdentifer() {return inventoryIdentifier; }
 
+    public double sellItem() {
+        return value;
+    }
     //Abstract Methods
     public abstract double useItem(Item itemTarget, Member memberTarget);
-    public abstract double sellItem();
 
 }
