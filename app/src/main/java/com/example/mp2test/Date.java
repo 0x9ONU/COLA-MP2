@@ -18,6 +18,7 @@ public class Date {
         DayCounter = 0;
     }
 
+
     //getters
 
     public int getCurrentDay() {

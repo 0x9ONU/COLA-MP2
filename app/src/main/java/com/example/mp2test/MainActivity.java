@@ -56,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
         final Button information = findViewById(R.id.MonthMore);
         final Button back = findViewById(R.id.BackButton);
         final TextView moreInfo = findViewById(R.id.MoreInfoText);
+        final Button yoke = findViewById(R.id.OxenButton);
+        final Button ammunition = findViewById(R.id.AmmunitionButton);
+        final Button clothes = findViewById(R.id.ClothesButton);
+        final Button food = findViewById(R.id.FoodButton);
+        final Button parts = findViewById(R.id.SparePartsButton);
+        final TextView shop = findViewById(R.id.Shop);
+        final ImageView oxenYoke = findViewById(R.id.OxenYoke);
+        final ImageView shirt = findViewById(R.id.Clothes);
+        final ImageView sandwhich = findViewById(R.id.Food);
+        final ImageView ammo = findViewById(R.id.Ammo);
+        final ImageView spares = findViewById(R.id.Spare);
 
         month.setVisibility(View.GONE);
         shopNext.setVisibility(View.GONE);
@@ -70,7 +81,18 @@ public class MainActivity extends AppCompatActivity {
         age.setVisibility(View.GONE);
         name.setVisibility(View.GONE);
         back.setVisibility(View.GONE);
-        moreInfo.setVisibility((View.GONE));
+        moreInfo.setVisibility(View.GONE);
+        sandwhich.setVisibility(View.GONE);
+        yoke.setVisibility(View.GONE);
+        ammunition.setVisibility(View.GONE);
+        clothes.setVisibility(View.GONE);
+        food.setVisibility(View.GONE);
+        parts.setVisibility(View.GONE);
+        shop.setVisibility(View.GONE);
+        oxenYoke.setVisibility(View.GONE);
+        shirt.setVisibility(View.GONE);
+        ammo.setVisibility(View.GONE);
+        spares.setVisibility(View.GONE);
 
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -120,6 +142,17 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+                sandwhich.setVisibility(View.VISIBLE);
+                yoke.setVisibility(View.VISIBLE);
+                ammunition.setVisibility(View.VISIBLE);
+                clothes.setVisibility(View.VISIBLE);
+                food.setVisibility(View.VISIBLE);
+                parts.setVisibility(View.VISIBLE);
+                shop.setVisibility(View.VISIBLE);
+                oxenYoke.setVisibility(View.VISIBLE);
+                shirt.setVisibility(View.VISIBLE);
+                ammo.setVisibility(View.VISIBLE);
+                spares.setVisibility(View.VISIBLE);
 
             }
         });
@@ -140,6 +173,17 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+                sandwhich.setVisibility(View.VISIBLE);
+                yoke.setVisibility(View.VISIBLE);
+                ammunition.setVisibility(View.VISIBLE);
+                clothes.setVisibility(View.VISIBLE);
+                food.setVisibility(View.VISIBLE);
+                parts.setVisibility(View.VISIBLE);
+                shop.setVisibility(View.VISIBLE);
+                oxenYoke.setVisibility(View.VISIBLE);
+                shirt.setVisibility(View.VISIBLE);
+                ammo.setVisibility(View.VISIBLE);
+                spares.setVisibility(View.VISIBLE);
             }
         });
 
@@ -159,6 +203,17 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+                sandwhich.setVisibility(View.VISIBLE);
+                yoke.setVisibility(View.VISIBLE);
+                ammunition.setVisibility(View.VISIBLE);
+                clothes.setVisibility(View.VISIBLE);
+                food.setVisibility(View.VISIBLE);
+                parts.setVisibility(View.VISIBLE);
+                shop.setVisibility(View.VISIBLE);
+                oxenYoke.setVisibility(View.VISIBLE);
+                shirt.setVisibility(View.VISIBLE);
+                ammo.setVisibility(View.VISIBLE);
+                spares.setVisibility(View.VISIBLE);
             }
         });
 
@@ -178,6 +233,17 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+                sandwhich.setVisibility(View.VISIBLE);
+                yoke.setVisibility(View.VISIBLE);
+                ammunition.setVisibility(View.VISIBLE);
+                clothes.setVisibility(View.VISIBLE);
+                food.setVisibility(View.VISIBLE);
+                parts.setVisibility(View.VISIBLE);
+                shop.setVisibility(View.VISIBLE);
+                oxenYoke.setVisibility(View.VISIBLE);
+                shirt.setVisibility(View.VISIBLE);
+                ammo.setVisibility(View.VISIBLE);
+                spares.setVisibility(View.VISIBLE);
             }
         });
 
@@ -197,6 +263,17 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+                sandwhich.setVisibility(View.VISIBLE);
+                yoke.setVisibility(View.VISIBLE);
+                ammunition.setVisibility(View.VISIBLE);
+                clothes.setVisibility(View.VISIBLE);
+                food.setVisibility(View.VISIBLE);
+                parts.setVisibility(View.VISIBLE);
+                shop.setVisibility(View.VISIBLE);
+                oxenYoke.setVisibility(View.VISIBLE);
+                shirt.setVisibility(View.VISIBLE);
+                ammo.setVisibility(View.VISIBLE);
+                spares.setVisibility(View.VISIBLE);
             }
         });
 
@@ -225,6 +302,7 @@ public class MainActivity extends AppCompatActivity {
                 information.setVisibility(View.VISIBLE);
             }
         });
+
 
 
 

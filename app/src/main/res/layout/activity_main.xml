@@ -162,6 +162,7 @@
         android:text="Month"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -230,6 +231,112 @@
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="362dp" />
 
+    <TextView
+        android:id="@+id/MoreInfoText"
+        android:layout_width="757dp"
+        android:layout_height="283dp"
+        android:text="More Information"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/Shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Shop"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/OxenYoke"
+        android:layout_width="144dp"
+        android:layout_height="88dp"
+        app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Button
+        android:id="@+id/OxenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oxen"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <ImageView
+        android:id="@+id/Clothes"
+        android:layout_width="109dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/pngitem_159722"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Button
+        android:id="@+id/ClothesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clothes"
+        tools:layout_editor_absoluteX="690dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <ImageView
+        android:id="@+id/Food"
+        android:layout_width="132dp"
+        android:layout_height="124dp"
+        app:srcCompat="@drawable/daco_3644451"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/FoodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <ImageView
+        android:id="@+id/Spare"
+        android:layout_width="153dp"
+        android:layout_height="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621"
+        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63"
+        tools:layout_editor_absoluteX="386dp" />
+
+    <ImageView
+        android:id="@+id/Ammo"
+        android:layout_width="211dp"
+        android:layout_height="114dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/SparePartsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spare Parts"
+        tools:layout_editor_absoluteX="398dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/AmmunitionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ammunition"
+        tools:layout_editor_absoluteX="698dp"
+        tools:layout_editor_absoluteY="281dp" />
+
     <Button
         android:id="@+id/ShopNext"
         android:layout_width="wrap_content"
@@ -237,18 +344,8 @@
         android:background="#00FFFFFF"
         android:text="Next"
         android:textColor="#FFFFFF"
-        android:visibility="invisible"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="796dp"
         tools:layout_editor_absoluteY="362dp" />
-
-    <TextView
-        android:id="@+id/MoreInfoText"
-        android:layout_width="757dp"
-        android:layout_height="283dp"
-        android:text="More Information"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="75dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
