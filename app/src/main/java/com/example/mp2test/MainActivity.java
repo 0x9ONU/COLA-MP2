@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView shop = findViewById(R.id.Shop);
         final ImageView oxenYoke = findViewById(R.id.OxenYoke);
         final ImageView shirt = findViewById(R.id.Clothes);
-        final ImageView sandwhich = findViewById(R.id.Food);
+        final ImageView sandwich = findViewById(R.id.Food);
         final ImageView ammo = findViewById(R.id.Ammo);
         final ImageView spares = findViewById(R.id.Spare);
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         name.setVisibility(View.GONE);
         back.setVisibility(View.GONE);
         moreInfo.setVisibility(View.GONE);
-        sandwhich.setVisibility(View.GONE);
+        sandwich.setVisibility(View.GONE);
         yoke.setVisibility(View.GONE);
         ammunition.setVisibility(View.GONE);
         clothes.setVisibility(View.GONE);
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                sandwhich.setVisibility(View.VISIBLE);
+                sandwich.setVisibility(View.VISIBLE);
                 yoke.setVisibility(View.VISIBLE);
                 ammunition.setVisibility(View.VISIBLE);
                 clothes.setVisibility(View.VISIBLE);
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                sandwhich.setVisibility(View.VISIBLE);
+                sandwich.setVisibility(View.VISIBLE);
                 yoke.setVisibility(View.VISIBLE);
                 ammunition.setVisibility(View.VISIBLE);
                 clothes.setVisibility(View.VISIBLE);
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                sandwhich.setVisibility(View.VISIBLE);
+                sandwich.setVisibility(View.VISIBLE);
                 yoke.setVisibility(View.VISIBLE);
                 ammunition.setVisibility(View.VISIBLE);
                 clothes.setVisibility(View.VISIBLE);
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                sandwhich.setVisibility(View.VISIBLE);
+                sandwich.setVisibility(View.VISIBLE);
                 yoke.setVisibility(View.VISIBLE);
                 ammunition.setVisibility(View.VISIBLE);
                 clothes.setVisibility(View.VISIBLE);
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                sandwhich.setVisibility(View.VISIBLE);
+                sandwich.setVisibility(View.VISIBLE);
                 yoke.setVisibility(View.VISIBLE);
                 ammunition.setVisibility(View.VISIBLE);
                 clothes.setVisibility(View.VISIBLE);
@@ -300,6 +300,36 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.VISIBLE);
                 july.setVisibility(View.VISIBLE);
                 information.setVisibility(View.VISIBLE);
+            }
+        });
+
+        yoke.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                member.set??();
+            }
+        });
+
+        ammunition.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                wep.setAmmo();
+            }
+        });
+
+        clothes.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                itm.set??();
+            }
+        });
+
+        food.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                itm.set??();
+            }
+        });
+
+        parts.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                itm.set??();
             }
         });
 

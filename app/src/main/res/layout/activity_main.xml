@@ -257,6 +257,7 @@
         android:id="@+id/OxenYoke"
         android:layout_width="144dp"
         android:layout_height="88dp"
+        android:visibility="visible"
         app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="43dp" />
@@ -266,6 +267,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Oxen"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="124dp"
         tools:layout_editor_absoluteY="123dp" />
 
@@ -274,6 +276,7 @@
         android:layout_width="109dp"
         android:layout_height="83dp"
         android:layout_marginEnd="104dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/pngitem_159722"
         tools:layout_editor_absoluteY="43dp" />
@@ -283,6 +286,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clothes"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="690dp"
         tools:layout_editor_absoluteY="126dp" />
 
@@ -290,6 +294,7 @@
         android:id="@+id/Food"
         android:layout_width="132dp"
         android:layout_height="124dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/daco_3644451"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="193dp" />
@@ -299,6 +304,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Food"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="128dp"
         tools:layout_editor_absoluteY="303dp" />
 
@@ -306,6 +312,7 @@
         android:id="@+id/Spare"
         android:layout_width="153dp"
         android:layout_height="136dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.621"
@@ -317,6 +324,7 @@
         android:layout_width="211dp"
         android:layout_height="114dp"
         android:layout_marginEnd="60dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
         tools:layout_editor_absoluteY="193dp" />
@@ -326,6 +334,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spare Parts"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="398dp"
         tools:layout_editor_absoluteY="303dp" />
 
@@ -334,6 +343,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ammunition"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="698dp"
         tools:layout_editor_absoluteY="281dp" />
 
@@ -344,8 +354,58 @@
         android:background="#00FFFFFF"
         android:text="Next"
         android:textColor="#FFFFFF"
-        android:visibility="visible"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="796dp"
         tools:layout_editor_absoluteY="362dp" />
+
+    <TextView
+        android:id="@+id/Balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance:"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <TextView
+        android:id="@+id/BalanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$800"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="470dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <TextView
+        android:id="@+id/YokeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There are 2 oxen ina yoke. It is recomended to have at least 3 yokes."
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/NumYoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of desired Yokes to purchase:"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <EditText
+        android:id="@+id/NumDesiredYokes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        tools:layout_editor_absoluteX="558dp"
+        tools:layout_editor_absoluteY="108dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
