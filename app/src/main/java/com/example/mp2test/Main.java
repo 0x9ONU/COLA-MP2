@@ -34,7 +34,7 @@ public class Main {
         Inventory shop1Inventory = new Inventory();
         Food shop1Food = new Food("Supplies", 2, true, false, 1, 100);
         shop1Inventory.addItem(shop1Food);
-        Shop shop1 = new Shop(80, 60, "Still-Close-to-Missouri-Saloon", shop1Inventory, shopKeeper1);
+        Shop shop1 = new Shop(60, 20, "Still-Close-to-Missouri-Saloon", shop1Inventory, shopKeeper1);
         Item clothes1 = new Item(10, "Basic Clothes", true, false) {
             /**
              * Temporary Clothes Class. WIll implement properly later
@@ -84,7 +84,7 @@ public class Main {
         Inventory shop2Inventory = new Inventory();
         Food shop2Food = new Food("Supplies", 3, true, false, 1, 120);
         shop2Inventory.addItem(shop2Food);
-        Shop shop2 = new Shop(80, 60, "Almost to Nebraska Saloon", shop2Inventory, shopKeeper2);
+        Shop shop2 = new Shop(100, 40, "Almost to Nebraska Saloon", shop2Inventory, shopKeeper2);
         Weapon pan = new Weapon(5000, "Pan", false, 1, 100, 0);
         shop2Inventory.addItem(pan);
 
@@ -111,9 +111,9 @@ public class Main {
             date.IncrementCurrentDay();
             date.IncrementdayCounter();
 
-            System.out.println("Day 1 " + day);
+            System.out.println("Day " + day);
             if (day != 0 ) {
-                mp.MovePlayer(60, 20);
+                mp.MovePlayer(30, 10);
             }
             Random temp = new Random();
             System.out.println("Rolling New Event...");
@@ -148,7 +148,19 @@ public class Main {
                     System.out.println("You barged into Native Americans on accident, and they do not seem too kind to you...");
                     System.out.println("Choose your weapon: ");
                     System.out.println(playerInventory.listInventory());
-
+                    int choice = in.nextInt();
+                    Weapon runAway = (Weapon) playerInventory.getItem(choice);
+                        try {
+                            runAway.reload();
+                        }
+                        catch (Exception e) {
+                            System.out.println("That is not a weapon... You take 10 damage");
+                            player.damage(10);
+                        }
+                        finally {
+                            System.out.println("Using a warning shot, you barely make it away.");
+                            runAway.setBulletCount(runAway.getBulletCount() - 1);
+                        }
                 }
                 else if (event.equals("thief")) {
 
@@ -209,7 +221,7 @@ public class Main {
 
             reg.IncrementProbabilityMultiplier();
             //checks if the player is in the location of a shop or monument
-            if (mp.CheckMonument().equals("none") && !mp.CheckShop(shop1)) {
+            if (mp.CheckMonument().equals("none") && !mp.CheckShop(shop1) && !mp.CheckShop(shop2)) {
                 //displays a message if there's no shop or monument at the player's location
                 System.out.println("There is not much to see in plain sight");
             }
@@ -240,11 +252,40 @@ public class Main {
                     System.out.println("You leave the shop.");
                 }
             }
+            else if (mp.CheckShop(shop2)) {
+                //Allows the player to interact with the shop if their is a shop at the player's location
+                System.out.print("You manage to find the " + shop2.getName() + ".");
+                System.out.println(" Would you like to Enter?");
+                System.out.print("Press y to enter, or any other letter to ignore and pass by the shop. Then hit enter.");
+                String decision = in.nextLine();
+
+                if (decision.equals("y") || decision.equals("Y")) {
+                    //enters the shop if the player types "y"
+                    System.out.println("You enter the " + shop2.getName() + ".");
+                    System.out.println("You have the options to buy...");
+                    for (int i = 0; i < shop2Inventory.getItemsLength(); i++) {
+                        System.out.println(i + ": " + shop1Inventory.getItem(i).getName());
+                    }
+                    System.out.println("To buy an item, put the number in front of said item and click enter, otherwise press any letter and enter to leave the shop.");
+
+                    int shopItem;
+                    //buys the item at the provided index or leaves the shop
+                    shopItem = in.nextInt();
+                    shop2.buyItem(player, shopItem);
+                    System.out.println("You bought this item.");
+
+                } else {
+                    System.out.println("You leave the shop.");
+                }
+            }
             else {
                 //tells the player if they're passing by a monument
                 System.out.println("You pass by the " + mp.CheckMonument() + " today.");
             }
-            System.out.println(""); //fill this print statement in a bit
+
+            //End of Day Summary
+            System.out.println("Press Enter to Continue"); //fill this print statement in a bit
+            in.nextLine();
 
         }
 

@@ -11,8 +11,8 @@ public class Map {
     int playerLocationY;                                                                            //will hold player's Y cord
     int wagonLocationX;                                                                             //will hold wagon's X cord
     int wagonLocationY;                                                                             //will hold wagon's Y cord
-    final int[] monumentLocationX = {60,100,120};                                                   //will hold all monument X cords (need hardcoded)
-    final int[] monumentLocationY = {20,40,80};                                                     //will hold all monument Y cords (need hardcoded)
+    final int[] monumentLocationX = {30,60,80};                                                   //will hold all monument X cords (need hardcoded)
+    final int[] monumentLocationY = {10,20,30};                                                     //will hold all monument Y cords (need hardcoded)
     final String[] monumentNames = {"Chimney Rock", "River", "Homestead"};                          //holds all monument names
     /**
      * Basic constructor for Map
@@ -146,7 +146,7 @@ public class Map {
      * @return true only if the player is at a shop
      */
     public boolean CheckShop(Shop Shopname) {
-        if (Shopname.getX() == playerLocationX && Shopname.getX() == playerLocationY ) {            // checks if the player is at the right x and y coordinates
+        if (Shopname.getX() == playerLocationX && Shopname.getY() == playerLocationY ) {            // checks if the player is at the right x and y coordinates
             return true;
         } else {
             return false;
