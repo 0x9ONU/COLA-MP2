@@ -1,3 +1,10 @@
+/**
+ * File Name: Shop.java
+ * Author: Ethan Berei
+ * Date: 4/2/23
+ * Description: The class responsible for buying and selling items with the player.
+ */
+
 package com.example.mp2test;
 
 public class Shop {
