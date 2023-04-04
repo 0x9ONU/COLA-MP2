@@ -1,3 +1,9 @@
+/**
+ * File Name: RandomEventGenerator.java
+ * Author: Aiden Tallet
+ * Date: 3/31/23
+ * Description: The class responsible for allowing random events to happen
+ */
 package com.example.mp2test;
 
 import java.lang.Math;
