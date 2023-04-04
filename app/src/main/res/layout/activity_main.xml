@@ -257,7 +257,7 @@
         android:id="@+id/OxenYoke"
         android:layout_width="144dp"
         android:layout_height="88dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:srcCompat="@drawable/pngtreebrown_thick_ox_clip_art_6030463"
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="43dp" />
@@ -386,6 +386,7 @@
         android:layout_height="wrap_content"
         android:text="There are 2 oxen ina yoke. It is recomended to have at least 3 yokes."
         android:textSize="20sp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="217dp"
         tools:layout_editor_absoluteY="74dp" />
 
@@ -395,6 +396,7 @@
         android:layout_height="wrap_content"
         android:text="Number of desired Yokes to purchase:"
         android:textSize="20sp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="121dp" />
 
@@ -405,7 +407,160 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter the number of yokes you would like to purchase"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="391dp"
         tools:layout_editor_absoluteY="117dp" />
+
+    <ImageView
+        android:id="@+id/Shirt"
+        android:layout_width="182dp"
+        android:layout_height="175dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/pngitem_159722"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <TextView
+        android:id="@+id/ClothesInfo"
+        android:layout_width="515dp"
+        android:layout_height="55dp"
+        android:text="You'll need warm clothing in the mountains.  I recommend taking at least 2 sets of clothes per person."
+        android:textSize="16sp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/YokeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="795dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/AmountClothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many sets of clothes would you like to purchase:"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <EditText
+        android:id="@+id/ClothesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Value Here"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <Button
+        android:id="@+id/ShirtBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <ImageView
+        android:id="@+id/sandwich"
+        android:layout_width="157dp"
+        android:layout_height="141dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/daco_3644451"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <TextView
+        android:id="@+id/FoodInfo"
+        android:layout_width="641dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:text="I recommend you take at least 200 pounds of food for each person in your party.  You'll need flour, sugar, salt, pepper, bacon, coffee, and meat."
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <TextView
+        android:id="@+id/FoodAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many pounds of food would you like to buy at the current time?"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <EditText
+        android:id="@+id/FoodValue"
+        android:layout_width="262dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter amount of pounds here."
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <Button
+        android:id="@+id/FoodBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="208dp"
+        android:layout_height="131dp"
+        app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/AmmoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ammunition is sold in boxes of 20 bullets."
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TextView
+        android:id="@+id/AmmoAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many boxes would you like to purchase at the current time?"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <EditText
+        android:id="@+id/AmmoValue"
+        android:layout_width="310dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Number of Boxes Here"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <Button
+        android:id="@+id/AmmoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="358dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

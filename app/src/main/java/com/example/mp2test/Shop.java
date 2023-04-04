@@ -19,7 +19,7 @@ public class Shop {
     }
 
     /**
-     * constructor for shop without shopkeeper name
+     * constructor for shop with a default shopKeeper name
      * @param x to hold an inserted x value
      * @param y to hold an inserted y value
      * @param name to hold an inserted shop name
@@ -131,14 +131,14 @@ public class Shop {
      */
     public boolean sellItem(Member seller, int index) {
         try {
-            seller.inventory.getItem(index).getValue();
+            seller.inventory.getItem(index).sellItem();
         }
         catch (IndexOutOfBoundsException e) {
             //Splash text why that item does not exist
             return false;
         }
         finally {
-            double receivingMoney = seller.inventory.getItem(index).getValue();
+            double receivingMoney = seller.inventory.getItem(index).sellItem();
             seller.inventory.removeItem(index);
             seller.incrementMoney(receivingMoney);
             return true;
@@ -160,7 +160,7 @@ public class Shop {
             return false;
         }
         finally {
-            double payment = shopInventory.getItem(index).getValue();
+            double payment = shopInventory.getItem(index).sellItem();
             if (buyer.getMoney() < payment) {
                 //Splash text why you do not have enough money to buy that item
                 return false;
