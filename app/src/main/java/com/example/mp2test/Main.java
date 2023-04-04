@@ -16,7 +16,7 @@ public class Main {
         //creates the player's wagon
         Wagon wag = new Wagon(player);
         //creates a weapon
-        Weapon wep = new Weapon();
+        Weapon wep = new Weapon(100.0, "Basic Revolver", true, 0, 26, 0);
         //the player starts out with 10 pounds of food, worth $1 per pound
         Food rations = new Food("rations", 1, false, false, 0, 10);
         playerInventory.addItem(rations);
@@ -28,7 +28,37 @@ public class Main {
         Inventory shop1Inventory = new Inventory();
         Food shop1Food = new Food("Supplies", 2, true, false, 1, 100);
         shop1Inventory.addItem(shop1Food);
-        Shop shop1 = new Shop(80, 60, "Still Close to Missouri Saloon", shop1Inventory, shopKeeper1);
+        Shop shop1 = new Shop(80, 60, "Still-Close-to-Missouri-Saloon", shop1Inventory, shopKeeper1);
+        Item clothes1 = new Item(10, "Basic Clothes", true, false) {
+            /**
+             * Temporary Clothes Class. WIll implement properly later
+             * @param itemTarget Does not matter. May be null.
+             * @param memberTarget Does not matter. May be null.
+             * @return 0
+             */
+            @Override
+            public double useItem(Item itemTarget, Member memberTarget) {
+                System.out.println("The Clothes do not fit you unfortunately...");
+                return 0;
+            }
+        };
+        playerInventory.addItem(clothes1);
+        Item clothes2 = new Item(50, "Fancy Clothes", true, false) {
+
+            /**
+             Temporary Clothes Class. WIll implement properly later
+             * @param itemTarget Does not matter. May be null.
+             * @param memberTarget Does not matter. May be null.
+             * @return 0
+             */
+            @Override
+            public double useItem(Item itemTarget, Member memberTarget) {
+                System.out.println("The Clothes do not fit you unfortunately...");
+                return 0;
+            }
+        };
+
+        shop1.addItem(clothes2);
 
         //make shop2 stuff here
 
@@ -64,14 +94,14 @@ public class Main {
         }
         else if (mp.CheckShop(shop1)) {
             //Allows the player to interact with the shop if their is a shop at the player's location
-            System.out.print("You manage to find the " + shop1.getName() + "");
-            System.out.println("Would you like to Enter?");
+            System.out.print("You manage to find the " + shop1.getName() + ".");
+            System.out.println(" Would you like to Enter?");
             System.out.print("Press y to enter, or any other letter to ignore and pass by the shop. Then hit enter.");
             String decision = in.nextLine();
 
             if (decision.equals("y") || decision.equals("Y")) {
                 //enters the shop if the player types "y"
-                System.out.println("You enter the " + shop1.getName() + ".");
+                System.out.print("You enter the " + shop1.getName() + ".");
                 System.out.println("You have the options to buy...");
                 for (int i = 0; i < shop1Inventory.getItemsLength(); i++) {
                     System.out.println(i + ": " + shop1Inventory.getItem(i).getName());

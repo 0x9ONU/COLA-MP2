@@ -53,6 +53,7 @@ public class Shop {
     Shop(int x, int y, String name, Inventory shopInventory, Member shopKeeper) {
         this.x = x;
         this.y = y;
+        this.name = name;
         this.shopInventory = shopInventory;
         this.shopKeeper = shopKeeper;
         shopInventory.setMemberIdentifier(shopKeeper);
