@@ -46,7 +46,12 @@ public class Inventory {
         items.set(index, item);
     }
 
-    public void addItem() {
+    public boolean addItem() {
+        if (maxItemCount == getItemsLength())
+        {
+            //Splash text why inventory is full
+            return false;
+        }
         Item newItem = new Item() {
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
@@ -59,9 +64,15 @@ public class Inventory {
             }
         };
         items.add(newItem);
+        return true;
     }
 
     public boolean addItem(Item item) {
+        if (maxItemCount == getItemsLength()) {
+            //Splash text why your inventory is full
+            return false;
+        }
+
         try {
             items.add(item);
         }
@@ -74,10 +85,18 @@ public class Inventory {
 
     }
 
-    public void removeItem() {
-        items.remove(getItemsLength()-1);
+    public boolean removeItem() {
+        if (getItemsLength() != 0) {
+            items.remove(getItemsLength() - 1);
+            return true;
+        }
+        return false;
     }
     public boolean removeItem(int index) {
+        if (getItemsLength() == 0) {
+            //Splash why you cannot remove nothing
+            return false;
+        }
         try {
             items.remove(getItemsLength()-1);
         }
@@ -106,14 +125,6 @@ public class Inventory {
             removeItem(itemIndex);
             return true;
         }
-    }
-
-    public boolean giveItem(Item item, Inventory inv) {
-        if (inv.getItemsLength() == inv.getMaxItemCount()) {
-            //Splash text why you cannot give an item
-            return false;
-        }
-        return true;
     }
 
     public boolean takeItem(int itemIndex, Inventory inv) {
