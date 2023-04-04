@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Used to set all our Id's in the xml file to a variable we can work with
+        /*
+        Used to set all our Id's in the xml file to a variable we can work with
         final Button start = findViewById(R.id.startButton);
         final ImageView wagon = findViewById(R.id.wagon);
         final ImageView Oxen = findViewById(R.id.OXEN);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView tongueQues = findViewById(R.id.TongueAmount);
         final EditText numTongue = findViewById(R.id.TongueValue);
 
-        //Sets the title scene and what the user sees right away
+        Sets the title scene and what the user sees right away
         shopBack.setVisibility(View.GONE);
         balance.setVisibility(View.GONE);
         balanceAmount.setVisibility(View.GONE);
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         ammo.setVisibility(View.GONE);
         spares.setVisibility(View.GONE);
 
-        //When the Adventure Time button is clicked the game starts and moves to Hattie Campbells
+        When the Adventure Time button is clicked the game starts and moves to Hattie Campbells
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 wagon.setVisibility(View.GONE);
@@ -409,5 +409,7 @@ public class MainActivity extends AppCompatActivity {
         //testInventory2.addItem(testFood);
 
         //testInventory.giveItem(0, testInventory2);
+         */
     }
 }
+
