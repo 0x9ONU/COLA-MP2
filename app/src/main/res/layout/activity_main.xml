@@ -520,9 +520,10 @@
         tools:layout_editor_absoluteY="358dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/Bullet"
         android:layout_width="208dp"
         android:layout_height="131dp"
+        android:visibility="invisible"
         app:srcCompat="@drawable/bullet_firearm_ammunition_clip_art_bullets_c714b43487c5179123e10f370875cd86"
         tools:layout_editor_absoluteX="35dp"
         tools:layout_editor_absoluteY="43dp" />
@@ -533,6 +534,7 @@
         android:layout_height="wrap_content"
         android:text="Ammunition is sold in boxes of 20 bullets."
         android:textSize="16sp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="233dp"
         tools:layout_editor_absoluteY="83dp" />
 
@@ -542,6 +544,7 @@
         android:layout_height="wrap_content"
         android:text="How many boxes would you like to purchase at the current time?"
         android:textSize="20sp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="235dp"
         tools:layout_editor_absoluteY="111dp" />
 
@@ -552,6 +555,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter Number of Boxes Here"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="233dp"
         tools:layout_editor_absoluteY="141dp" />
 
@@ -560,7 +564,90 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="358dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="236dp"
+        android:layout_height="146dp"
+        app:srcCompat="@drawable/automotive_engine_parts_359cdb66a70e10df51b3aaeaa1c8ed63"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <TextView
+        android:id="@+id/PartsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It is a great idea to have a few extra spare parts for your wagon."
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/WheelAmount"
+        android:layout_width="589dp"
+        android:layout_height="50dp"
+        android:text="How many extra wagon wheels would you like to purchase at this time?"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="291dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <EditText
+        android:id="@+id/WheelValue"
+        android:layout_width="287dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter number of wheels here."
+        tools:layout_editor_absoluteX="291dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <TextView
+        android:id="@+id/AxleAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many extra wagon axles would you like to purchase at the current time?"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <EditText
+        android:id="@+id/AxelValue"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter number of axels here."
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <TextView
+        android:id="@+id/TongueAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many extra wagon tongues would you like to purchase at the current time?"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <EditText
+        android:id="@+id/TongueValue"
+        android:layout_width="301dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter number of tongues here."
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="318dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
