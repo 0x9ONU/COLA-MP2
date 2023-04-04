@@ -10,7 +10,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Item itm = new Item();
+    Item itm = new Item() {
+        @Override
+        public double useItem(Item itemTarget, Member memberTarget) {
+            return 0;
+        }
+
+        @Override
+        public double sellItem() {
+            return 0;
+        }
+    };
     Map mp = new Map();
     Date date = new Date();
     Member member = new Member();
@@ -97,7 +107,11 @@ public class MainActivity extends AppCompatActivity {
         march.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 int startMonth = 03;
+                int startDay = 01;
+                int startYear = 1849;
+                date.setCurrentDay(startDay);
                 date.setCurrentMonth(startMonth);
+                date.setCurrentYear(startYear);
                 month.setVisibility(View.GONE);
                 shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
@@ -113,9 +127,13 @@ public class MainActivity extends AppCompatActivity {
         april.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 int startMonth = 04;
+                int startDay = 01;
+                int startYear = 1849;
+                date.setCurrentDay(startDay);
                 date.setCurrentMonth(startMonth);
+                date.setCurrentYear(startYear);
                 month.setVisibility(View.GONE);
-                shopNext.setVisibility(View.VISIBLE;
+                shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
                 april.setVisibility(View.GONE);
                 may.setVisibility(View.GONE);
@@ -128,9 +146,13 @@ public class MainActivity extends AppCompatActivity {
         may.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 int startMonth = 05;
+                int startDay = 01;
+                int startYear = 1849;
+                date.setCurrentDay(startDay);
                 date.setCurrentMonth(startMonth);
+                date.setCurrentYear(startYear);
                 month.setVisibility(View.GONE);
-                shopNext.setVisibility(View.VISIBLE;
+                shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
                 april.setVisibility(View.GONE);
                 may.setVisibility(View.GONE);
@@ -143,9 +165,13 @@ public class MainActivity extends AppCompatActivity {
         june.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 int startMonth = 06;
+                int startDay = 01;
+                int startYear = 1849;
+                date.setCurrentDay(startDay);
                 date.setCurrentMonth(startMonth);
+                date.setCurrentYear(startYear);
                 month.setVisibility(View.GONE);
-                shopNext.setVisibility(View.VISIBLE;
+                shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
                 april.setVisibility(View.GONE);
                 may.setVisibility(View.GONE);
@@ -158,9 +184,13 @@ public class MainActivity extends AppCompatActivity {
         july.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 int startMonth = 07;
+                int startDay = 01;
+                int startYear = 1849;
+                date.setCurrentDay(startDay);
                 date.setCurrentMonth(startMonth);
+                date.setCurrentYear(startYear);
                 month.setVisibility(View.GONE);
-                shopNext.setVisibility(View.VISIBLE;
+                shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
                 april.setVisibility(View.GONE);
                 may.setVisibility(View.GONE);
@@ -195,6 +225,8 @@ public class MainActivity extends AppCompatActivity {
                 information.setVisibility(View.VISIBLE);
             }
         });
+
+
 
 
 
