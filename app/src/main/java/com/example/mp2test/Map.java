@@ -141,7 +141,7 @@ public class Map {
      * @return false if the player is not at a shop
      */
     public boolean CheckShop(Shop Shopname) {
-        if (Shopname.getLocationX() == playerLocationX && Shopname.getLocationY == playerLocationY ) {
+        if (Shopname.getX() == playerLocationX && Shopname.getX() == playerLocationY ) {
             return true;
         } else {
             return false;
