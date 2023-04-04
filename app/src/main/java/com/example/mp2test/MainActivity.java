@@ -10,6 +10,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    Item itm = new Item();
+    Map mp = new Map();
+    Date date = new Date();
+    Member member = new Member();
+    RandomEventGenerator reg = new RandomEventGenerator();
+    Wagon wag = new Wagon();
+    Weapon wep = new Weapon();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         final Button july = findViewById(R.id.Julybutton);
         final Button information = findViewById(R.id.MonthMore);
         final Button back = findViewById(R.id.BackButton);
+        final TextView moreInfo = findViewById(R.id.MoreInfoText);
 
         month.setVisibility(View.GONE);
         shopNext.setVisibility(View.GONE);
@@ -48,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         bio.setVisibility(View.GONE);
         age.setVisibility(View.GONE);
         name.setVisibility(View.GONE);
-        informationBack.setVisibility(View.GONE);
+        back.setVisibility(View.GONE);
+        moreInfo.setVisibility((View.GONE));
 
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -84,19 +96,24 @@ public class MainActivity extends AppCompatActivity {
 
         march.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                int startMonth = 03;
+                date.setCurrentMonth(startMonth);
                 month.setVisibility(View.GONE);
-                shopNext.setVisibility(View.VISIBLE;
+                shopNext.setVisibility(View.VISIBLE);
                 march.setVisibility(View.GONE);
                 april.setVisibility(View.GONE);
                 may.setVisibility(View.GONE);
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
+
             }
         });
 
         april.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                int startMonth = 04;
+                date.setCurrentMonth(startMonth);
                 month.setVisibility(View.GONE);
                 shopNext.setVisibility(View.VISIBLE;
                 march.setVisibility(View.GONE);
@@ -110,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
         may.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                int startMonth = 05;
+                date.setCurrentMonth(startMonth);
                 month.setVisibility(View.GONE);
                 shopNext.setVisibility(View.VISIBLE;
                 march.setVisibility(View.GONE);
@@ -123,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
         june.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                int startMonth = 06;
+                date.setCurrentMonth(startMonth);
                 month.setVisibility(View.GONE);
                 shopNext.setVisibility(View.VISIBLE;
                 march.setVisibility(View.GONE);
@@ -136,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
 
         july.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                int startMonth = 07;
+                date.setCurrentMonth(startMonth);
                 month.setVisibility(View.GONE);
                 shopNext.setVisibility(View.VISIBLE;
                 march.setVisibility(View.GONE);
@@ -157,8 +180,19 @@ public class MainActivity extends AppCompatActivity {
                 june.setVisibility(View.GONE);
                 july.setVisibility(View.GONE);
                 information.setVisibility(View.GONE);
-                informationBack.setVisibility(View.VISIBLE);
+                back.setVisibility(View.VISIBLE);
+                moreInfo.setVisibility(View.VISIBLE);
+            }
+        });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                march.setVisibility(View.VISIBLE);
+                april.setVisibility(View.VISIBLE);
+                may.setVisibility(View.VISIBLE);
+                june.setVisibility(View.VISIBLE);
+                july.setVisibility(View.VISIBLE);
+                information.setVisibility(View.VISIBLE);
             }
         });
 

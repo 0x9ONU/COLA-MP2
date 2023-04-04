@@ -241,4 +241,14 @@
         tools:layout_editor_absoluteX="796dp"
         tools:layout_editor_absoluteY="362dp" />
 
+    <TextView
+        android:id="@+id/MoreInfoText"
+        android:layout_width="757dp"
+        android:layout_height="283dp"
+        android:text="More Information"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="75dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
