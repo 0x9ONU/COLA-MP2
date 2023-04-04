@@ -69,10 +69,10 @@ public class Main {
             //displays a message if there's no shop or monument at the player's location
             System.out.println("This is a very uneventful day");
         }
-        else if (mp.CheckShop(shop1)) {
+        else if (!mp.CheckShop(shop1)) {
             //Allows the player to interact with the shop if their is a shop at the player's location
             System.out.print("You manage to find the " + shop1.getName() + "");
-            System.out.println("Would you like to Enter?");
+            System.out.println(" Would you like to Enter?");
             System.out.print("Press y to enter, or any other letter to ignore and pass by the shop. Then hit enter.");
             String decision = in.nextLine();
 
