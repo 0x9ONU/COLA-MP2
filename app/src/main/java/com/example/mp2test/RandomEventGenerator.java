@@ -1,14 +1,20 @@
+/**
+ * File Name: RandomEventGenerator.java
+ * Author: Aiden Tallet
+ * Date: 3/31/23
+ * Description: The class responsible for allowing random events to happen
+ */
 package com.example.mp2test;
 
 import java.lang.Math;
 import java.util.Random;
 
 public class RandomEventGenerator {
-    private String[] GoodRandomEvents = {"Kiss","gold nugget","nice native americans","bundle of food","deserted wagon","miscounted food","house","wandering oxen","good sleep","Alex Frimel"}; // 10 good events
-    private String[] BadRandomEvents = {"Volcano","broken wheel","aggressive native americans","thief","bad shortcut","rainy day","broken leg","tired oxen","misplaced food","animals got to the food"}; // 10 bad events
+    private final String[] GoodRandomEvents = {"Kiss","gold nugget","nice native americans","bundle of food","deserted wagon","miscounted food","house","wandering oxen","good sleep","Alex Frimel"}; // 10 good events
+    private final String[] BadRandomEvents = {"Volcano","broken wheel","aggressive native americans","thief","bad shortcut","rainy day","broken leg","tired oxen","misplaced food","animals got to the food"}; // 10 bad events
     private int RandomNumber;                                                                       //holds what the generated number is
     private double ProbabilityMultiplier;                                                           //allows the number to have higher chances of good or bad events
-    private Random rand = new Random();                                                             //allows for the random number generator to work
+    private final Random rand = new Random();                                                             //allows for the random number generator to work
 
     //constructor
 
