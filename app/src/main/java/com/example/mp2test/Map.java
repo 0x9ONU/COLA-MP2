@@ -1,3 +1,9 @@
+/**
+ * File Name: Map.java
+ * Author: Aiden Tallet
+ * Date: 3/31/23
+ * Description: The class responsible for holding some locations
+ */
 package com.example.mp2test;
 
 public class Map {
