@@ -22,7 +22,8 @@ public class Main {
         playerInventory.addItem(rations);
         //the player starts with $100
         player.incrementMoney(100);
-        //creates the shops and shopkeepers along the trails
+
+        //creates shop1
         Member shopKeeper1 = new Member();
         shopKeeper1.incrementMoney(25);
         Inventory shop1Inventory = new Inventory();
@@ -60,7 +61,13 @@ public class Main {
 
         shop1.addItem(clothes2);
 
-        //make shop2 stuff here
+        //creates shop2
+        Member shopKeeper2 = new Member();
+        shopKeeper2.incrementMoney(75);
+        Inventory shop2Inventory = new Inventory();
+        Food shop2Food = new Food("Supplies", 3, true, false, 1, 120);
+        shop2Inventory.addItem(shop2Food);
+        Shop shop2 = new Shop(80, 60, "Almost to Nebraska Saloon", shop2Inventory, shopKeeper2);
 
         //scanner for user input/responses
         Scanner in = new Scanner(System.in);
@@ -101,7 +108,7 @@ public class Main {
 
             if (decision.equals("y") || decision.equals("Y")) {
                 //enters the shop if the player types "y"
-                System.out.print("You enter the " + shop1.getName() + ".");
+                System.out.println("You enter the " + shop1.getName() + ".");
                 System.out.println("You have the options to buy...");
                 for (int i = 0; i < shop1Inventory.getItemsLength(); i++) {
                     System.out.println(i + ": " + shop1Inventory.getItem(i).getName());
@@ -130,6 +137,7 @@ public class Main {
             System.out.println("You pass by the " + mp.CheckMonument() + " today.");
         }
         System.out.println(""); //fill this print statement in a bit
+
 
     }
 }
