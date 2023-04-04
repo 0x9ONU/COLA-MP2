@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 infoYoke.setVisibility(View.VISIBLE);
                 yokeNumQues.setVisibility(View.VISIBLE);
                 numYoke.setVisibility(View.VISIBLE);
-                member.set??();
+                //member.set??();
 
             }
         });
@@ -366,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                wep.setAmmo();
+                //wep.setAmmo();
             }
         });
 
@@ -374,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -382,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
@@ -390,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 balance.setVisibility(View.GONE);
                 balanceAmount.setVisibility(View.GONE);
-                itm.set??();
+                //itm.set??();
             }
         });
 
