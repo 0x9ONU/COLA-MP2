@@ -218,43 +218,46 @@ public class Weapon extends Item {
      */
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        if(bulletCount != 0){
-            if (wear == 100){
-                //Splash text why gun cannot shoot
-                return -1.0;
-            }
-            else {
-                if (memberTarget == null) {
-                    if (!itemTarget.getIndestructible()) {
-                        //Insert console code here
-                        itemTarget.setUsed(true);
-                        itemTarget.setInventoryIdentifier(null);
-                        return 0.0;
+        if (getInventoryIdentifer().equals(memberTarget.getName())) {
+            if(bulletCount != 0){
+                if (wear == 100){
+                    //Splash text why gun cannot shoot
+                    return -1.0;
+                }
+                else {
+                    if (memberTarget == null) {
+                        if (!itemTarget.getIndestructible()) {
+                            //Insert console code here
+                            itemTarget.setUsed(true);
+                            itemTarget.setInventoryIdentifier(null);
+                            return 0.0;
+                        } else {
+                            //Splash text for when the gun cannot be used
+                            return -1.0;
+                        }
                     } else {
-                        //Splash text for when the gun cannot be used
-                        return -1.0;
-                    }
-                } else {
-                    if (memberTarget.isFriendly() && memberTarget.isHuman()) {
-                        //Splash text for why you cannot shoot a friendly person
-                        return -1.0;
-                    } else if (memberTarget.isFriendly() && !memberTarget.isHuman()) {
-                        //Splash text for why you cannot shoot a friendly dog
-                        return -1.0;
-                    } else if (memberTarget.isHuman()) {
-                        //return murder(memberTarget);
-                        //Implement later. For now: Splash text why murdering people is bad
-                        return -1.0;
-                    } else {
-                        return hunt(memberTarget);
+                        if (memberTarget.isFriendly() && memberTarget.isHuman()) {
+                            //Splash text for why you cannot shoot a friendly person
+                            return -1.0;
+                        } else if (memberTarget.isFriendly() && !memberTarget.isHuman()) {
+                            //Splash text for why you cannot shoot a friendly dog
+                            return -1.0;
+                        } else if (memberTarget.isHuman()) {
+                            //return murder(memberTarget);
+                            //Implement later. For now: Splash text why murdering people is bad
+                            return -1.0;
+                        } else {
+                            return hunt(memberTarget);
+                        }
                     }
                 }
             }
+            else {
+                //splash text why do not own the gun
+                return -1.0;
+            }
         }
-        else {
-            //splash text why gun is empty
-            return -1.0;
-        }
+        return -1.0;
     }
 
     //Implement Later
@@ -292,7 +295,7 @@ public class Weapon extends Item {
             return false;
         }
         if (bulletCount == maxBulletCount) {
-            //Splash text why your weapon is full
+            System.out.println("Your weapon is full...");
             return false;
         }
         int numberOfBulletsReloaded = maxBulletCount - bulletCount;

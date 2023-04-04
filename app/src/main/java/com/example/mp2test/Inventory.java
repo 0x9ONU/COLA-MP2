@@ -136,7 +136,7 @@ public class Inventory {
             //Splash Text why you are out of bounds
             return false;
         }
-        items.get(getItemsLength()-1).inventoryIdentifier = memberIdentifier;
+        items.get(getItemsLength()-1).setInventoryIdentifer(memberIdentifier);
         return true;
 
     }
@@ -188,7 +188,8 @@ public class Inventory {
             return false;
         }
         try {
-            inv.addItem(this.getItem(itemIndex));
+            Item temp = items.get(itemIndex);
+            inv.addItem(temp);
         }
         catch(IndexOutOfBoundsException e) {
             //Splash text why you do not have that index of item in your inventory
@@ -222,5 +223,13 @@ public class Inventory {
             inv.removeItem(itemIndex);
             return true;
         }
+    }
+
+    public String listInventory() {
+        StringBuilder temp = new StringBuilder();
+        for (int i = 0; i < getItemsLength(); i++) {
+            temp.append(i + ": " + items.get(i).getName() + "\n\r");
+        }
+        return temp.toString();
     }
 }

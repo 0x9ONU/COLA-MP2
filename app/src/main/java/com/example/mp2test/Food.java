@@ -173,17 +173,22 @@ public class Food extends Item{
      */
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        if (spoiled) {
-            return 0.0;
-        }
-        if (pounds > 0){
-            decrementPounds(10);
-            if (pounds < 0) {
-                //Splash text why
-                pounds = 0;
+        if (getInventoryIdentifer().equals(memberTarget.getName())) {
+            if (spoiled) {
+                return 0.0;
             }
-            memberTarget.heal(healthValue);
-            return healthValue;
+            if (pounds > 0){
+                decrementPounds(10);
+                if (pounds < 0) {
+                    //Splash text why
+                    pounds = 0;
+                }
+                memberTarget.heal(healthValue);
+                return healthValue;
+            }
+            else {
+                return 0.0;
+            }
         }
         else {
             return 0.0;

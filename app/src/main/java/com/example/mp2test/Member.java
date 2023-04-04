@@ -196,7 +196,12 @@ public class Member {
      * @param money the amount of money taken away from the member
      */
     public void decrementMoney(double money) {
-        this.money =- money;
+        if (this.money - money < 0) {
+            this.money = 0;
+        }
+        else {
+            this.money =- money;
+        }
     }
 
     //other methods

@@ -171,6 +171,7 @@ public class Shop {
             double payment = shopInventory.getItem(index).sellItem();
             if (buyer.getMoney() < payment) {
                 //Splash text why you do not have enough money to buy that item
+                System.out.println("You do not have enough money to buy this item...");
                 return false;
             }
             else {

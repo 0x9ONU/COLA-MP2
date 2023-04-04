@@ -13,9 +13,9 @@ public abstract class Item {
     //Data Members
     private double value;
     private String name = "";
-    boolean used;
-    boolean indestructible;
-    String inventoryIdentifier = null;
+    private boolean used;
+    private boolean indestructible;
+    private String inventoryIdentifier = null;
 
     /**
      * The default Constructor for Item. Gives it a default value of nothing and "Dohickey" for the name.
@@ -114,4 +114,7 @@ public abstract class Item {
     //Abstract Methods
     public abstract double useItem(Item itemTarget, Member memberTarget);
 
+    public void setInventoryIdentifer(String inventoryIdentifier) {
+        this.inventoryIdentifier = inventoryIdentifier;
+    }
 }
