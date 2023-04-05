@@ -164,14 +164,15 @@ public class Inventory {
             return false;
         }
         try {
-            items.remove(getItemsLength()-1);
+            items.remove(index);
         }
         catch(IndexOutOfBoundsException e) {
             //SPlash text why you are out of bounds
             return false;
         }
-        items.remove(index);
-        return true;
+        finally {
+            return true;
+        }
     }
 
     //Member Functions

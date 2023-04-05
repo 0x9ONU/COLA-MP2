@@ -21,8 +21,8 @@ public class Shop {
         this.x = 0;
         this.y = 0;
         this.name = "Test";
-        shopInventory = new Inventory();
-        shopKeeper =  new Member();
+        this.shopInventory = new Inventory();
+        this.shopKeeper =  new Member();
     }
 
     /**
@@ -169,15 +169,15 @@ public class Shop {
         }
         finally {
             double payment = shopInventory.getItem(index).sellItem();
-            if (buyer.getMoney() < payment) {
-                //Splash text why you do not have enough money to buy that item
-                System.out.println("You do not have enough money to buy this item...");
-                return false;
-            }
-            else {
+            if (buyer.getMoney() >= payment) {
                 buyer.decrementMoney(payment);
                 shopInventory.giveItem(index, buyer.inventory);
                 return true;
+            }
+            else {
+                //Splash text why you do not have enough money to buy that item
+                System.out.println("You do not have enough money to buy this item...");
+                return false;
             }
         }
     }
