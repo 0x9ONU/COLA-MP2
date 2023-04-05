@@ -1,3 +1,10 @@
+/**
+ * File: Main.java
+ * Authors: Ethan Berei, Ashton Beresford, Alexander Frimel
+ * Date: 4/4/2023
+ * Description: A test main for our project. It is rather messy, but works rather well. It goes through the first 5 days from Missouri to Nebraska with test events, monuments, and shops.
+ */
+
 package com.example.mp2test;
 
 import java.util.*;
@@ -43,7 +50,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifer().equals(memberTarget.getName())) {
+                if (getInventoryIdentifier().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -64,7 +71,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifer().equals(memberTarget.getName())) {
+                if (getInventoryIdentifier().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -131,7 +138,7 @@ public class Main {
                         if (!playerInventory.getItem(index).getIndestructible()) {
                             System.out.println("You lost your '" + playerInventory.getItem(index).getName() + "'.");
                             playerInventory.getItem(index).setUsed(true);
-                            playerInventory.getItem(index).setInventoryIdentifer(null);
+                            playerInventory.getItem(index).setInventoryIdentifier(null);
                             break;
                         }
                         else {

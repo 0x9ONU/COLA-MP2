@@ -173,7 +173,7 @@ public class Food extends Item{
      */
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        if (getInventoryIdentifer().equals(memberTarget.getName())) {
+        if (getInventoryIdentifier().equals(memberTarget.getName())) {
             if (spoiled) {
                 return 0.0;
             }

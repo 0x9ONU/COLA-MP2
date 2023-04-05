@@ -218,7 +218,7 @@ public class Weapon extends Item {
      */
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        if (getInventoryIdentifer().equals(memberTarget.getName())) {
+        if (getInventoryIdentifier().equals(memberTarget.getName())) {
             if(bulletCount != 0){
                 if (wear == 100){
                     //Splash text why gun cannot shoot

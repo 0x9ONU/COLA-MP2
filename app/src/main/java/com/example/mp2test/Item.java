@@ -8,7 +8,7 @@
 package com.example.mp2test;
 import java.util.Random;
 
-//The defualt Item Class that is meant to be the super class to all items in the game
+//The default Item Class that is meant to be the super class to all items in the game
 public abstract class Item {
     //Data Members
     private double value;
@@ -48,6 +48,10 @@ public abstract class Item {
         boolean used = false;
     }
 
+    /**
+     * Copy Constructor for Item. It will copy all the values from one item to another, allowing for duplication
+     * @param i An item that wants to be copied.
+     */
     Item(Item i) {
         this.value = i.getValue();
         this.name = i.getName();
@@ -73,18 +77,34 @@ public abstract class Item {
         return name;
     }
 
+    /**
+     * Getter for Indestructibility of the Item. These items can be used, but cannot be destroyed by normal means.
+     * @return True if Indestructible. False otherwise.
+     */
     public boolean getIndestructible() {
         return indestructible;
     }
 
+    /**
+     * Getter for whether or not the item has been used
+     * @return True with it was used. False otherwise.
+     */
     public boolean getUsed() {
         return used;
     }
 
+    /**
+     * Sets if the item can be destroyed or not
+     * @param indestructible True if indestructible. False if otherwise.
+     */
     public void setIndestructible(boolean indestructible) {
         this.indestructible = indestructible;
     }
 
+    /**
+     * Setter for whether the object is used or not.
+     * @param used True if the item has been used. False otherwise.
+     */
     public void setUsed(boolean used) {
         this.used = used;
     }
@@ -105,16 +125,32 @@ public abstract class Item {
         this.name = name;
     }
 
+    /**
+     * Setter for the Inventory Identifier
+     * @param inventoryIdentifier Sets the inventory identifier that matches either the Shop or Member class' name
+     */
     public void setInventoryIdentifier(String inventoryIdentifier) {this.inventoryIdentifier = inventoryIdentifier; }
-    public String getInventoryIdentifer() {return inventoryIdentifier; }
 
+    /**
+     * Getter for the Inventory Identifier
+     * @return A String of the Name that matches the Inventory's Shop or Member class
+     */
+    public String getInventoryIdentifier() {return inventoryIdentifier; }
+
+    /**
+     * Returns the value of the item. NOTE: This is different from getValue as it is overridden by future classes.
+     * @return Value
+     */
     public double sellItem() {
         return value;
     }
     //Abstract Methods
-    public abstract double useItem(Item itemTarget, Member memberTarget);
 
-    public void setInventoryIdentifer(String inventoryIdentifier) {
-        this.inventoryIdentifier = inventoryIdentifier;
-    }
+    /**
+     * Abstract method that will give usage to new created Items.
+     * @param itemTarget What the Item will this affect? May or may not be used.
+     * @param memberTarget What Member/Person will this affect? May or may not be used.
+     * @return A double value relating to its usage. If boolean is needed, use 0.0 and 1.0. Not always necessary
+     */
+    public abstract double useItem(Item itemTarget, Member memberTarget);
 }
