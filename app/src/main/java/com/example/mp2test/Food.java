@@ -199,7 +199,7 @@ public class Food extends Item{
      * Impletionation of the sellItem abstract method for the Food class. This method gives the value of the item based on the amount of pounds.
      * @return The value of each pound of object multiplied by the number of pounds
      */
-    @Override
+
     public double sellItem() {
         return super.getValue() * pounds;
     }

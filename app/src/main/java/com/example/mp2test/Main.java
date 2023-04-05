@@ -14,8 +14,9 @@ public class Main {
         //journey starts on March 1, 1849
         Date date = new Date(1,3,1849);
         //creates the player as a member, and creates their inventory with a max items of 100
-        Member player = new Member();
-        Inventory playerInventory = new Inventory(100, player);
+        Inventory playerInventory = new Inventory();
+        Member player = new Member(100, playerInventory, "Hattie Campbell", true, true, 100);
+        playerInventory.setMemberIdentifier(player);
         //creates Random event generator
         RandomEventGenerator reg = new RandomEventGenerator();
         //creates the player's wagon
@@ -25,14 +26,12 @@ public class Main {
         //the player starts out with 10 pounds of food, worth $1 per pound
         Food rations = new Food("rations", 1, false, false, 0, 10);
         playerInventory.addItem(rations);
-        //the player starts with $100
-        player.incrementMoney(100);
 
         //creates shop1
         Member shopKeeper1 = new Member();
         shopKeeper1.incrementMoney(25);
         Inventory shop1Inventory = new Inventory();
-        Food shop1Food = new Food("Supplies", 2, true, false, 1, 100);
+        Food shop1Food = new Food("Supplies", 0.2, false, false, 1, 100);
         shop1Inventory.addItem(shop1Food);
         Shop shop1 = new Shop(60, 20, "Still-Close-to-Missouri-Saloon", shop1Inventory, shopKeeper1);
         Item clothes1 = new Item(10, "Basic Clothes", true, false) {
@@ -82,11 +81,11 @@ public class Main {
         Member shopKeeper2 = new Member();
         shopKeeper2.incrementMoney(75);
         Inventory shop2Inventory = new Inventory();
-        Food shop2Food = new Food("Supplies", 3, true, false, 1, 120);
+        Food shop2Food = new Food("Supplies", 0.3, false, false, 1, 120);
         shop2Inventory.addItem(shop2Food);
-        Shop shop2 = new Shop(100, 40, "Almost to Nebraska Saloon", shop2Inventory, shopKeeper2);
         Weapon pan = new Weapon(5000, "Pan", false, 1, 100, 0);
         shop2Inventory.addItem(pan);
+        Shop shop2 = new Shop(120, 40, "Almost to Nebraska Saloon", shop2Inventory, shopKeeper2);
 
         //scanner for user input/responses
         Scanner in = new Scanner(System.in);
@@ -149,15 +148,15 @@ public class Main {
                     System.out.println("Choose your weapon: ");
                     System.out.println(playerInventory.listInventory());
                     int choice = in.nextInt();
-                    Weapon runAway = (Weapon) playerInventory.getItem(choice);
                         try {
-                            runAway.reload();
+                            Weapon runAway = (Weapon) playerInventory.getItem(choice);
                         }
-                        catch (Exception e) {
+                        catch (ClassCastException e) {
                             System.out.println("That is not a weapon... You take 10 damage");
                             player.damage(10);
                         }
                         finally {
+                            Weapon runAway = (Weapon) playerInventory.getItem(choice);
                             System.out.println("Using a warning shot, you barely make it away.");
                             runAway.setBulletCount(runAway.getBulletCount() - 1);
                         }
@@ -237,15 +236,15 @@ public class Main {
                     System.out.println("You enter the " + shop1.getName() + ".");
                     System.out.println("You have the options to buy...");
                     for (int i = 0; i < shop1Inventory.getItemsLength(); i++) {
-                        System.out.println(i + ": " + shop1Inventory.getItem(i).getName());
+                        System.out.println(i + ": " + shop1Inventory.getItem(i).getName() + " $" + shop1Inventory.getItem(i).sellItem());
                     }
                     System.out.println("To buy an item, put the number in front of said item and click enter, otherwise press any letter and enter to leave the shop.");
-
-                    int shopItem;
+                    System.out.println("You currenlty have: $" + player.getMoney() + ".");
                     //buys the item at the provided index or leaves the shop
-                    shopItem = in.nextInt();
-                    shop1.buyItem(player, shopItem);
-                    System.out.println("You bought this item.");
+                    int shopItem = in.nextInt();
+                    if(shop1.buyItem(player, shopItem)) {
+                        System.out.println("You bought this item.");
+                    }
 
                 }
                 else {
@@ -264,15 +263,16 @@ public class Main {
                     System.out.println("You enter the " + shop2.getName() + ".");
                     System.out.println("You have the options to buy...");
                     for (int i = 0; i < shop2Inventory.getItemsLength(); i++) {
-                        System.out.println(i + ": " + shop1Inventory.getItem(i).getName());
+                        System.out.println(i + ": " + shop2Inventory.getItem(i).getName() + " $" +shop2Inventory.getItem(i).sellItem());
                     }
                     System.out.println("To buy an item, put the number in front of said item and click enter, otherwise press any letter and enter to leave the shop.");
 
                     int shopItem;
                     //buys the item at the provided index or leaves the shop
                     shopItem = in.nextInt();
-                    shop2.buyItem(player, shopItem);
-                    System.out.println("You bought this item.");
+                    if(shop2.buyItem(player, shopItem)) {
+                        System.out.println("You bought this item.");
+                    }
 
                 } else {
                     System.out.println("You leave the shop.");
@@ -284,6 +284,31 @@ public class Main {
             }
 
             //End of Day Summary
+            System.out.println("Stats:" );
+            System.out.println("Health " + player.getHealth());
+            System.out.println("Money: " + player.getMoney());
+            System.out.println("Inventory: ");
+            for(int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                System.out.print(i + ": " + player.getInventory().getItem(i).getName());
+                try {
+                    Food foodCheck = (Food) player.getInventory().getItem(i);
+                    System.out.print("     Pounds: " + foodCheck.getPounds());
+                }
+                catch (ClassCastException e) {
+
+                }
+
+                try {
+                    Weapon weaponCheck = (Weapon) player.getInventory().getItem(i);
+                    System.out.println("     Ammo: " + weaponCheck.getAmmo());
+                }
+                catch (ClassCastException e) {
+
+                }
+
+                System.out.println();
+
+            }
             System.out.println("Press Enter to Continue"); //fill this print statement in a bit
             in.nextLine();
 
