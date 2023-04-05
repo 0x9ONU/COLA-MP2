@@ -1,3 +1,9 @@
+/**
+ * File Name: Main.java
+ * Author: Alexander Frimel
+ * Date: 4/4/23
+ * Description: Runs the game and passes things between all of the classes and is used as the main hub for our entire program.
+ */
 package com.example.mp2test;
 
 import java.util.*;
@@ -287,7 +293,9 @@ public class Main {
             System.out.println("Press Enter to Continue"); //fill this print statement in a bit
             in.nextLine();
 
+
         }
+        System.out.println("Hip Hip Hooray! You have made it through Missouri and are now in the lovely state of Nebraska. Congrats on making it through your first state!");
 
 
     }

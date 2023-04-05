@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //USE THIS FOR EXPORTING TO THE CONSOLE
         Log.d("MainActivity", "Test");
+        Log.d("MainActivity","Test2");
         /*
 
 
