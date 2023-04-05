@@ -78,7 +78,7 @@ public class RandomEventGenerator {
             String BEvent = BadRandomEvents[(int)(Math.ceil(RandomNumber * ProbabilityMultiplier)) - 90];
             return BEvent;
         }
-        if (RandomNumber * ProbabilityMultiplier <= 10) {
+        if (RandomNumber * ProbabilityMultiplier < 90) {
             String GEvent = GoodRandomEvents[(int)(Math.floor(RandomNumber * ProbabilityMultiplier))];
             return GEvent;
         }
