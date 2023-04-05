@@ -22,7 +22,7 @@ public class RandomEventGenerator {
      * default constructor for the RandomEventGenerator
      */
     public RandomEventGenerator() {
-        ProbabilityMultiplier = 1;
+        ProbabilityMultiplier = 10;
         RandomNumber = rand.nextInt(100);
     }
 
@@ -65,7 +65,7 @@ public class RandomEventGenerator {
      * adds 0.1 to the probability multiplier
      */
     public void IncrementProbabilityMultiplier() {
-        ProbabilityMultiplier = ProbabilityMultiplier + 0.1;
+        ProbabilityMultiplier = ProbabilityMultiplier + 9;
     }
 
     /**
@@ -74,16 +74,27 @@ public class RandomEventGenerator {
      */
     public String GetEvent() {
         setRandomNumber();
+        int badEvent = 0;
+        int badEventCalc = 10;
+        int amountZeros = 0;
         if (RandomNumber * ProbabilityMultiplier >= 90 ) {
-            String BEvent = BadRandomEvents[(int)(Math.ceil(RandomNumber * ProbabilityMultiplier)) - 90];
+            badEvent = (int)((Math.ceil(RandomNumber * ProbabilityMultiplier))-57);
+            if (badEvent > 10) {
+                for(badEventCalc = badEventCalc; badEvent < badEventCalc; badEventCalc = badEventCalc * 10){
+                    amountZeros++;
+                }
+                badEvent = badEvent % (int)(Math.pow(badEventCalc,amountZeros));
+            }
+            String BEvent = BadRandomEvents[badEvent];
             return BEvent;
         }
-        if (RandomNumber * ProbabilityMultiplier < 90) {
+        if (RandomNumber * ProbabilityMultiplier < 11) {
             String GEvent = GoodRandomEvents[(int)(Math.floor(RandomNumber * ProbabilityMultiplier))];
             return GEvent;
         }
         return "none";
     }
+
 }
 
 

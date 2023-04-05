@@ -1,10 +1,9 @@
 /**
- * File: Main.java
- * Authors: Ethan Berei, Ashton Beresford, Alexander Frimel
- * Date: 4/4/2023
- * Description: A test main for our project. It is rather messy, but works rather well. It goes through the first 5 days from Missouri to Nebraska with test events, monuments, and shops.
+ * File Name: Main.java
+ * Authors: Alexander Frimel and Ethan Berei
+ * Date: 4/4/23
+ * Description: Runs the game and passes things between all of the classes and is used as the main hub for our entire program.
  */
-
 package com.example.mp2test;
 
 import java.util.*;
@@ -50,7 +49,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifier().equals(memberTarget.getName())) {
+                if (getInventoryIdentifer().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -71,7 +70,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifier().equals(memberTarget.getName())) {
+                if (getInventoryIdentifer().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -138,7 +137,7 @@ public class Main {
                         if (!playerInventory.getItem(index).getIndestructible()) {
                             System.out.println("You lost your '" + playerInventory.getItem(index).getName() + "'.");
                             playerInventory.getItem(index).setUsed(true);
-                            playerInventory.getItem(index).setInventoryIdentifier(null);
+                            playerInventory.getItem(index).setInventoryIdentifer(null);
                             break;
                         }
                         else {
@@ -319,7 +318,9 @@ public class Main {
             System.out.println("Press Enter to Continue"); //fill this print statement in a bit
             in.nextLine();
 
+
         }
+        System.out.println("Hip Hip Hooray! You have made it through Missouri and are now in the lovely state of Nebraska. Congrats on making it through your first state!");
 
 
     }
