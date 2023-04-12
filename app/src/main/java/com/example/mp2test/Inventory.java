@@ -136,7 +136,7 @@ public class Inventory {
             //Splash Text why you are out of bounds
             return false;
         }
-        items.get(getItemsLength()-1).setInventoryIdentifer(memberIdentifier);
+        items.get(getItemsLength()-1).setInventoryIdentifier(memberIdentifier);
         return true;
 
     }

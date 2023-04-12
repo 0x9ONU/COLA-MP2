@@ -49,7 +49,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifer().equals(memberTarget.getName())) {
+                if (getInventoryIdentifier().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -70,7 +70,7 @@ public class Main {
              */
             @Override
             public double useItem(Item itemTarget, Member memberTarget) {
-                if (getInventoryIdentifer().equals(memberTarget.getName())) {
+                if (getInventoryIdentifier().equals(memberTarget.getName())) {
                     System.out.println("The Clothes do not fit you unfortunately...");
                 }
                 else {
@@ -137,7 +137,7 @@ public class Main {
                         if (!playerInventory.getItem(index).getIndestructible()) {
                             System.out.println("You lost your '" + playerInventory.getItem(index).getName() + "'.");
                             playerInventory.getItem(index).setUsed(true);
-                            playerInventory.getItem(index).setInventoryIdentifer(null);
+                            playerInventory.getItem(index).setInventoryIdentifier(null);
                             break;
                         }
                         else {
@@ -167,6 +167,7 @@ public class Main {
                             runAway.setBulletCount(runAway.getBulletCount() - 1);
                         }
                 }
+                //Ran out of time will be implementing these at a later date.
                 else if (event.equals("thief")) {
 
                 }
