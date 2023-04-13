@@ -11,10 +11,10 @@ import java.util.Random;
 
 public class RandomEventGenerator {
     private final String[] GoodRandomEvents = {"Kiss","gold nugget","nice native americans","bundle of food","deserted wagon","miscounted food","house","wandering oxen","good sleep","Alex Frimel"}; // 10 good events
-    private final String[] BadRandomEvents = {"Volcano","broken wheel","aggressive native americans","thief","bad shortcut","rainy day","broken leg","tired oxen","misplaced food","animals got to the food"}; // 10 bad events
+    private final String[] BadRandomEvents = {"animals got to the food","broken wheel","aggressive native americans","thief","bad shortcut","rainy day","broken leg","tired oxen","misplaced food","Volcano"}; // 10 bad events
     private int RandomNumber;                                                                       //holds what the generated number is
     private double ProbabilityMultiplier;                                                           //allows the number to have higher chances of good or bad events
-    private final Random rand = new Random();                                                             //allows for the random number generator to work
+    private final Random rand = new Random();                                                       //allows for the random number generator to work
 
     //constructor
 
@@ -22,7 +22,7 @@ public class RandomEventGenerator {
      * default constructor for the RandomEventGenerator
      */
     public RandomEventGenerator() {
-        ProbabilityMultiplier = 10;
+        ProbabilityMultiplier = 1;
         RandomNumber = rand.nextInt(100);
     }
 
@@ -40,7 +40,7 @@ public class RandomEventGenerator {
      * gives a new random number
      */
     public void setRandomNumber() {
-        RandomNumber = rand.nextInt(100);
+        RandomNumber = rand.nextInt(99);
     }
 
     /**
@@ -62,37 +62,38 @@ public class RandomEventGenerator {
     }
 
     /**
-     * adds 0.1 to the probability multiplier
+     * adds 0.01 to the probability multiplier
      */
     public void IncrementProbabilityMultiplier() {
-        ProbabilityMultiplier = ProbabilityMultiplier + 9;
+        ProbabilityMultiplier = ProbabilityMultiplier + 0.01;
     }
 
+    /**
+     * subtracts 0.01 to the probability multiplier
+     */
+    public void DecrementProbabilityMultiplier() {
+        if (ProbabilityMultiplier > 0.1) {
+            ProbabilityMultiplier = ProbabilityMultiplier - 0.01;
+        }
+    }
     /**
      * returns the string of a random event if the value is low or high enough
      * @return the string of a random event or "none"
      */
+
     public String GetEvent() {
-        setRandomNumber();
-        int badEvent = 0;
-        int badEventCalc = 10;
-        int amountZeros = 0;
-        if (RandomNumber * ProbabilityMultiplier >= 90 ) {
-            badEvent = (int)((Math.ceil(RandomNumber * ProbabilityMultiplier))-57);
-            if (badEvent > 10) {
-                for(badEventCalc = badEventCalc; badEvent < badEventCalc; badEventCalc = badEventCalc * 10){
-                    amountZeros++;
-                }
-                badEvent = badEvent % (int)(Math.pow(badEventCalc,amountZeros));
+        setRandomNumber();                                                                          //sets a new random number
+        int NumberDecided = (int)(RandomNumber * ProbabilityMultiplier);                            //finds the number after the multiplier
+        if (NumberDecided >= 90) {                                                                  //checks if the number is high enough for a bad event
+            if (NumberDecided >= 100) {                                                             //is a check for if the number is > 100
+                return BadRandomEvents[10 - 1];                                                     //returns worst scenario if number is > 100
             }
-            String BEvent = BadRandomEvents[badEvent];
-            return BEvent;
+            return BadRandomEvents[NumberDecided % 100 - 90];                                       //otherwise returns the appropriate bad event
         }
-        if (RandomNumber * ProbabilityMultiplier < 11) {
-            String GEvent = GoodRandomEvents[(int)(Math.floor(RandomNumber * ProbabilityMultiplier))];
-            return GEvent;
+        if (NumberDecided < 10) {                                                                  //checks if the number is low enough for a good event
+            return GoodRandomEvents[NumberDecided % 100];                                           //returns appropriate good event
         }
-        return "none";
+        return "none";                                                                              // if number > 10 and < 90 then nothing happens
     }
 
 }
