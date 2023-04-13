@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     //add additional shops here in the same format as above
 
     //An NPC (DOESN'T DO ANYTHING AS OF NOW) located at the Gardner Junction monument
+    Member gardnerNPC = new Member("Gardner NPC", 44);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

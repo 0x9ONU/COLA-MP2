@@ -42,6 +42,23 @@ public class Member {
     }
 
     /**
+     * member constructor that only requires a name and xCoordinate
+     * @param name The Member's name
+     * @param xCoordinate The Member's location on the map
+     */
+    public Member(String name, int xCoordinate) {
+        this.name = name;
+        this.health = 100;
+        this.human = true;
+        this.friendly = true;
+        this.alive = true;
+        this.money = 0;
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = 0;
+        this.maxHealth = 100;
+    }
+
+    /**
      * The constructor that will primarily be used for the Member class, member will by default always be (0,0), and will by default always be alive
      * @param health the Member's starting health and maxHealth value
      * @param inventory the Member's starting inventory
