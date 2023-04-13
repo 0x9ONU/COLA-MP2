@@ -30,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
     Wagon wag = new Wagon(member);
     Weapon wep = new Weapon();
 
+    //shop 1, at 180 miles and same place (and name) as the Hollenberg Pony Express Station
+    Member shopKeeper1 = new Member();
+    Inventory shop1Inventory = new Inventory();
+    //add things for the shop to sell here
+    //also here add any money the shopkeeper will already have
+    Shop shop1 = new Shop(60, 0, "The Hollenberg Pony Express Station", shop1Inventory, shopKeeper1);
 
+    //add additional shops here in the same format as above
+
+    //An NPC (DOESN'T DO ANYTHING AS OF NOW) located at the Gardner Junction monument
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,9 +11,9 @@ public class Map {
     int playerLocationY;                                                                            //will hold player's Y cord
     int wagonLocationX;                                                                             //will hold wagon's X cord
     int wagonLocationY;                                                                             //will hold wagon's Y cord
-    final int[] monumentLocationX = {30,60,80};                                                   //will hold all monument X cords (need hardcoded)
-    final int[] monumentLocationY = {10,20,30};                                                     //will hold all monument Y cords (need hardcoded)
-    final String[] monumentNames = {"Chimney Rock", "River", "Homestead"};                          //holds all monument names
+    final int[] monumentLocationX = {44,115,165,180};                                                   //will hold all monument X cords (need hardcoded)
+    final int[] monumentLocationY = {0,0,0,0};                                                      //will hold all monument Y cords (need hardcoded)
+    final String[] monumentNames = {"Gardner Junction", "Red Vermillion Crossing", "Big Blue River Crossing", "Hollenberg Pony Express Station"};                          //holds all monument names
     /**
      * Basic constructor for Map
      */
