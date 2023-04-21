@@ -12,8 +12,8 @@
         android:id="@+id/back_button"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
         android:background="@color/design_default_color_error"
         android:backgroundTint="#FF0000"
         android:text="X"
@@ -31,59 +31,61 @@
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="28dp"
         android:text="Inventory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="408dp"
-        android:layout_height="310dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="160dp"
+        android:layout_height="499dp"
+        android:layout_marginBottom="104dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:text="1. Test"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal"
+        tools:text="2. Test" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="160dp"
+        android:layout_height="499dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="104dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:text="1. Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextMultiLine"
         tools:text="2. Test" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="187dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="54dp"
         android:layout_marginBottom="9dp"
         android:text="Item"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="76dp"
         android:text="Count"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextNumberDecimal"
-        android:layout_width="171dp"
-        android:layout_height="311dp"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="2 5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextMultiLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
