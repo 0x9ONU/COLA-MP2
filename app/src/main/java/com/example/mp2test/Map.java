@@ -12,7 +12,7 @@ public class Map {
     int wagonLocationX;                                                                             //will hold wagon's X cord
     int wagonLocationY;                                                                             //will hold wagon's Y cord
     final int[] monumentLocationX = {44,115,165,180, 277, 290, 335, 492, 509, 564, 585, 612, 640, 660, 780, 838, 975, 1040, 1090, 1186, 1300, 1445, 1567, 1660, 1800, 2170};                                                   //will hold all monument X cords (need hardcoded)
-    final int[] monumentLocationY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                      //will hold all monument Y cords (need hardcoded)
+    final int[] monumentLocationY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                      //will hold all monument Y cords (need hardcoded)
     final String[] monumentNames = {"Gardner Junction", "Red Vermillion Crossing", "Big Blue River Crossing", "Hollenberg Pony Express Station" , "Liberty Farm Station", "Fort Kearny Outpost", "Fort Kearny", "California Hill", "Ash Hallow", "Courthouse and Jail Rock", "Chimney Rock", "Pioneer Graves", "Cold Springs Camp", "Fort Laramie", "Deer Creek Crossing", "Independence Rock", "Fort Bridger", "Thomas Fork Crossing", "Sulphur Springs", "Massacre Rocks", "The Raft River", "Milner Swales", "Thousand Springs", "Hot Spring", "Umatilla River Crossing", "Fort Vancouver"};                          //holds all monument names
     final String[] monumentDescription = {"A large open field full of "};
     /**
