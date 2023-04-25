@@ -10,8 +10,8 @@
         android:layout_width="979dp"
         android:layout_height="642dp"
         app:srcCompat="@drawable/plains"
-        tools:layout_editor_absoluteX="-133dp"
-        tools:layout_editor_absoluteY="-59dp" />
+        tools:layout_editor_absoluteX="-34dp"
+        tools:layout_editor_absoluteY="-63dp" />
 
     <TextView
         android:id="@+id/dialogue4"
