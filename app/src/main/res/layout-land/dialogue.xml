@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/plainsDialogue"
+        android:layout_width="979dp"
+        android:layout_height="642dp"
+        app:srcCompat="@drawable/plains"
+        tools:layout_editor_absoluteX="-133dp"
+        tools:layout_editor_absoluteY="-59dp" />
+
+    <TextView
+        android:id="@+id/dialogue4"
+        android:layout_width="273dp"
+        android:layout_height="64dp"
+        android:text="Dialogue4"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="432dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/dialogue3"
+        android:layout_width="273dp"
+        android:layout_height="64dp"
+        android:text="Dialogue3"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="432dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/dialogueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Dialogue Person "
+        android:textColor="#DF1505"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/Dialogue1"
+        android:layout_width="273dp"
+        android:layout_height="64dp"
+        android:text="Dialogue1"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/dialogue2"
+        android:layout_width="273dp"
+        android:layout_height="64dp"
+        android:text="Dialogue2"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

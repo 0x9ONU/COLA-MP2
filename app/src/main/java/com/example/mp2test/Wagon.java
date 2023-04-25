@@ -19,8 +19,8 @@ public class Wagon {
      * default (and only) constructor for wagon, sets the speed to 1 and score to 0 by default
      */
     public Wagon(Member memberIdentifier) {
-        //setting speed automatically to 1, probably change automatic value later
-        this.speed = 1;
+        //setting speed automatically to 12, as it will travel at normal speed at 12 miles a day
+        this.speed = 12;
         this.score = 0;
         this.inventory = new Inventory(100, memberIdentifier);
     }
