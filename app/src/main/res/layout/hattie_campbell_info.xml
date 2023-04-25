@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#9C9C9C">
 
     <ImageView
         android:id="@+id/imageView7"
@@ -20,16 +21,16 @@
         android:layout_height="158dp"
         android:fontFamily="sans-serif"
         android:text="In memory of Hattie Campbell"
+        android:textColor="#000000"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="14dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
-        android:id="@+id/HattieButton"
-        android:layout_width="444dp"
-        android:layout_height="401dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="5dp"
-        tools:visibility="invisible" />
+        android:id="@+id/button32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        tools:layout_editor_absoluteX="793dp"
+        tools:layout_editor_absoluteY="359dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
