@@ -12,20 +12,6 @@ import android.widget.TextView;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-
-    Item itm = new Item() {
-        @Override
-        public double useItem(Item itemTarget, Member memberTarget) {
-            return 0;
-        }
-
-        @Override
-        public double sellItem() {
-            return 0;
-        }
-    };
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
