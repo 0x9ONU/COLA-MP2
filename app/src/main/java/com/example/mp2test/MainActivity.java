@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity);
         //USE THIS FOR EXPORTING TO THE CONSOLE
         Log.d("MainActivity", "Test");
         Log.d("MainActivity","Test2");
