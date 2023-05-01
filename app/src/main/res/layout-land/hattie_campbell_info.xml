@@ -8,29 +8,36 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="501dp"
-        android:layout_height="320dp"
-        android:rotation="90"
-        app:srcCompat="@drawable/img_7522"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:layout_width="500dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="520dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_7522" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="166dp"
         android:layout_height="158dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif"
         android:text="In memory of Hattie Campbell"
         android:textColor="#000000"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Next"
-        tools:layout_editor_absoluteX="793dp"
-        tools:layout_editor_absoluteY="359dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

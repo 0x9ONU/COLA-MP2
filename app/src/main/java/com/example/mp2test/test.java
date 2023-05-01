@@ -1,7 +1,6 @@
 package com.example.mp2test;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class test extends AppCompatActivity {
