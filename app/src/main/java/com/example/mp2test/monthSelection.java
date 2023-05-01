@@ -8,6 +8,6 @@ public class monthSelection extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.months_Selection);
+        setContentView(R.layout.months_selection);
     }
 }

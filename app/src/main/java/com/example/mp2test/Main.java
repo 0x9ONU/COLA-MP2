@@ -227,7 +227,7 @@ public class Main {
 
             reg.IncrementProbabilityMultiplier();
             //checks if the player is in the location of a shop or monument
-            if (mp.CheckMonument().equals("none") && !mp.CheckShop(shop1) && !mp.CheckShop(shop2)) {
+            if (mp.CheckMonument() == 0 && !mp.CheckShop(shop1) && !mp.CheckShop(shop2)) {
                 //displays a message if there's no shop or monument at the player's location
                 System.out.println("There is not much to see in plain sight");
             }

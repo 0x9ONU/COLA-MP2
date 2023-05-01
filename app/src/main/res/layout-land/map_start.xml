@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/oregonm_nobac" />
+        app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
