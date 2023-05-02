@@ -33,36 +33,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_0k5nkf5ku7849627ncvl6v8fs" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="You Are Here"
-        android:textColor="#03A9F4"
-        android:textColorHighlight="#0027FF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        tools:layout_editor_absoluteX="493dp" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:rotation="180"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:srcCompat="?android:attr/textSelectHandle"
-        tools:layout_editor_absoluteY="241dp" />
+        app:srcCompat="@drawable/oregonm_nobac" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="imageView10,editTextTextPersonName" />
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/youarehere_removebg_preview"
+        tools:layout_editor_absoluteX="534dp"
+        tools:layout_editor_absoluteY="215dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="1011dp"
+        android:layout_height="616dp"
+        app:srcCompat="@drawable/white_full"
+        tools:layout_editor_absoluteX="-127dp"
+        tools:layout_editor_absoluteY="-79dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="816dp"
+        android:layout_height="402dp"
+        app:srcCompat="@drawable/oregonm_nobac"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health"
+        android:textColor="#00BCD4"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day"
+        android:textColor="#00BCD4"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miles traveled"
+        android:textColor="#00BCD4"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/inventory_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventory"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <Button
+        android:id="@+id/map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="map location"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <Button
+        android:id="@+id/proceed_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed (next day)"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
