@@ -177,7 +177,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/mayButton"
         android:layout_width="281dp"
         android:layout_height="22dp"
         android:layout_marginStart="15dp"
@@ -197,7 +197,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/aprilButton"
         android:layout_width="281dp"
         android:layout_height="22dp"
         android:layout_marginEnd="20dp"
@@ -206,7 +206,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/marchButton"
         android:layout_width="281dp"
         android:layout_height="22dp"
         android:layout_marginEnd="20dp"
@@ -221,7 +221,7 @@
         android:layout_marginEnd="20dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/marchButton" />
 
     <Button
         android:id="@+id/button26"
@@ -286,7 +286,7 @@
         android:layout_marginEnd="20dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/aprilButton" />
 
     <Button
         android:id="@+id/button3"
@@ -295,10 +295,10 @@
         android:layout_marginEnd="20dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/backMonthMoreInfo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/backMonthMoreInfo"
         android:layout_width="281dp"
         android:layout_height="22dp"
         android:layout_marginEnd="20dp"
@@ -325,13 +325,13 @@
         app:layout_constraintTop_toBottomOf="@+id/button23" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/moreInfoMonths"
         android:layout_width="281dp"
         android:layout_height="22dp"
         android:layout_marginStart="15dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/mayButton" />
 
     <Button
         android:id="@+id/button9"
@@ -340,6 +340,6 @@
         android:layout_marginStart="15dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/moreInfoMonths" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
