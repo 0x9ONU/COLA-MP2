@@ -21,7 +21,7 @@ public class Food extends Item{
     /**
      * The default constructor for the Food class. Creates an 10 pounds of apples called "Dohickey".
      */
-    Food() {
+    Food(String sack_of_potatoes, double v, boolean b, boolean b1, int i) {
         super();
         setupArray();
         this.type = 0;
