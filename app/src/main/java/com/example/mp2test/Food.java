@@ -10,7 +10,7 @@ package com.example.mp2test;
 public class Food extends Item{
 
     //Member Variables
-    private final int numberOfFood = 3;
+    private final int numberOfFood = 4;
     private int type;
     private int healthValue;
     private int pounds;
@@ -54,6 +54,8 @@ public class Food extends Item{
             case 2:
                 this.healthValue = 10;
                 break;
+            case 3:
+                this.healthValue = 5;
         }
     }
 
@@ -162,6 +164,7 @@ public class Food extends Item{
         typeConvert[0] = "Fruit";
         typeConvert[1] = "Meat";
         typeConvert[2] = "Canned Goods";
+        typeConvert[3] = "Dessert";
     }
 
 

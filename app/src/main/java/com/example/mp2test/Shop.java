@@ -107,6 +107,8 @@ public class Shop {
         this.name = name;
     }
 
+    public Inventory getInventory() {return shopInventory; }
+
     /**
      * checks if its possible to add an item to the inventory
      * @param item the item that the player wants to add to an inventory

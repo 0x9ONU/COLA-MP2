@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="37dp" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/item4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Health"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="47dp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/item5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Miles traveled"

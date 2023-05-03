@@ -8,28 +8,38 @@
     android:background="#A1A1A1">
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="281dp"
+        android:id="@+id/item2"
+        android:layout_width="0dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="69dp"
+        android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/item3"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="281dp"
+        android:id="@+id/item3"
+        android:layout_width="0dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="38dp"
+        android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item2Description" />
 
     <Button
         android:id="@+id/back_button5"
-        android:layout_width="48dp"
+        android:layout_width="50dp"
         android:layout_height="48dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
@@ -43,213 +53,174 @@
         android:visibility="visible"
         app:iconTint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopName"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FF0000" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="418dp"
+        android:id="@+id/shopName"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toStartOf="@+id/back_button5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="395dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:layout_editor_absoluteX="395dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        tools:layout_editor_absoluteX="395dp" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="56dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.31"
-        tools:layout_editor_absoluteX="395dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="53dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="395dp" />
-
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="281dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="40dp"
+        android:id="@+id/item1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/item1Description"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/item2Description"
         android:layout_width="281dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/item3Description"
         android:layout_width="281dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="52dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+    <TextView
+        android:id="@+id/item4Description"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <TextView
+        android:id="@+id/item5Description"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+    <TextView
+        android:id="@+id/item1Description"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/item4"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="39dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item3Description" />
+
+    <TextView
+        android:id="@+id/item5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/item5Description"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox5" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="38dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/textView10" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/item1Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item1"
+        app:layout_constraintTop_toBottomOf="@+id/shopName" />
 
     <CheckBox
         android:id="@+id/checkBox2"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="36dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-        app:layout_constraintStart_toEndOf="@+id/textView15" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/item2Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item2"
+        app:layout_constraintTop_toBottomOf="@+id/item1Description" />
 
     <CheckBox
         android:id="@+id/checkBox3"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="37dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-        app:layout_constraintStart_toEndOf="@+id/textView14" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/item3Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item3"
+        app:layout_constraintTop_toBottomOf="@+id/item2Description" />
 
     <CheckBox
         android:id="@+id/checkBox4"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="38dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/item4Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item4"
+        app:layout_constraintTop_toBottomOf="@+id/item3Description" />
 
     <CheckBox
         android:id="@+id/checkBox5"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="51dp"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView13" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/item5Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item5"
+        app:layout_constraintTop_toBottomOf="@+id/item4Description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
