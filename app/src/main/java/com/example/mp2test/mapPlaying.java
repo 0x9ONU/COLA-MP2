@@ -1,5 +1,7 @@
 package com.example.mp2test;
 
+//Main Game Code will Go Here
+
 import android.os.Bundle;
 import android.util.Log;
 

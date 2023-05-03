@@ -1,5 +1,7 @@
 package com.example.mp2test;
 
+//Does Kind of Nothing Only Switches between Title Screen and Hattie Campbell
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
