@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,57 +15,187 @@ import org.w3c.dom.Text;
 public class shopScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Get values from previous activities
+        double money = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shops_screen);
         Intent intent = getIntent();
         int shopValue = intent.getIntExtra(monthSelection.MONTH, -1);
         if (shopValue > -1) shopValue = 0;
         //shopValue += int.getIntExtra
+        if (shopValue == 0) {
+            money = 1000;
+        }
+        else {
+            //money = int.getDoubleExtra
+        }
+
         //Setup Text
         final TextView title = (TextView) findViewById(R.id.shopName);
         final TextView item1 = (TextView) findViewById(R.id.item1);
+        item1.setText("");
         final TextView item2 = (TextView) findViewById(R.id.item2);
+        item2.setText("");
         final TextView item3 = (TextView) findViewById(R.id.item3);
+        item3.setText("");
         final TextView item4 = (TextView) findViewById(R.id.item4);
+        item4.setText("");
         final TextView item5 = (TextView) findViewById(R.id.item5);
+        item5.setText("");
         final TextView item1Description = (TextView) findViewById(R.id.item1Description);
+        item1Description.setText("");
         final TextView item2Description = (TextView) findViewById(R.id.item2Description);
+        item2Description.setText("");
         final TextView item3Description = (TextView) findViewById(R.id.item3Description);
+        item3Description.setText("");
         final TextView item4Description = (TextView) findViewById(R.id.item4Description);
+        item4Description.setText("");
         final TextView item5Description = (TextView) findViewById(R.id.item5Description);
+        item5Description.setText("");
+        final TextView moneyText = (TextView) findViewById(R.id.moneyShop);
+        moneyText.setText("$ " + money);
+        //Setup Shop
         Shop shop = setupShop(shopValue);
         int inventoryLength = shop.getInventory().getItemsLength();
+        title.setText(shop.getName());
 
         for (int i = 0; i < inventoryLength; i++) {
-            title.setText(shop.getName());
-            item1.setText(shop.getItem(i).getName());
             String itemType = "Item";
-            try {
-                Weapon test = (Weapon) shop.getItem(i);
-                itemType = "Weapon";
-            }
-            catch (Exception e) {}
+            switch (i) {
+                case 0:
+                    item1.setText(shop.getItem(i).getName());
+                    try {
+                        Weapon test = (Weapon) shop.getItem(i);
+                        itemType = "Weapon";
+                    }
+                    catch (Exception e) {}
 
-            try {
-                Food test = (Food) shop.getItem(i);
-                itemType = "Food";
-            }
-            catch (Exception e) {}
-            if (itemType.equals("Food")) {
-                Food food = (Food) shop.getItem(i);
-                item1Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
-            }
-            else if (itemType.equals("Weapon")) {
-                Weapon weapon = (Weapon) shop.getItem(i);
-                item1Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
-            }
-            else {
-                item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    try {
+                        Food test = (Food) shop.getItem(i);
+                        itemType = "Food";
+                    }
+                    catch (Exception e) {}
+
+                    if (itemType.equals("Food")) {
+                        Food food = (Food) shop.getItem(i);
+                        item1Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
+                    }
+                    else if (itemType.equals("Weapon")) {
+                        Weapon weapon = (Weapon) shop.getItem(i);
+                        item1Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else {
+                        item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    }
+                    break;
+                case 1:
+                    item2.setText(shop.getItem(i).getName());
+                    try {
+                        Weapon test = (Weapon) shop.getItem(i);
+                        itemType = "Weapon";
+                    }
+                    catch (Exception e) {}
+
+                    try {
+                        Food test = (Food) shop.getItem(i);
+                        itemType = "Food";
+                    }
+                    catch (Exception e) {}
+
+                    if (itemType.equals("Food")) {
+                        Food food = (Food) shop.getItem(i);
+                        item2Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
+                    }
+                    else if (itemType.equals("Weapon")) {
+                        Weapon weapon = (Weapon) shop.getItem(i);
+                        item2Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else {
+                        item2Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    }
+                    break;
+                case 2:
+                    item3.setText(shop.getItem(i).getName());
+                    try {
+                        Weapon test = (Weapon) shop.getItem(i);
+                        itemType = "Weapon";
+                    }
+                    catch (Exception e) {}
+
+                    try {
+                        Food test = (Food) shop.getItem(i);
+                        itemType = "Food";
+                    }
+                    catch (Exception e) {}
+
+                    if (itemType.equals("Food")) {
+                        Food food = (Food) shop.getItem(i);
+                        item3Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
+                    }
+                    else if (itemType.equals("Weapon")) {
+                        Weapon weapon = (Weapon) shop.getItem(i);
+                        item3Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else {
+                        item3Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    }
+                    break;
+                case 3:
+                    item4.setText(shop.getItem(i).getName());
+                    try {
+                        Weapon test = (Weapon) shop.getItem(i);
+                        itemType = "Weapon";
+                    }
+                    catch (Exception e) {}
+
+                    try {
+                        Food test = (Food) shop.getItem(i);
+                        itemType = "Food";
+                    }
+                    catch (Exception e) {}
+
+                    if (itemType.equals("Food")) {
+                        Food food = (Food) shop.getItem(i);
+                        item4Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
+                    }
+                    else if (itemType.equals("Weapon")) {
+                        Weapon weapon = (Weapon) shop.getItem(i);
+                        item4Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else {
+                        item4Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    }
+                    break;
+                case 4:
+                    item5.setText(shop.getItem(i).getName());
+                    try {
+                        Weapon test = (Weapon) shop.getItem(i);
+                        itemType = "Weapon";
+                    }
+                    catch (Exception e) {}
+
+                    try {
+                        Food test = (Food) shop.getItem(i);
+                        itemType = "Food";
+                    }
+                    catch (Exception e) {}
+
+                    if (itemType.equals("Food")) {
+                        Food food = (Food) shop.getItem(i);
+                        item5Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
+                    }
+                    else if (itemType.equals("Weapon")) {
+                        Weapon weapon = (Weapon) shop.getItem(i);
+                        item5Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else {
+                        item5Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                    }
+                    break;
             }
 
         }
-
-        setupBackButton(shop);
+        setupBackButton(shop, money);
     }
 
 
@@ -75,16 +206,20 @@ public class shopScreen extends AppCompatActivity {
         switch (shopValue) {
             case 0:
                 Member shopKeeper1 = new Member("Independence Shop Keeper", 0);
-                Inventory shop1Inventory = new Inventory(4, shopKeeper1);
+                Inventory shop1Inventory = new Inventory(5, shopKeeper1);
                 shopKeeper1.setInventory(shop1Inventory);
                 Shop shop1 = new Shop(0, 0, "Independence Shop", shop1Inventory, shopKeeper1);
                 Food potatoes = new Food("Sack of Potatoes", 0.5, false, false, 0, 15);
                 Food beans = new Food("Can of Beans", 0.75, false, false, 2, 20);
-                Weapon DBS = new Weapon(40, "Double Barrel Shotgun", true, 1, 20, 0);
+                Food basicRations = new Food("Basic Rations", 0.6, false, false, 2, 200);
+                Food cookies = new Food("Cookies", 0.75, false, false, 3, 10);
+                Weapon DBS = new Weapon(80, "Double Barrel Shotgun", true, 1, 20, 0);
                 DBS.setMaxBulletCount(2);
                 DBS.setBulletCount(2);
                 shop1.addItem(potatoes);
                 shop1.addItem(beans);
+                shop1.addItem(basicRations);
+                shop1.addItem(cookies);
                 shop1.addItem(DBS);
                 return shop1;
             case 1:
@@ -183,14 +318,64 @@ public class shopScreen extends AppCompatActivity {
         return new Shop();
     }
 
-    private void setupBackButton(Shop shop) {
+    private void setupBackButton(Shop shop, double money) {
         final Button backButton = (Button) findViewById(R.id.back_button5);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(shopScreen.this, mapPlaying.class);
-                //intent.putExtra("SHOPITEM", shop.getInventory());
-                startActivity(intent);
+                final CheckBox item1Check = (CheckBox) findViewById(R.id.item1CheckBox);
+                final CheckBox item2Check = (CheckBox) findViewById(R.id.item2CheckBox);
+                final CheckBox item3Check = (CheckBox) findViewById(R.id.item3CheckBox);
+                final CheckBox item4Check = (CheckBox) findViewById(R.id.item4CheckBox);
+                final CheckBox item5Check = (CheckBox) findViewById(R.id.item5CheckBox);
+                final TextView error = (TextView) findViewById(R.id.errorMessageShop);
+                final TextView moneyLeft = (TextView) findViewById(R.id.moneyShop);
+
+                double total = 0;
+
+                if (item1Check.isChecked()) {
+                    try {
+                        total += shop.getItem(1).getValue();
+                    }
+                    catch (IndexOutOfBoundsException e) {}
+                }
+                if (item2Check.isChecked()) {
+                    try {
+                        total += shop.getItem(2).getValue();
+                    }
+                    catch (IndexOutOfBoundsException e) {}
+                }
+                if (item3Check.isChecked()) {
+                    try {
+                        total += shop.getItem(3).getValue();
+                    }
+                    catch (IndexOutOfBoundsException e) {}
+                }
+                if (item4Check.isChecked()) {
+                    try {
+                        total += shop.getItem(4).getValue();
+                    }
+                    catch (IndexOutOfBoundsException e) {}
+                }
+                if (item5Check.isChecked()) {
+                    try {
+                        total += shop.getItem(5).getValue();
+                    }
+                    catch (IndexOutOfBoundsException e) {}
+                }
+
+                if (total < money) {
+                    error.setText("Not enough funds.");
+                }
+                else {
+                    double change = total - money;
+                    //moneyLeft.setText("$ " + change);
+                    Intent intent = new Intent(shopScreen.this, mapPlaying.class);
+                    intent.putExtra("SHOPITEM", (Parcelable) shop.getInventory());
+                    intent.putExtra("MONEYLEFT", change);
+                    startActivity(intent);
+                }
             }
         });
     }

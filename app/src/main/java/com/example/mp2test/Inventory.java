@@ -6,6 +6,12 @@
  */
 
 package com.example.mp2test;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Inventory {
@@ -32,6 +38,23 @@ public class Inventory {
     }
 
     //getters
+
+    protected Inventory(Parcel in) {
+        maxItemCount = in.readInt();
+        memberIdentifier = in.readString();
+    }
+
+    public static final Creator<Inventory> CREATOR = new Creator<Inventory>() {
+        @Override
+        public Inventory createFromParcel(Parcel in) {
+            return new Inventory(in);
+        }
+
+        @Override
+        public Inventory[] newArray(int size) {
+            return new Inventory[size];
+        }
+    };
 
     /**
      * gets the max items of the inventory
