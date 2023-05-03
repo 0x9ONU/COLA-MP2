@@ -17,10 +17,11 @@
         android:layout_marginBottom="69dp"
         android:gravity="center"
         android:text="TextView"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="@+id/item3"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintEnd_toStartOf="@+id/item2CheckBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+        app:layout_constraintTop_toTopOf="@+id/item1CheckBox" />
 
     <TextView
         android:id="@+id/item3"
@@ -32,8 +33,9 @@
         android:layout_marginBottom="38dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/item4CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/item3CheckBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/item2Description" />
 
@@ -68,7 +70,7 @@
         android:gravity="center"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/item1CheckBox"
         app:layout_constraintEnd_toStartOf="@+id/back_button5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,10 +85,11 @@
         android:layout_marginBottom="2dp"
         android:gravity="center"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/item1Description"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintEnd_toStartOf="@+id/item1CheckBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+        app:layout_constraintTop_toTopOf="@+id/item1CheckBox" />
 
     <TextView
         android:id="@+id/item2Description"
@@ -94,10 +97,10 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        app:layout_constraintBottom_toTopOf="@+id/item3CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/item2CheckBox" />
 
     <TextView
         android:id="@+id/item3Description"
@@ -105,10 +108,10 @@
         android:layout_height="0dp"
         android:layout_marginBottom="9dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintBottom_toTopOf="@+id/item4CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/item3CheckBox" />
 
     <TextView
         android:id="@+id/item4Description"
@@ -116,10 +119,10 @@
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintBottom_toTopOf="@+id/item5CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/item4CheckBox" />
 
     <TextView
         android:id="@+id/item5Description"
@@ -130,7 +133,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/item5CheckBox" />
 
     <TextView
         android:id="@+id/item1Description"
@@ -138,10 +141,10 @@
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintBottom_toTopOf="@+id/item2CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/item1CheckBox" />
 
     <TextView
         android:id="@+id/item4"
@@ -153,8 +156,9 @@
         android:layout_marginBottom="39dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/item5CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/item4CheckBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/item3Description" />
 
@@ -168,13 +172,14 @@
         android:layout_marginBottom="2dp"
         android:gravity="center"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/item5Description"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox5"
+        app:layout_constraintEnd_toStartOf="@+id/item5CheckBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox5" />
+        app:layout_constraintTop_toTopOf="@+id/item5CheckBox" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/item1CheckBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="189dp"
@@ -184,7 +189,7 @@
         app:layout_constraintTop_toBottomOf="@+id/shopName" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/item2CheckBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="189dp"
@@ -194,7 +199,7 @@
         app:layout_constraintTop_toBottomOf="@+id/item1Description" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/item3CheckBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="189dp"
@@ -204,7 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/item2Description" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/item4CheckBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="189dp"
@@ -214,7 +219,7 @@
         app:layout_constraintTop_toBottomOf="@+id/item3Description" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/item5CheckBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="189dp"
@@ -222,5 +227,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item5"
         app:layout_constraintTop_toBottomOf="@+id/item4Description" />
+
+    <TextView
+        android:id="@+id/errorMessageShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/moneyShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
