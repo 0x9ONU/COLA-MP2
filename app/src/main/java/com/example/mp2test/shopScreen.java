@@ -3,6 +3,7 @@ package com.example.mp2test;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,6 +17,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class shopScreen extends AppCompatActivity {
+    public static final String SHOPITEM = "shopItem";
+    public static final String MONEYLEFT = "moneyLeft";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Get values from previous activities
@@ -25,12 +28,12 @@ public class shopScreen extends AppCompatActivity {
         Intent intent = getIntent();
         int shopValue = intent.getIntExtra(monthSelection.MONTH, -1);
         if (shopValue > -1) shopValue = 0;
-        //shopValue += int.getIntExtra
+        shopValue += intent.getIntExtra(mapPlaying.SHOPNUMBER, 0);
         if (shopValue == 0) {
             money = 1000;
         }
         else {
-            //money = int.getDoubleExtra
+            money = intent.getDoubleExtra(mapPlaying.PLAYERMONEY, 0);
         }
 
         //Setup Text
@@ -216,7 +219,7 @@ public class shopScreen extends AppCompatActivity {
                 Food beans = new Food("Can of Beans", 0.75, false, false, 2, 20);
                 Food basicRations = new Food("Basic Rations", 0.6, false, false, 2, 200);
                 Food cookies = new Food("Cookies", 0.75, false, false, 3, 10);
-                Weapon DBS = new Weapon(80, "Double Barrel Shotgun", true, 1, 20, 0);
+                Weapon DBS = new Weapon(1000, "Double Barrel Shotgun", true, 1, 20, 0);
                 DBS.setMaxBulletCount(2);
                 DBS.setBulletCount(2);
                 shop1.addItem(potatoes);
@@ -333,51 +336,51 @@ public class shopScreen extends AppCompatActivity {
                 final CheckBox item4Check = (CheckBox) findViewById(R.id.item4CheckBox);
                 final CheckBox item5Check = (CheckBox) findViewById(R.id.item5CheckBox);
                 final TextView error = (TextView) findViewById(R.id.errorMessageShop);
-                final TextView moneyLeft = (TextView) findViewById(R.id.moneyShop);
+                //final TextView moneyLeft = (TextView) findViewById(R.id.moneyShop);
 
                 double total = 0;
 
                 if (item1Check.isChecked()) {
                     try {
-                        total += shop.getItem(1).getValue();
+                        total += shop.getItem(0).getValue();
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item2Check.isChecked()) {
                     try {
-                        total += shop.getItem(2).getValue();
+                        total += shop.getItem(1).getValue();
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item3Check.isChecked()) {
                     try {
-                        total += shop.getItem(3).getValue();
+                        total += shop.getItem(2).getValue();
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item4Check.isChecked()) {
                     try {
-                        total += shop.getItem(4).getValue();
+                        total += shop.getItem(3).getValue();
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item5Check.isChecked()) {
                     try {
-                        total += shop.getItem(5).getValue();
+                        total += shop.getItem(4).getValue();
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
-
-                if (total < money) {
+                Log.d("Debug", "Total: " + total);
+                if (total > money) {
                     error.setText("Not enough funds.");
                 }
                 else {
-                    double change = total - money;
+                    double change = money - total;
                     Inventory items = shop.getInventory();
                     //moneyLeft.setText("$ " + change);
                     Intent intent = new Intent(shopScreen.this, mapPlaying.class);
-                    intent.putExtra("SHOPITEM", (Serializable) items);
-                    intent.putExtra("MONEYLEFT", change);
+                    intent.putExtra(SHOPITEM, items);
+                    intent.putExtra(MONEYLEFT, change);
                     startActivity(intent);
                 }
             }

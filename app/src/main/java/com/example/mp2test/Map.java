@@ -6,7 +6,9 @@
  */
 package com.example.mp2test;
 
-public class Map {
+import java.io.Serializable;
+
+public class Map implements Serializable {
     private int playerLocationX;                                                                            //will hold player's X cord
     private int playerLocationY;                                                                            //will hold player's Y cord
     private int wagonLocationX;                                                                             //will hold wagon's X cord
@@ -140,7 +142,7 @@ public class Map {
      */
     public int CheckMonument() {
             int monumentNumber;
-            int previous = 0;
+            int previous = -1;
             for (monumentNumber = monumentNames.length - 1; monumentNumber >= 0; monumentNumber--) {
                 if (monumentLocationX[monumentNumber] >= playerLocationX) {
                     previous = monumentNumber;

@@ -67,7 +67,7 @@ public class Member {
      * @param friendly true if the member if friendly to the player, false if they are not friendly and will attack
      * @param money the member's starting amount of money
      */
-    public Member(int health, Inventory inventory, String name, boolean human, boolean friendly, int money) {
+    public Member(int health, Inventory inventory, String name, boolean human, boolean friendly, double money) {
         this.health = health;
         this.maxHealth = health;
         this.inventory = inventory;
