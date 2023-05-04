@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Inventory {
+public class Inventory implements Serializable {
     private ArrayList<Item> items = new ArrayList<Item>();                                             //holds the list of items
     private int maxItemCount;                                                                       //the maximum amount of items that can be held
     private String memberIdentifier;                                                                //an ID string for the member
@@ -44,22 +44,16 @@ public class Inventory {
         memberIdentifier = in.readString();
     }
 
-    public static final Creator<Inventory> CREATOR = new Creator<Inventory>() {
-        @Override
-        public Inventory createFromParcel(Parcel in) {
-            return new Inventory(in);
-        }
-
-        @Override
-        public Inventory[] newArray(int size) {
-            return new Inventory[size];
-        }
-    };
+    public ArrayList<Item> getItems() {
+        return items;
+    }
 
     /**
      * gets the max items of the inventory
      * @return maxItemCount
      */
+
+
     public int getMaxItemCount() {
         return maxItemCount;
     }

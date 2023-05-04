@@ -8,6 +8,8 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class mapPlaying extends AppCompatActivity {
 
     @Override
@@ -17,8 +19,7 @@ public class mapPlaying extends AppCompatActivity {
         //Receiving values from previous activities
         Intent receivingValues = getIntent();
         int month = receivingValues.getIntExtra(monthSelection.MONTH, 0);
-        Inventory firstShop = receivingValues.getParcelableExtra(shopScreen.SHOPITEM, new Inventory());
-
+        Inventory shop1Items = receivingValues.getSerializableExtra(shopScreen., new Inventory());
         //Creating the multiple classes for the game
         Map mp = new Map();
     }

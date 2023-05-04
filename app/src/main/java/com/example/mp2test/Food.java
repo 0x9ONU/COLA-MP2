@@ -7,7 +7,9 @@
 
 package com.example.mp2test;
 
-public class Food extends Item{
+import java.io.Serializable;
+
+public class Food extends Item implements Serializable {
 
     //Member Variables
     private final int numberOfFood = 4;

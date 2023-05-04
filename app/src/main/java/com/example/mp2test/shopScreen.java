@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.w3c.dom.Text;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 public class shopScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -370,9 +373,10 @@ public class shopScreen extends AppCompatActivity {
                 }
                 else {
                     double change = total - money;
+                    Inventory items = shop.getInventory();
                     //moneyLeft.setText("$ " + change);
                     Intent intent = new Intent(shopScreen.this, mapPlaying.class);
-                    intent.putExtra("SHOPITEM", (Parcelable) shop.getInventory());
+                    intent.putExtra("SHOPITEM", (Serializable) items);
                     intent.putExtra("MONEYLEFT", change);
                     startActivity(intent);
                 }

@@ -7,9 +7,10 @@
 
 package com.example.mp2test;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Weapon extends Item {
+public class Weapon extends Item implements Serializable {
 
    //Member Variables
     private final int numberOfWeapons = 3;

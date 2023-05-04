@@ -6,10 +6,11 @@
  */
 
 package com.example.mp2test;
+import java.io.Serializable;
 import java.util.Random;
 
 //The default Item Class that is meant to be the super class to all items in the game
-public abstract class Item {
+public abstract class Item implements Serializable {
     //Data Members
     private double value;
     private String name = "";
