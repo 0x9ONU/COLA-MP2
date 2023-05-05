@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/oregonm_nobac" />
 
     <TextView
-        android:id="@+id/item4"
+        android:id="@+id/health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/item5"
+        android:id="@+id/miles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -60,7 +60,7 @@
         android:textColor="#00BCD4"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/day" />
 
     <Button
         android:id="@+id/inventory_button"
@@ -89,6 +89,6 @@
         android:layout_marginTop="23dp"
         android:text="Proceed (next day)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item5" />
+        app:layout_constraintTop_toBottomOf="@+id/miles" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -147,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/item1CheckBox" />
 
     <TextView
-        android:id="@+id/item4"
+        android:id="@+id/health"
         android:layout_width="0dp"
         android:layout_height="28dp"
         android:layout_marginStart="225dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toTopOf="@+id/item3Description" />
 
     <TextView
-        android:id="@+id/item5"
+        android:id="@+id/miles"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="225dp"
@@ -215,7 +215,7 @@
         android:layout_marginEnd="189dp"
         app:layout_constraintBottom_toTopOf="@+id/item4Description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item4"
+        app:layout_constraintStart_toEndOf="@+id/health"
         app:layout_constraintTop_toBottomOf="@+id/item3Description" />
 
     <CheckBox
@@ -225,7 +225,7 @@
         android:layout_marginEnd="189dp"
         app:layout_constraintBottom_toTopOf="@+id/item5Description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item5"
+        app:layout_constraintStart_toEndOf="@+id/miles"
         app:layout_constraintTop_toBottomOf="@+id/item4Description" />
 
     <TextView

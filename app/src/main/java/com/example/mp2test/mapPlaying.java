@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class mapPlaying extends AppCompatActivity {
 
     public final static String SHOPNUMBER = "shopNumber";
@@ -48,6 +50,8 @@ public class mapPlaying extends AppCompatActivity {
         final Button proceed = findViewById(R.id.proceed_button);
         final Button inventory = findViewById(R.id.inventory_button);
         final Button mapLocation = findViewById(R.id.map_button);
+
+        //TextVeiws
 
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,14 +112,52 @@ public class mapPlaying extends AppCompatActivity {
                 }
                 else if (rndEvent.equals("aggressive native americans")) player.damage(5);
                 else if (rndEvent.equals("thief")) {
-
+                    int inventoryLength = player.getInventory().getItemsLength();
+                    Random rand = new Random(System.currentTimeMillis());
+                    int temp = 0;
+                    while (true) {
+                        temp = rand.nextInt(inventoryLength);
+                        if (player.getInventory().getItem(temp).getIndestructible());
+                        else break;
+                    }
+                    player.getInventory().removeItem(temp);
                 }
-                else if (rndEvent.equals("bad shortcut"));
-                else if (rndEvent.equals("rainy day"));
-                else if (rndEvent.equals("broken leg"));
-                else if (rndEvent.equals("tired oxen"));
-                else if (rndEvent.equals("misplaced food"));
-                else if (rndEvent.equals("Volcano"));
+                else if (rndEvent.equals("bad shortcut")) {
+                    for (int i = 0; i < 6; i++) dt.IncrementCurrentDay();
+                }
+                else if (rndEvent.equals("rainy day")) {
+                    dt.IncrementCurrentDay();
+                }
+                else if (rndEvent.equals("broken leg")) {
+                    dt.IncrementCurrentDay();
+                    player.damage(10);
+                }
+                else if (rndEvent.equals("tired oxen")) dt.IncrementCurrentDay();
+                else if (rndEvent.equals("misplaced food")) {
+                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                        try {
+                            Food test = (Food) player.getInventory().getItem(i);
+                        }
+                        catch (ClassCastException e) {
+                            continue;
+                        }
+                        Food test = (Food) player.getInventory().getItem(i);
+                        int pounds = test.getPounds();
+                        test.setPounds(pounds - 10);
+                        break;
+                    }
+                }
+                else if (rndEvent.equals("Volcano")) {
+                    int inventoryLength = player.getInventory().getItemsLength();
+                    Random rand = new Random(System.currentTimeMillis());
+                    int temp = 0;
+                    while (true) {
+                        temp = rand.nextInt(inventoryLength);
+                        if (player.getInventory().getItem(temp).getIndestructible());
+                        else break;
+                    }
+                    player.getInventory().removeItem(temp);
+                }
                 Intent intent = new Intent(mapPlaying.this, randomEventSplash.class);
                 intent.putExtra(RND, rndEvent);
                 startActivity(intent);

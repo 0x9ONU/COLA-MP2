@@ -2,7 +2,6 @@ package com.example.mp2test;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,11 +9,6 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 public class shopScreen extends AppCompatActivity {
     public static final String SHOPITEM = "shopItem";
@@ -44,9 +38,9 @@ public class shopScreen extends AppCompatActivity {
         item2.setText("");
         final TextView item3 = (TextView) findViewById(R.id.item3);
         item3.setText("");
-        final TextView item4 = (TextView) findViewById(R.id.item4);
+        final TextView item4 = (TextView) findViewById(R.id.health);
         item4.setText("");
-        final TextView item5 = (TextView) findViewById(R.id.item5);
+        final TextView item5 = (TextView) findViewById(R.id.miles);
         item5.setText("");
         final TextView item1Description = (TextView) findViewById(R.id.item1Description);
         item1Description.setText("");
