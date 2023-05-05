@@ -47,6 +47,9 @@
         <activity
             android:name=".shopScreen"
             android:exported="false"></activity>
+        <activity
+            android:name=".inventoryScreen"
+            android:exported="false"></activity>
     </application>
 
 </manifest>

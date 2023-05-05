@@ -106,7 +106,9 @@ public class mapPlaying extends AppCompatActivity {
                     }
                 }
                 else if (rndEvent.equals("aggressive native americans")) player.damage(5);
-                else if (rndEvent.equals("thief"));
+                else if (rndEvent.equals("thief")) {
+
+                }
                 else if (rndEvent.equals("bad shortcut"));
                 else if (rndEvent.equals("rainy day"));
                 else if (rndEvent.equals("broken leg"));
