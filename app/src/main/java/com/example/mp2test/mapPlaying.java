@@ -52,19 +52,60 @@ public class mapPlaying extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String rndEvent = rnd.GetEvent();
-                if (rndEvent.equals("Kiss")) ;
-                else if (rndEvent.equals("gold nugget")) ;
-                else if (rndEvent.equals("nice native americans"));
-                else if (rndEvent.equals("bundle of food"));
-                else if (rndEvent.equals("deserted wagon"));
-                else if (rndEvent.equals("miscounted food"));
-                else if (rndEvent.equals("house"));
+                if (rndEvent.equals("Kiss"));
+                else if (rndEvent.equals("gold nugget")) {
+                    player.getInventory().addItem(new Item(10, "Golden Nugget", true, false) {
+                        @Override
+                        public double useItem(Item itemTarget, Member memberTarget) {
+                            return 0;
+                        }
+                    });
+                }
+                else if (rndEvent.equals("nice native americans")) player.getInventory().addItem(new Food("Tanka Me A Lo", 0.5, false, false, 2, 5));
+                else if (rndEvent.equals("bundle of food")) player.getInventory().addItem(new Food("Bundle of Food", 0.25, false, false, 0, 5));
+                else if (rndEvent.equals("deserted wagon")) player.getInventory().addItem(new Food("Old cakes", 0.1, false, false, 3, 15));
+                else if (rndEvent.equals("miscounted food")) {
+                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                        try {
+                            Food test = (Food) player.getInventory().getItem(i);
+                        }
+                        catch (ClassCastException e) {
+                            continue;
+                        }
+                        Food test = (Food) player.getInventory().getItem(i);
+                        int pounds = test.getPounds();
+                        test.setPounds(pounds + 10);
+                        break;
+                    }
+                }
+                else if (rndEvent.equals("house")) player.getInventory().addItem(new Food("Blue-Berei Pie", 1, false, false, 3, 5));
                 else if (rndEvent.equals("wandering oxen"));
-                else if (rndEvent.equals("good sleep"));
+                else if (rndEvent.equals("good sleep")) player.heal(5);
                 else if (rndEvent.equals("Alex Fimel"));
-                else if (rndEvent.equals("animals go to the food"));
-                else if (rndEvent.equals("broken wheel"));
-                else if (rndEvent.equals("aggressive native americans"));
+                else if (rndEvent.equals("animals go to the food")) {
+                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                        try {
+                            Food test = (Food) player.getInventory().getItem(i);
+                        }
+                        catch (ClassCastException e) {
+                            continue;
+                        }
+                        Food test = (Food) player.getInventory().getItem(i);
+                        int pounds = test.getPounds();
+                        test.setPounds(pounds - 5);
+                        break;
+                    }
+                }
+                else if (rndEvent.equals("broken wheel")) {
+                    if (player.getMoney() < 50) {
+                        double tempMoney = player.getMoney();
+                        player.setMoney(50 - tempMoney);
+                    }
+                    else {
+                        for (int i = 0; i < 6; i++) dt.IncrementCurrentDay();
+                    }
+                }
+                else if (rndEvent.equals("aggressive native americans")) player.damage(5);
                 else if (rndEvent.equals("thief"));
                 else if (rndEvent.equals("bad shortcut"));
                 else if (rndEvent.equals("rainy day"));

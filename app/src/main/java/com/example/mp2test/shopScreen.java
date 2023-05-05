@@ -201,7 +201,7 @@ public class shopScreen extends AppCompatActivity {
             }
 
         }
-        setupBackButton(shop, money);
+        setupBackButton(shop, money, shopValue);
     }
 
 
@@ -324,7 +324,7 @@ public class shopScreen extends AppCompatActivity {
         return new Shop();
     }
 
-    private void setupBackButton(Shop shop, double money) {
+    private void setupBackButton(Shop shop, double money, int shopValue) {
         final Button backButton = (Button) findViewById(R.id.back_button5);
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -381,7 +381,12 @@ public class shopScreen extends AppCompatActivity {
                     Intent intent = new Intent(shopScreen.this, mapPlaying.class);
                     intent.putExtra(SHOPITEM, items);
                     intent.putExtra(MONEYLEFT, change);
-                    startActivity(intent);
+                    if (shopValue == 0) {
+                        startActivity(intent);
+                    }
+                    else {
+                        finish();
+                    }
                 }
             }
         });
