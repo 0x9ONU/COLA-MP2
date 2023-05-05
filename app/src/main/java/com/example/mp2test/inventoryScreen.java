@@ -10,5 +10,9 @@ public class inventoryScreen extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.inventory_screen);
+
+            Inventory playerInventory = getIntent().getParcelableExtra(mapPlaying.PLAYERIVENTORY);
+
+
         }
 }

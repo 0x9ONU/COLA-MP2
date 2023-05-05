@@ -17,6 +17,7 @@ public class mapPlaying extends AppCompatActivity {
     public final static String PLAYERMONEY = "playerMoney";
     public final static String MAP = "map";
     public final static String RND = "RandomEvent";
+    public final static String PLAYERIVENTORY = "playerInventory";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +118,15 @@ public class mapPlaying extends AppCompatActivity {
                 else if (rndEvent.equals("Volcano"));
                 Intent intent = new Intent(mapPlaying.this, randomEventSplash.class);
                 intent.putExtra(RND, rndEvent);
+                startActivity(intent);
+            }
+        });
+
+        inventory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mapPlaying.this, inventoryScreen.class);
+                intent.putExtra(PLAYERIVENTORY, player.getInventory());
                 startActivity(intent);
             }
         });
