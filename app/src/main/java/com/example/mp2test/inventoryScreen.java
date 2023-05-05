@@ -13,33 +13,38 @@ public class inventoryScreen extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.inventory_screen);
 
+            Intent intent = getIntent();
+
             //setup text
             final TextView items = (TextView) findViewById(R.id.editTextTextMultiLine);
             final TextView count = (TextView) findViewById(R.id.editTextTextMultiLine2);
 
             //money
                 //figure out and set up this part later
-            Intent intent = getIntent();
             double money = intent.getDoubleExtra(mapPlaying.PLAYERMONEY, 0);
 
             //setup inventory
             Inventory playerInventory = getIntent().getParcelableExtra(mapPlaying.PLAYERIVENTORY);
-            int inventoryLength = playerInventory.getItemsLength();
+            int inventoryCounted = 0;
+            int inventoryLength = 5 /*playerInventory.getItemsLength()*/;
 
             for (int i = 0; i < inventoryLength; i++) {
                 String itemType = "Item";
-                items.setText(playerInventory.getItem(i).getName());
-                try {
+                String itemTest = items + playerInventory.getItem(i).getName() + "\n";
+                items.setText(itemTest /*playerInventory.getItem(i).getName()*/);
+                /*try {
                     Weapon test = (Weapon) playerInventory.getItem(i);
                     itemType = "Weapon";
+                    inventoryCounted++;
+                } catch (Exception e) {
                 }
-                catch (Exception e) {}
 
                 try {
                     Food test = (Food) playerInventory.getItem(i);
                     itemType = "Food";
-                }
-                catch (Exception e) {}
+                    inventoryCounted++;
+                } catch (Exception e) {
+                }*/
 
                 /*if (itemType.equals("Food")) {
                     Food food = (Food) shop.getItem(i);
@@ -50,9 +55,16 @@ public class inventoryScreen extends AppCompatActivity {
                     item1Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
                 }
                 else {
-                    item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");*/
-                }
-            finish();
+                    item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                } */
+            }
+            /*if (inventoryCounted == inventoryLength) {
+                finish();
+            }
+            else {
+                finish();
+            }*/
+            //finish();
 
 
         }
