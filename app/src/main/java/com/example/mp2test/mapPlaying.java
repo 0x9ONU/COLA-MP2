@@ -5,6 +5,7 @@ package com.example.mp2test;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class mapPlaying extends AppCompatActivity {
     public final static String RND = "RandomEvent";
     public final static String PLAYERIVENTORY = "playerInventory";
     public final static String PLAYER = "player";
+    public final static String MONEY = "money";
 
     public int previousMonument = -1;
 
@@ -172,16 +174,47 @@ public class mapPlaying extends AppCompatActivity {
                     if (monument != -1) {
                         if (mp.getPreviousMonument() < monument) {
                             mp.setPreviousMonument(monument);
+                            mp.setPlayerLocationX(mp.getMonumentLocationX(monument));
+                            mp.setWagonLocationX(mp.getMonumentLocationX(monument));
+                            player.setxCoordinate(mp.getMonumentLocationX(monument));
                             Intent monumentActivity = new Intent(mapPlaying.this, monumentDescription.class);
                             monumentActivity.putExtra(MAP, mp);
                             startActivity(monumentActivity);
                         }
                     }
 
-                    //Set display Values
-                    health.setText("Health: " + player.getHealth());
-                    date.setText("Date: " + dt.toString());
-                    miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
+                    int shop = mp.checkShop();
+                    Log.d("shop", "" + shop);
+                    boolean shopHappened = false;
+
+                    if (shop > 0) {
+                        if (mp.getPreviousShop() < shop) {
+                            mp.setPreviousShop(shop);
+                            mp.setPlayerLocationX(mp.getShopLocation(monument));
+                            mp.setWagonLocationX(mp.getShopLocation(monument));
+                            player.setxCoordinate(mp.getShopLocation(monument));
+                            Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
+                            shopActivity.putExtra(MONEY, player.getMoney());
+                            shopActivity.putExtra(SHOPNUMBER, shop + 1);
+                            startActivity(shopActivity);
+                            onBackPressed();
+                            //Remove change from player
+                            Intent intent = getIntent();
+
+                            player.decrementMoney(intent.getDoubleExtra(shopScreen.MONEYLEFT, 0));
+
+                            //Add Inventory from shop to the player's inventory
+                            Inventory exportInv = (Inventory) intent.getSerializableExtra(shopScreen.INVEXTRA);
+                            for (int i = 0; i < exportInv.getItemsLength(); i++) {
+                                player.getInventory().addItem(exportInv.getItem(i));
+                            }
+                        }
+
+                        //Set display Values
+                        health.setText("Health: " + player.getHealth());
+                        date.setText("Date: " + dt.toString());
+                        miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
+                    }
                 }
             });
 

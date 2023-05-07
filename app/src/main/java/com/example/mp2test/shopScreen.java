@@ -14,6 +14,7 @@ public class shopScreen extends AppCompatActivity {
     public static final String SHOPITEM = "shopItem";
     public static final String MONEYLEFT = "moneyLeft";
     public static final String MONTH = "month";
+    public static final String INVEXTRA = "invExtra";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Get values from previous activities
@@ -27,7 +28,7 @@ public class shopScreen extends AppCompatActivity {
             money = 1000;
         }
         else {
-            money = intent.getDoubleExtra(mapPlaying.PLAYERMONEY, 0);
+            money = intent.getDoubleExtra(mapPlaying.MONEY, 0);
         }
 
         //Setup Text
@@ -382,7 +383,12 @@ public class shopScreen extends AppCompatActivity {
                     Intent intent = new Intent(shopScreen.this, mapPlaying.class);
                     //int temp = intent.getIntExtra(monthSelection.MONTH, 1);
                     //intent.putExtra(MONTH, temp);
-                    intent.putExtra(SHOPITEM, exportInv);
+                    if (shopValue == 0)
+                        intent.putExtra(SHOPITEM, exportInv);
+                    else {
+                        intent.putExtra(INVEXTRA, exportInv);
+                        Log.d("Real", "true");
+                    }
                     intent.putExtra(MONEYLEFT, change);
                     if (shopValue == 0) {
                         startActivity(intent);

@@ -2,8 +2,6 @@ package com.example.mp2test;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,63 +18,53 @@ public class inventoryScreen extends AppCompatActivity {
             //setup text
             final TextView items = (TextView) findViewById(R.id.editTextTextMultiLine);
             final TextView count = (TextView) findViewById(R.id.editTextTextMultiLine2);
-            final TextView moneyText = (TextView) findViewById(R.id.invMoney);
 
-            final Button back = findViewById(R.id.back_button);
-
-            Member player = (Member) intent.getSerializableExtra(mapPlaying.PLAYER);
-
-            moneyText.setText("$" + player.getMoney());
-
+            //money
+                //figure out and set up this part later
+            double money = intent.getDoubleExtra(mapPlaying.PLAYERMONEY, 0);
 
             //setup inventory
-            Inventory playerInventory = (Inventory) getIntent().getSerializableExtra(mapPlaying.PLAYERIVENTORY);
-            int inventoryLength = playerInventory.getItemsLength();
-
-            //get Player
-
-
-
-            String exportTextTitle = "";
-            String exportTextDetail = "";
+            Inventory playerInventory = getIntent().getParcelableExtra(mapPlaying.PLAYERIVENTORY);
+            int inventoryCounted = 0;
+            int inventoryLength = 5 /*playerInventory.getItemsLength()*/;
 
             for (int i = 0; i < inventoryLength; i++) {
                 String itemType = "Item";
-                exportTextTitle += playerInventory.getItem(i).getName() + "\n";
-                try {
+                String itemTest = items + playerInventory.getItem(i).getName() + "\n";
+                items.setText(itemTest /*playerInventory.getItem(i).getName()*/);
+                /*try {
                     Weapon test = (Weapon) playerInventory.getItem(i);
                     itemType = "Weapon";
+                    inventoryCounted++;
                 } catch (Exception e) {
                 }
 
                 try {
                     Food test = (Food) playerInventory.getItem(i);
                     itemType = "Food";
+                    inventoryCounted++;
                 } catch (Exception e) {
-                }
+                }*/
 
-                if (itemType.equals("Food")) {
-                    Food food = (Food) playerInventory.getItem(i);
-                    exportTextDetail += itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds() + "\n";
+                /*if (itemType.equals("Food")) {
+                    Food food = (Food) shop.getItem(i);
+                    item1Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
                 }
                 else if (itemType.equals("Weapon")) {
-                    Weapon weapon = (Weapon) playerInventory.getItem(i);
-                    exportTextDetail +=  "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear() + "\n";
+                    Weapon weapon = (Weapon) shop.getItem(i);
+                    item1Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
                 }
                 else {
-                    exportTextDetail += itemType + "   Cost: " + playerInventory.getItem(i).getValue() + "\n";
-                }
+                    item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
+                } */
             }
-
-            items.setText(exportTextTitle);
-            count.setText(exportTextDetail);
-
-            back.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
+            /*if (inventoryCounted == inventoryLength) {
+                finish();
+            }
+            else {
+                finish();
+            }*/
+            //finish();
 
 
         }

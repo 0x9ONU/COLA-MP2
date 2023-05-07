@@ -292,6 +292,14 @@ public class Member implements Serializable {
         this.yCoordinate += y;
     }
 
+    public int getxCoordinate() {
+        return xCoordinate;
+    }
+
+    public void setxCoordinate(int xCoordinate) {
+        this.xCoordinate = xCoordinate;
+    }
+
     /**
      * Prints out the information of the member string
      * @return the string of the member's information

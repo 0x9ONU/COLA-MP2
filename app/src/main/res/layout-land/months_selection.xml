@@ -10,74 +10,88 @@
         android:id="@+id/aprilButton"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
         android:text="April"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
 
     <Button
         android:id="@+id/julyButton"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="16dp"
         android:text="July"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
 
     <Button
         android:id="@+id/juneButton"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="272dp"
         android:text="June"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/marchButton"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
         android:text="March"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
 
     <Button
         android:id="@+id/mayButton"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="48dp"
         android:text="May"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/moreInfoMonths"
         android:layout_width="184dp"
         android:layout_height="88dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginBottom="136dp"
         android:text="More Information"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="330dp"
         android:layout_height="133dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="200dp"
         android:text="Choose The Month You Would  Like To Leave In"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
