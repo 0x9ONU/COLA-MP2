@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A3A3A3">
+
+    <Button
+        android:id="@+id/back_button4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/design_default_color_error"
+        android:backgroundTint="#FF0000"
+        android:text="X"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textColorHighlight="#FFFFFF"
+        android:visibility="visible"
+        app:iconTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FF0000" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Citations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine5"
+        android:layout_width="693dp"
+        android:layout_height="336dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:text="Bureau of Land Management, “Bureau of Land Management,” Home. [Online]. Available: https://www.blm.gov/. [Accessed: 05-May-2023]. &#10; &#10;G. Stallsmith, “Blue River in Indiana,” Blue River. Maps of river and Maps to public access points and liveries. [Online]. Available: https://www.indianaoutfitters.com/blue_river.html. [Accessed: 05-May-2023]. &#10; &#10;History Globe.com, “The Oregon Trail,” The oregon trail: 1843 Map. [Online]. Available: http://www.historyglobe.com/ot/otmap1.htm. [Accessed: 05-May-2023]. &#10; &#10;K. Ford, “Across the Wide and Lonesome Prairie: The Oregon Trail Diary of Hattie Campbell, 1847,” ProQuest, May-2006. [Online]. Available: https://www.proquest.com/. [Accessed: 05-May-2023]. &#10; &#10;National Park Service, “Maps,” National Parks Service. [Online]. Available: https://www.nps.gov/oreg/planyourvisit/maps.htm. [Accessed: 05-May-2023]. &#10; &#10;National Trail Systems and National Park Services, “Nps.gov homepage (U.S. National Park Service),” National Historic Trails. [Online]. Available: https://www.nps.gov/cali/planyourvisit/upload/NE_ATR_IG_web.pdf. [Accessed: 05-May-2023]. " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
