@@ -11,9 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
+        android:layout_marginBottom="340dp"
         android:gravity="center"
         android:text="TextView"
         android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,15 +25,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="The shimmering sun slowly descended behind the horizon, casting an orange hue over the tranquil sea. A cool breeze blew, rustling the leaves of the trees that lined the shore. The sound of crashing waves filled the air, as seagulls flew overhead, their calls echoing in the distance.  In the nearby town, people bustled about their daily lives, going about their routines with a sense of purpose. The smell of freshly baked bread wafted from the local bakery, while the sound of children's laughter could be heard from the playground.  As the night drew near, the stars began to twinkle in the sky, and the moon rose high, casting a pale light over the landscape. The world seemed to slow down, as if taking a deep breath before another day began.     "
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="146dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/contButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="347dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="16dp"
         android:text="Continue"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="347dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
