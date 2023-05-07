@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class shopScreen extends AppCompatActivity {
     public static final String SHOPITEM = "shopItem";
     public static final String MONEYLEFT = "moneyLeft";
+    public static final String MONTH = "month";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Get values from previous activities
@@ -20,8 +21,7 @@ public class shopScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shops_screen);
         Intent intent = getIntent();
-        int shopValue = intent.getIntExtra(monthSelection.MONTH, -1);
-        if (shopValue > -1) shopValue = 0;
+        int shopValue = 0;
         shopValue += intent.getIntExtra(mapPlaying.SHOPNUMBER, 0);
         if (shopValue == 0) {
             money = 1000;
@@ -332,35 +332,43 @@ public class shopScreen extends AppCompatActivity {
                 final TextView error = (TextView) findViewById(R.id.errorMessageShop);
                 //final TextView moneyLeft = (TextView) findViewById(R.id.moneyShop);
 
+                Inventory exportInv = new Inventory();
+                exportInv.setMaxItemCount(5);
+
                 double total = 0;
 
                 if (item1Check.isChecked()) {
                     try {
                         total += shop.getItem(0).getValue();
+                        exportInv.addItem(shop.getItem(0));
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item2Check.isChecked()) {
                     try {
                         total += shop.getItem(1).getValue();
+                        exportInv.addItem(shop.getItem(1));
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item3Check.isChecked()) {
                     try {
                         total += shop.getItem(2).getValue();
+                        exportInv.addItem(shop.getItem(2));
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item4Check.isChecked()) {
                     try {
                         total += shop.getItem(3).getValue();
+                        exportInv.addItem(shop.getItem(3));
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item5Check.isChecked()) {
                     try {
                         total += shop.getItem(4).getValue();
+                        exportInv.addItem(shop.getItem(4));
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
@@ -370,10 +378,11 @@ public class shopScreen extends AppCompatActivity {
                 }
                 else {
                     double change = money - total;
-                    Inventory items = shop.getInventory();
                     //moneyLeft.setText("$ " + change);
                     Intent intent = new Intent(shopScreen.this, mapPlaying.class);
-                    intent.putExtra(SHOPITEM, items);
+                    //int temp = intent.getIntExtra(monthSelection.MONTH, 1);
+                    //intent.putExtra(MONTH, temp);
+                    intent.putExtra(SHOPITEM, exportInv);
                     intent.putExtra(MONEYLEFT, change);
                     if (shopValue == 0) {
                         startActivity(intent);

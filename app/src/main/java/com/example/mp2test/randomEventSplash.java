@@ -10,11 +10,15 @@ import android.widget.TextView;
 
 public class randomEventSplash extends AppCompatActivity {
 
+    final static String MAP = "map";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_event_splash);
+        if (getIntent().getBooleanExtra(monumentDescription.FINISHED, false)) finish();
         String title = getIntent().getStringExtra(mapPlaying.RND);
+        Map map = (Map) getIntent().getSerializableExtra(mapPlaying.MAP);
 
         //Setup Text and buttons
 

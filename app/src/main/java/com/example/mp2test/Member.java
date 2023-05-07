@@ -7,10 +7,12 @@
 
 package com.example.mp2test;
 
+import java.io.Serializable;
+
 /**
  * Acts as a class to be used for each instance of an "party" member in the group's wagon
  */
-public class Member {
+public class Member implements Serializable {
     //instance methods
     private String name;
     private int health;

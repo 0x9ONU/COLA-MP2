@@ -169,7 +169,7 @@ public class Date {
             CurrentDay = 0;
         }
         else {
-            CurrentDay +=1;
+            CurrentDay++;
         }
     }
 
@@ -177,7 +177,7 @@ public class Date {
      * increases the current month by 1
      */
     public void IncrementCurrentMonth() {
-        if (CurrentDay > 11) {
+        if (CurrentMonth > 11) {
             IncrementCurrentYear();
             CurrentMonth = 0;
         } else {
@@ -197,5 +197,10 @@ public class Date {
      */
     public void IncrementdayCounter() {
         DayCounter += 1;
+    }
+
+    @Override
+    public String toString() {
+        return CurrentMonth + "/" + CurrentDay + "/" + CurrentYear;
     }
 }
