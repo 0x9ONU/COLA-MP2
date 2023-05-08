@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.Serializable;
@@ -25,7 +29,37 @@ public class mapPlaying extends AppCompatActivity {
     public final static String PLAYER = "player";
     public final static String MONEY = "money";
 
-    public int previousMonument = -1;
+    public static boolean shopFound = false;
+
+    public Map mp = new Map();
+
+    public Date dt = new Date(3, 1, 1834);
+
+    public RandomEventGenerator rnd = new RandomEventGenerator();
+
+    public Member player = new Member(100, new Inventory(), "Jerry Clark", true, true, 0);
+
+    ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+
+            if (shopFound) {
+                Log.d("Shop", "Ended");
+                //Remove change from player
+                Intent intent = getIntent();
+
+                player.decrementMoney(intent.getDoubleExtra(shopScreen.MONEYLEFT, 0));
+
+                //Add Inventory from shop to the player's inventory
+                Inventory exportInv = (Inventory) intent.getSerializableExtra(shopScreen.INVEXTRA);
+                for (int i = 0; i < exportInv.getItemsLength(); i++) {
+                    player.getInventory().addItem(exportInv.getItem(i));
+                }
+
+                shopFound = false;
+            }
+        }
+    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +69,21 @@ public class mapPlaying extends AppCompatActivity {
         //Receiving values from previous activities
         Intent receivingValues = getIntent();
         int month = (int) receivingValues.getIntExtra(monthSelection.MONTH, 1);
-        Inventory playerInventory = (Inventory) receivingValues.getSerializableExtra(shopScreen.SHOPITEM);
 
         //Creating the multiple classes for the game
-        Map mp = new Map();
-        Date dt = new Date(3, month, 1834);
-        RandomEventGenerator rnd = new RandomEventGenerator();
-        Member player = new Member(100, playerInventory, "Jerry Clark", true, true, receivingValues.getDoubleExtra(shopScreen.MONEYLEFT, 0));
-        playerInventory.setMemberIdentifier(player);
-        playerInventory.setMaxItemCount(20);
+        dt.setCurrentMonth(month);
+        player.setMoney(receivingValues.getDoubleExtra(shopScreen.MONEYLEFT, 0));
+        player.setInventory((Inventory) receivingValues.getSerializableExtra(shopScreen.SHOPITEM));
+        player.getInventory().setMemberIdentifier(player);
+        player.getInventory().setMaxItemCount(20);
         Wagon wagon = new Wagon(player);
+
+        //DEBUG: Player Location
+
+        mp.setPlayerLocationX(170);
+        mp.setWagonLocationX(170);
+        player.setxCoordinate(170);
+        mp.setPreviousMonument(2);
 
         //Add shop items to player
 
@@ -188,27 +227,12 @@ public class mapPlaying extends AppCompatActivity {
                 Log.d("shop", "" + shop);
 
                 if (shop > 0) {
+                    shopFound = true;
                     Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
                     shopActivity.putExtra(MONEY, player.getMoney());
                     shopActivity.putExtra(SHOPNUMBER, shop + 1);
-                    startActivity(shopActivity);
-                    //onResume();
+                    activityResultLauncher.launch(shopActivity);
                 }
-
-
-
-                    /*
-                    //Remove change from player
-                    Intent intent = getIntent();
-
-                    player.decrementMoney(intent.getDoubleExtra(shopScreen.MONEYLEFT, 0));
-
-                    //Add Inventory from shop to the player's inventory
-                    Inventory exportInv = (Inventory) intent.getSerializableExtra(shopScreen.INVEXTRA);
-                    for (int i = 0; i < exportInv.getItemsLength(); i++) {
-                        player.getInventory().addItem(exportInv.getItem(i));
-                    }
-                     */
 
                 //Set display Values
                 health.setText("Health: " + player.getHealth());
@@ -234,4 +258,5 @@ public class mapPlaying extends AppCompatActivity {
         });
 
     }
+
 }
