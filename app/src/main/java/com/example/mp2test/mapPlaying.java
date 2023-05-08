@@ -170,7 +170,7 @@ public class mapPlaying extends AppCompatActivity {
                 startActivity(rndEventActivity);
 
                 int monument = mp.CheckMonument();
-                Log.d("Monument", ""+monument);
+                Log.d("Monument", "" + monument);
 
                 if (monument != -1) {
                     mp.setPlayerLocationX(mp.getMonumentLocationX(monument));
@@ -181,22 +181,17 @@ public class mapPlaying extends AppCompatActivity {
                     startActivity(monumentActivity);
                 }
 
+
                 int shop = mp.checkShop();
                 Log.d("shop", "" + shop);
-                boolean shopHappened = false;
 
                 if (shop > 0) {
-                    if (mp.getPreviousShop() < shop) {
-                        mp.setPreviousShop(shop);
-                        mp.setPlayerLocationX(mp.getShopLocation(shop));
-                        mp.setWagonLocationX(mp.getShopLocation(shop));
-                        player.setxCoordinate(mp.getShopLocation(shop));
-                        Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
-                        shopActivity.putExtra(MONEY, player.getMoney());
-                        shopActivity.putExtra(SHOPNUMBER, shop + 1);
-                        startActivity(shopActivity);
-                        onResume();
-                    }
+                    Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
+                    shopActivity.putExtra(MONEY, player.getMoney());
+                    shopActivity.putExtra(SHOPNUMBER, shop + 1);
+                    startActivity(shopActivity);
+                    //onResume();
+                }
 
                     /*
                     //Remove change from player
@@ -211,16 +206,15 @@ public class mapPlaying extends AppCompatActivity {
                     }
                      */
 
-                    //Set display Values
-                    health.setText("Health: " + player.getHealth());
-                    date.setText("Date: " + dt.toString());
-                    miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
+                //Set display Values
+                health.setText("Health: " + player.getHealth());
+                date.setText("Date: " + dt.toString());
+                miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
 
-                    //Check if the Player died
-                    if (player.getHealth() <= 0) {
-                        health.setText("Health: Dead");
+                //Check if the Player died
+                if (player.getHealth() <= 0) {
+                    health.setText("Health: Dead");
 
-                    }
                 }
             }
         });

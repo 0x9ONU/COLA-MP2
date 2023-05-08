@@ -21,7 +21,7 @@ public class Map implements Serializable {
 
     private int previousMonument = -1;
 
-    private int previousShop = 1;
+    private int previousShop = 0;
 
     /**
      * Basic constructor for Map
@@ -197,18 +197,14 @@ public class Map implements Serializable {
     public int checkShop() {
         int shopNumber;
         int previous = previousShop;
-        for (shopNumber = 0; shopNumber <= shopLocationX.length; shopNumber++) {
-            if (shopLocationX[shopNumber] >= playerLocationX) {
-                previous = shopNumber;
-                previousShop = previous;
-            }
-            else if (shopNumber == previous) {
-                return -1;
-            }
-            else {
-                return previous;
+        for (shopNumber = 0; shopNumber <= shopLocationX.length - 1; shopNumber++) {
+            if (shopLocationX[shopNumber] <= playerLocationX) {
+                if (shopNumber > previous) {
+                    previousMonument = shopNumber;
+                    return shopNumber;
+                }
             }
         }
-        return shopNumber;
+        return -1;
     }
 }
