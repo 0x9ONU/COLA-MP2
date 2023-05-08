@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/shopName"
-        android:layout_width="455dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="36dp"
-        android:text="You attend a public meeting "
+        android:layout_width="526dp"
+        android:layout_height="404dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="You attend a public meeting where the famous explorer William Clark is discussing when the best time to set off on the Oregon Trail is. While discussing in the meeting he made it very well known that, if you leave too early the oxen will not have any grass or other food to eat on the trail. However if you leave too late then there is a better than average chance that you will not make it to Oregon before the harsh Northwestern winter hits. So you must leave at just the correct time, where there will be a plentiful amount of green grass for the oxen to eat and the weather will remain mostly optimal throughout the long and treacherous adventure."
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,5 +28,16 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="183dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155"
+        app:srcCompat="@drawable/_83" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
