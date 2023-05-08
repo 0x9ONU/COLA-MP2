@@ -107,7 +107,7 @@ public class randomEventSplash extends AppCompatActivity {
                     "\n" +
                     "With this newfound sense of confidence, you set off down the trail once again, grateful for the strength and companionship of your new animal friend.");
         }
-        else if (title.equals("Alex Fimel")) {
+        else if (title.equals("Alex Frimel")) {
             splashText.setText("As you travel down the trail, you notice a figure in the distance, walking towards you. As the figure approaches, you realize that it's a fellow traveler, a man named Alex Fimel.\n" +
                     "\n" +
                     "Alex greets you warmly, introducing himself as a fellow pioneer on the trail. He tells you that he's been following your progress and admires your determination and resilience. You feel a sense of surprise and gratitude, not quite sure how this stranger knows so much about your journey.");

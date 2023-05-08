@@ -150,15 +150,15 @@ public class Map implements Serializable {
     public int CheckMonument() {
             int monumentNumber;
             int previous = previousMonument;
-            for (monumentNumber = monumentNames.length - 1; monumentNumber >= 0; monumentNumber--) {
-                if (monumentLocationX[monumentNumber] >= playerLocationX) {
-                    previous = monumentNumber;
-                }
-                else {
-                    return previous;
+            for (monumentNumber = 0; monumentNumber <= monumentNames.length - 1; monumentNumber++) {
+                if (monumentLocationX[monumentNumber] <= playerLocationX) {
+                    if (monumentNumber > previous) {
+                        previousMonument = monumentNumber;
+                        return monumentNumber;
+                    }
                 }
             }
-        return monumentNumber;
+        return -1;
     }
 
     public int getPreviousMonument() {
@@ -197,9 +197,13 @@ public class Map implements Serializable {
     public int checkShop() {
         int shopNumber;
         int previous = previousShop;
-        for (shopNumber = shopLocationX.length - 1; shopNumber >= 0; shopNumber--) {
+        for (shopNumber = 0; shopNumber <= shopLocationX.length; shopNumber++) {
             if (shopLocationX[shopNumber] >= playerLocationX) {
                 previous = shopNumber;
+                previousShop = previous;
+            }
+            else if (shopNumber == previous) {
+                return -1;
             }
             else {
                 return previous;

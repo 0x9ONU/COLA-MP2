@@ -40,7 +40,7 @@
             android:exported="false"></activity>
         <activity
             android:name=".mapPlaying"
-            android:exported="false"></activity>
+            android:exported="false"> </activity>
         <activity
             android:name=".monumentDescription"
             android:exported="false"></activity>
