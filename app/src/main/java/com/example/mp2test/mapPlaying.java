@@ -65,7 +65,7 @@ public class mapPlaying extends AppCompatActivity {
         miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
             proceed.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
+                public void onClick(View view) {      //Rnaomd events below
                     String rndEvent = rnd.GetEvent();
                     rnd.IncrementProbabilityMultiplier();
                     if (rndEvent.equals("Kiss")) ;
@@ -214,6 +214,12 @@ public class mapPlaying extends AppCompatActivity {
                         health.setText("Health: " + player.getHealth());
                         date.setText("Date: " + dt.toString());
                         miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
+
+                        //Check if the Player died
+                        if (player.getHealth() <= 0) {
+                            health.setText("Health: Dead");
+
+                        }
                     }
                 }
             });
