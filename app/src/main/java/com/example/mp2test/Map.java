@@ -197,10 +197,10 @@ public class Map implements Serializable {
     public int checkShop() {
         int shopNumber;
         int previous = previousShop;
-        for (shopNumber = 0; shopNumber <= shopLocationX.length - 1; shopNumber++) {
-            if (shopLocationX[shopNumber] <= playerLocationX) {
+        for (shopNumber = 1; shopNumber <= shopLocationX.length - 1; shopNumber++) {
+            if (shopLocationX[shopNumber] == playerLocationX) {
                 if (shopNumber > previous) {
-                    previousMonument = shopNumber;
+                    previousShop = shopNumber;
                     return shopNumber;
                 }
             }

@@ -148,14 +148,16 @@ public class mapPlaying extends AppCompatActivity {
                     }
                 } else if (rndEvent.equals("Volcano")) {
                     int inventoryLength = player.getInventory().getItemsLength();
-                    Random rand = new Random(System.currentTimeMillis());
-                    int temp = 0;
-                    while (true) {
-                        temp = rand.nextInt(inventoryLength);
-                        if (player.getInventory().getItem(temp).getIndestructible()) ;
-                        else break;
+                    if (inventoryLength > 0) {
+                        Random rand = new Random(System.currentTimeMillis());
+                        int temp = 0;
+                        while (true) {
+                            temp = rand.nextInt(inventoryLength);
+                            if (player.getInventory().getItem(temp).getIndestructible()) ;
+                            else break;
+                        }
+                        player.getInventory().removeItem(temp);
                     }
-                    player.getInventory().removeItem(temp);
                 } else {
                     dt.IncrementCurrentDay();
                 }
@@ -192,6 +194,8 @@ public class mapPlaying extends AppCompatActivity {
                     startActivity(shopActivity);
                     //onResume();
                 }
+
+
 
                     /*
                     //Remove change from player
