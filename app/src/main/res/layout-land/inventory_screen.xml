@@ -57,6 +57,7 @@
             android:inputType="textMultiLine"
             android:singleLine="false"
             android:text="1. Test"
+            android:textAlignment="textStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,17 +66,23 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="310dp"
-            android:layout_height="309dp"
-            android:layout_marginBottom="19dp"
+            android:layout_width="312dp"
+            android:layout_height="304dp"
+            android:layout_marginStart="420dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:singleLine="false"
             android:text="1. Test"
-            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="2. Test" />
 
         <TextView

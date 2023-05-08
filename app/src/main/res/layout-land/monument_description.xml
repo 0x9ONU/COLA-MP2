@@ -12,12 +12,10 @@
         android:id="@+id/MonumentImage"
         android:layout_width="736dp"
         android:layout_height="227dp"
-        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MonumentTitle"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <Button
@@ -41,18 +39,14 @@
 
     <TextView
         android:id="@+id/MonumentTitle"
-        android:layout_width="0dp"
+        android:layout_width="731dp"
         android:layout_height="26dp"
-        android:layout_marginTop="29dp"
         android:gravity="center"
         android:text="Title"
+        android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="28dp" />
 
     <TextView
         android:id="@+id/monumentDescription"
