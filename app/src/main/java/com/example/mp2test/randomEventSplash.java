@@ -104,7 +104,7 @@ public class randomEventSplash extends AppCompatActivity {
                     "You feel a sense of relief and gratitude as you realize that this extra ox will make your journey much easier. With an extra animal to help pull your wagon, you'll be able to cover more ground and carry more supplies. You pat the ox on the head, feeling a sense of kinship and appreciation for this unexpected stroke of good luck.\n" +
                     "\n" +
                     "As you continue on your journey, you feel a renewed sense of optimism and determination. The extra ox serves as a reminder that sometimes help can come from the most unexpected sources, and that even in the toughest of circumstances, there is still the potential for good fortune and resilience.\n" +
-                    "\n" +
+                    "" +
                     "With this newfound sense of confidence, you set off down the trail once again, grateful for the strength and companionship of your new animal friend.");
         }
         else if (title.equals("Alex Frimel")) {
