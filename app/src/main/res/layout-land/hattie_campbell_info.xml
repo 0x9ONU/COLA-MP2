@@ -8,20 +8,22 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:rotation="0"
+        android:layout_width="643dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="282dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="88dp"
+        android:rotation="90"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nextHattieCampbell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_7522" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="166dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="405dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="182dp"
         android:fontFamily="sans-serif"
         android:text="In memory of Hattie Campbell"
@@ -29,7 +31,8 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/nextHattieCampbell"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
 
     <Button
         android:id="@+id/nextHattieCampbell"
@@ -41,6 +44,19 @@
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="436dp"
+        android:layout_height="286dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:text=" Hattie Campbell was a 13 year old girl who was one of only three surviving children that Charles and Augusta Campbell had. She lived her early years in a small town just off the Missouri River. In january of 1847 her father announced that he had arranged a river boat that would take them up to Independence, in which from there they would be setting off on the Oregon Trail. In March of 1847 Hattie's father had sold almost all of their possessions to make some extra money that they would be able to use on the trail. When they started out on the trail they had about $800 to their name. They set off on the trail early on the year of 1847. This where her written adventure ends and her true story begins. You now get to play as Hattie Campbell and finish writing her story for her. So get on now and ride that wild trail."
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
