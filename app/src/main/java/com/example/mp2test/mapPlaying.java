@@ -2,13 +2,13 @@ package com.example.mp2test;
 
 //Main Game Code will Go Here
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -31,6 +31,8 @@ public class mapPlaying extends AppCompatActivity {
 
     public static boolean shopFound = false;
 
+    public static boolean healPlayer = false;
+
     public Map mp = new Map();
 
     public Date dt = new Date(3, 1, 1834);
@@ -42,6 +44,51 @@ public class mapPlaying extends AppCompatActivity {
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
+            if (result.getResultCode() == 3) {
+                int playerHealthTotal = player.getHealth();
+                int playerHeal = 0;
+                while (playerHealthTotal < 100) {
+                    int healthItem = -1;
+                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                        try {
+                            Food test = (Food) player.getInventory().getItem(i);
+                        } catch (Exception e) {
+                            continue;
+                        }
+                        finally {
+                            healthItem = i;
+                            Log.d("HealItem", "" + i);
+                            break;
+                        }
+                    }
+                    if (healthItem == -1) {
+                        Toast.makeText(getBaseContext(), "No Food Items", Toast.LENGTH_SHORT);
+                        Log.d("Heal", "Failed");
+                        break;
+                    }
+                    else {
+                        Food healthTarget = (Food) player.getInventory().getItem(healthItem);
+                        healthTarget.decrementPounds(1);
+                        Log.d("Health Value", "" + healthTarget.getHealthValue());
+                        playerHeal += healthTarget.getHealthValue();
+                        playerHealthTotal += healthTarget.getHealthValue();
+                        if (healthTarget.getPounds() == 0) player.getInventory().removeItem(healthItem);
+                        else player.getInventory().setItem(healthItem, healthTarget);
+                    }
+                }
+                player.heal(playerHeal);
+            }
+
+            if (result.getResultCode() == 2) {
+                Log.d("shopDone?", "true");
+                //player.decrementMoney(result.getData().getDoubleExtra(shopScreen.MONEYLEFT, 0));
+                Inventory exportInv = (Inventory) result.getData().getSerializableExtra(shopScreen.INVEXTRA);
+                for (int i = 0; i < exportInv.getItemsLength(); i++) {
+                    player.getInventory().addItem(exportInv.getItem(i));
+                }
+                shopFound = false;
+            }
+
 
             //this was commented out so it would work for the presensation, will probably need to be put back in and fixed
             /*if (shopFound) {
@@ -81,11 +128,12 @@ public class mapPlaying extends AppCompatActivity {
 
         //DEBUG: Player Location
 
+        /*
         mp.setPlayerLocationX(170);
         mp.setWagonLocationX(170);
         player.setxCoordinate(170);
         mp.setPreviousMonument(2);
-
+         */
         //Add shop items to player
 
         //Setup Buttons
@@ -129,6 +177,7 @@ public class mapPlaying extends AppCompatActivity {
                         Food test = (Food) player.getInventory().getItem(i);
                         int pounds = test.getPounds();
                         test.setPounds(pounds + 10);
+                        player.getInventory().setItem(i, test);
                         break;
                     }
                 } else if (rndEvent.equals("house"))
@@ -146,6 +195,7 @@ public class mapPlaying extends AppCompatActivity {
                         Food test = (Food) player.getInventory().getItem(i);
                         int pounds = test.getPounds();
                         test.setPounds(pounds - 5);
+                        player.getInventory().setItem(i, test);
                         break;
                     }
                 } else if (rndEvent.equals("broken wheel")) {
@@ -184,6 +234,7 @@ public class mapPlaying extends AppCompatActivity {
                         Food test = (Food) player.getInventory().getItem(i);
                         int pounds = test.getPounds();
                         test.setPounds(pounds - 10);
+                        player.getInventory().setItem(i, test);
                         break;
                     }
                 } else if (rndEvent.equals("Volcano")) {
@@ -206,6 +257,7 @@ public class mapPlaying extends AppCompatActivity {
                 mp.MovePlayer(distance, 0);
                 mp.MoveWagon(distance, 0);
                 player.move(distance, 0);
+                player.damage(rand.nextInt(6));
                 Intent rndEventActivity = new Intent(mapPlaying.this, randomEventSplash.class);
                 rndEventActivity.putExtra(RND, rndEvent);
                 rndEventActivity.putExtra(MAP, mp);
@@ -228,7 +280,7 @@ public class mapPlaying extends AppCompatActivity {
                 Log.d("shop", "" + shop);
 
                 if (shop > 0) {
-                    shopFound = true;
+                    //shopFound = true;
                     Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
                     shopActivity.putExtra(MONEY, player.getMoney());
                     shopActivity.putExtra(SHOPNUMBER, shop + 1);
@@ -254,7 +306,7 @@ public class mapPlaying extends AppCompatActivity {
                 Intent intent = new Intent(mapPlaying.this, inventoryScreen.class);
                 intent.putExtra(PLAYERIVENTORY, (Serializable) player.getInventory());
                 intent.putExtra(PLAYER, player);
-                startActivity(intent);
+                activityResultLauncher.launch(intent);
             }
         });
 

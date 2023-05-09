@@ -77,6 +77,12 @@ public class shopScreen extends AppCompatActivity {
                     }
                     catch (Exception e) {}
 
+                    try {
+                        Valuable test = (Valuable) shop.getItem(i);
+                        itemType = "Valuable";
+                    }
+                    catch (Exception e) {}
+
                     if (itemType.equals("Food")) {
                         Food food = (Food) shop.getItem(i);
                         item1Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
@@ -84,6 +90,10 @@ public class shopScreen extends AppCompatActivity {
                     else if (itemType.equals("Weapon")) {
                         Weapon weapon = (Weapon) shop.getItem(i);
                         item1Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else if (itemType.equals("Valuable")) {
+                        Valuable valuable = (Valuable) shop.getItem(i);
+                        item1Description.setText(itemType + "   Cost: " + valuable.getValue());
                     }
                     else {
                         item1Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
@@ -103,6 +113,13 @@ public class shopScreen extends AppCompatActivity {
                     }
                     catch (Exception e) {}
 
+                    try {
+                        Valuable test = (Valuable) shop.getItem(i);
+                        itemType = "Valuable";
+                    }
+                    catch (Exception e) {}
+
+
                     if (itemType.equals("Food")) {
                         Food food = (Food) shop.getItem(i);
                         item2Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
@@ -110,6 +127,10 @@ public class shopScreen extends AppCompatActivity {
                     else if (itemType.equals("Weapon")) {
                         Weapon weapon = (Weapon) shop.getItem(i);
                         item2Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else if (itemType.equals("Valuable")) {
+                        Valuable valuable = (Valuable) shop.getItem(i);
+                        item2Description.setText(itemType + "   Cost: " + valuable.getValue());
                     }
                     else {
                         item2Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
@@ -129,6 +150,13 @@ public class shopScreen extends AppCompatActivity {
                     }
                     catch (Exception e) {}
 
+                    try {
+                        Valuable test = (Valuable) shop.getItem(i);
+                        itemType = "Valuable";
+                    }
+                    catch (Exception e) {}
+
+
                     if (itemType.equals("Food")) {
                         Food food = (Food) shop.getItem(i);
                         item3Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
@@ -136,6 +164,10 @@ public class shopScreen extends AppCompatActivity {
                     else if (itemType.equals("Weapon")) {
                         Weapon weapon = (Weapon) shop.getItem(i);
                         item3Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else if (itemType.equals("Valuable")) {
+                        Valuable valuable = (Valuable) shop.getItem(i);
+                        item3Description.setText(itemType + "   Cost: " + valuable.getValue());
                     }
                     else {
                         item3Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
@@ -155,6 +187,13 @@ public class shopScreen extends AppCompatActivity {
                     }
                     catch (Exception e) {}
 
+                    try {
+                        Valuable test = (Valuable) shop.getItem(i);
+                        itemType = "Valuable";
+                    }
+                    catch (Exception e) {}
+
+
                     if (itemType.equals("Food")) {
                         Food food = (Food) shop.getItem(i);
                         item4Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
@@ -162,6 +201,10 @@ public class shopScreen extends AppCompatActivity {
                     else if (itemType.equals("Weapon")) {
                         Weapon weapon = (Weapon) shop.getItem(i);
                         item4Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else if (itemType.equals("Valuable")) {
+                        Valuable valuable = (Valuable) shop.getItem(i);
+                        item4Description.setText(itemType + "   Cost: " + valuable.getValue());
                     }
                     else {
                         item4Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
@@ -181,6 +224,13 @@ public class shopScreen extends AppCompatActivity {
                     }
                     catch (Exception e) {}
 
+                    try {
+                        Valuable test = (Valuable) shop.getItem(i);
+                        itemType = "Valuable";
+                    }
+                    catch (Exception e) {}
+
+
                     if (itemType.equals("Food")) {
                         Food food = (Food) shop.getItem(i);
                         item5Description.setText(itemType + "   Cost: " + food.getValue()*food.getPounds() + " Pounds: " + food.getPounds());
@@ -188,6 +238,10 @@ public class shopScreen extends AppCompatActivity {
                     else if (itemType.equals("Weapon")) {
                         Weapon weapon = (Weapon) shop.getItem(i);
                         item5Description.setText(itemType + "   Cost: " + weapon.getValue() + " Ammo: " + weapon.getAmmo() + " Wear: " + weapon.getWear());
+                    }
+                    else if (itemType.equals("Valuable")) {
+                        Valuable valuable = (Valuable) shop.getItem(i);
+                        item5Description.setText(itemType + "   Cost: " + valuable.getValue());
                     }
                     else {
                         item5Description.setText(itemType + "   Cost: " + shop.getItem(i).getValue() + " ");
@@ -230,17 +284,7 @@ public class shopScreen extends AppCompatActivity {
                 Shop shop2 = new Shop(180, 0, "Hollenberg Shop", shop2Inventory, shopKeeper2);
                 Food fish = new Food("Sack of Cod", 1, false, false, 1, 25);
                 Food berries = new Food("Bundle of Berries", 0.75, false, false, 0, 10);
-                Item ps5 = new Item(20, "Piano Stool Five", true, false) {
-                    /**
-                     * @param itemTarget   What the Item will this affect? May or may not be used.
-                     * @param memberTarget What Member/Person will this affect? May or may not be used.
-                     * @return
-                     */
-                    @Override
-                    public double useItem(Item itemTarget, Member memberTarget) {
-                        return 0;
-                    }
-                };
+                Item ps5 = new Valuable(20, "Piano Stool Five", true, false);
                 Weapon revolver = new Weapon(5, "Broken Revolver", true, 0, 20, 90);
                 shop2.addItem(fish);
                 shop2.addItem(berries);
@@ -254,17 +298,7 @@ public class shopScreen extends AppCompatActivity {
                 Shop shop3 = new Shop(335, 0, "Fort Kearny Tavern", shop3Inventory, shopKeeper3);
                 Food sunflower = new Food("Sunflower Seeds", 0.80, false, false, 0, 10);
                 Food apple = new Food("Bundle of Apples", 0.85, false, false, 0, 20);
-                Item mirror = new Item(20, "Expensive Mirror", true, true) {
-                    /**
-                     * @param itemTarget   What the Item will this affect? May or may not be used.
-                     * @param memberTarget What Member/Person will this affect? May or may not be used.
-                     * @return
-                     */
-                    @Override
-                    public double useItem(Item itemTarget, Member memberTarget) {
-                        return 0;
-                    }
-                };
+                Item mirror = new Valuable(20, "Expensive Mirror", true, true);
                 shop3.addItem(sunflower);
                 shop3.addItem(apple);
                 shop3.addItem(mirror);
@@ -288,12 +322,7 @@ public class shopScreen extends AppCompatActivity {
                 Inventory shop5Inventory = new Inventory(2, shopKeeper5);
                 shopKeeper5.setInventory(shop5Inventory);
                 Shop shop5 = new Shop(660, 0, "High Plains Trader", shop5Inventory, shopKeeper5);
-                Item chair = new Item(5, "Oak Chair", true, true) {
-                    @Override
-                    public double useItem(Item itemTarget, Member memberTarget) {
-                        return 0;
-                    }
-                };
+                Item chair = new Valuable(5, "Oak Chair", true, true);
                 Food carrots = new Food("Sack of Carrots", 0.9, false, false, 0, 10);
                 shop5.addItem(chair);
                 shop5.addItem(carrots);
@@ -380,20 +409,19 @@ public class shopScreen extends AppCompatActivity {
                 else {
                     double change = money - total;
                     //moneyLeft.setText("$ " + change);
-                    Intent intent = new Intent(shopScreen.this, mapPlaying.class);
                     //int temp = intent.getIntExtra(monthSelection.MONTH, 1);
                     //intent.putExtra(MONTH, temp);
-                    if (shopValue == 0)
-                        intent.putExtra(SHOPITEM, exportInv);
-                    else {
-                        intent.putExtra(INVEXTRA, exportInv);
-                        Log.d("Real", "true");
-                    }
-                    intent.putExtra(MONEYLEFT, change);
                     if (shopValue == 0) {
+                        Intent intent = new Intent(shopScreen.this, mapPlaying.class);
+                        intent.putExtra(SHOPITEM, exportInv);
+                        intent.putExtra(MONEYLEFT, change);
                         startActivity(intent);
                     }
                     else {
+                        Intent shopReturn = new Intent(shopScreen.this, mapPlaying.class);
+                        shopReturn.putExtra(INVEXTRA, exportInv);
+                        shopReturn.putExtra(MONEYLEFT, change);
+                        setResult(2, shopReturn);
                         finish();
                     }
                 }

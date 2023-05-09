@@ -178,26 +178,30 @@ public class Food extends Item implements Serializable {
      */
     @Override
     public double useItem(Item itemTarget, Member memberTarget) {
-        if (getInventoryIdentifier().equals(memberTarget.getName())) {
+        //if (getInventoryIdentifier().equals(memberTarget.getName())) {
             if (spoiled) {
                 return 0.0;
             }
             if (pounds > 0){
-                decrementPounds(10);
+                decrementPounds(1);
+                //uncomment if more than 1 pound is decreased.
+                /*
                 if (pounds < 0) {
+
                     //Splash text why
                     pounds = 0;
                 }
+                */
                 memberTarget.heal(healthValue);
                 return healthValue;
             }
             else {
                 return 0.0;
             }
-        }
-        else {
-            return 0.0;
-        }
+        //}
+        //else {
+        //    return 0.0;
+        //}
     }
 
     /**
