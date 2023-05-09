@@ -43,7 +43,8 @@ public class mapPlaying extends AppCompatActivity {
         @Override
         public void onActivityResult(ActivityResult result) {
 
-            if (shopFound) {
+            //this was commented out so it would work for the presensation, will probably need to be put back in and fixed
+            /*if (shopFound) {
                 Log.d("Shop", "Ended");
                 //Remove change from player
                 Intent intent = getIntent();
@@ -57,7 +58,7 @@ public class mapPlaying extends AppCompatActivity {
                 }
 
                 shopFound = false;
-            }
+            }*/
         }
     });
 
