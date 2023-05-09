@@ -65,7 +65,7 @@ public class RandomEventGenerator {
      * adds 0.01 to the probability multiplier
      */
     public void IncrementProbabilityMultiplier() {
-        ProbabilityMultiplier = ProbabilityMultiplier + 0.01;
+        ProbabilityMultiplier = ProbabilityMultiplier + 0.001;
     }
 
     /**
@@ -73,7 +73,7 @@ public class RandomEventGenerator {
      */
     public void DecrementProbabilityMultiplier() {
         if (ProbabilityMultiplier > 0.1) {
-            ProbabilityMultiplier = ProbabilityMultiplier - 0.01;
+            ProbabilityMultiplier = ProbabilityMultiplier - 0.001;
         }
     }
     /**
