@@ -166,7 +166,7 @@ public class Date {
     public void IncrementCurrentDay() {
         if (CurrentDay > 30) {
             IncrementCurrentMonth();
-            CurrentDay = 0;
+            CurrentDay = 1;
         }
         else {
             CurrentDay++;
