@@ -1,5 +1,7 @@
 package com.example.mp2test;
 
+//This funcition was made to un-abstract the Item class to prevent crashing errors when passing Items through bundles and Intents
+
 public class Valuable extends Item{
 
     Valuable() {

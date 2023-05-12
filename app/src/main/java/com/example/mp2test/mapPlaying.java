@@ -21,6 +21,7 @@ import java.util.Random;
 
 public class mapPlaying extends AppCompatActivity {
 
+    //Final Strings used in intents to pass data between activities
     public final static String SHOPNUMBER = "shopNumber";
     public final static String PLAYERMONEY = "playerMoney";
     public final static String MAP = "map";
@@ -29,10 +30,10 @@ public class mapPlaying extends AppCompatActivity {
     public final static String PLAYER = "player";
     public final static String MONEY = "money";
 
+    //Global Boolean used by Shop
     public static boolean shopFound = false;
 
-    public static boolean healPlayer = false;
-
+    //Setup all the main player classes
     public Map mp = new Map();
 
     public Date dt = new Date(3, 1, 1834);
@@ -41,14 +42,22 @@ public class mapPlaying extends AppCompatActivity {
 
     public Member player = new Member(100, new Inventory(), "Jerry Clark", true, true, 0);
 
+    //The ActivityResultLauncher that calls a special function from certain activities with a result code.
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
+
+            //This part of the function is called when the player uses the heal button in the inventory.
             if (result.getResultCode() == 3) {
+                //Setups needed variables. totalHealth deals with when the end the program while the playerHeal total will be added to the player's health at the end
                 int playerHealthTotal = player.getHealth();
                 int playerHeal = 0;
+
+                //Loops until the player has 100 health
                 while (playerHealthTotal < 100) {
                     int healthItem = -1;
+
+                    //Searches through the player's inventory for the first food item it can find
                     for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
                         try {
                             Food test = (Food) player.getInventory().getItem(i);
@@ -61,51 +70,43 @@ public class mapPlaying extends AppCompatActivity {
                             break;
                         }
                     }
+                    //An error code that is called when the player does not have any food items to heal themselves with
                     if (healthItem == -1) {
                         Toast.makeText(getBaseContext(), "No Food Items", Toast.LENGTH_SHORT);
                         Log.d("Heal", "Failed");
                         break;
                     }
+                    //The food item is taken out of the player's inventory
                     else {
+                        //Takes the food item found in the player's inventory
                         Food healthTarget = (Food) player.getInventory().getItem(healthItem);
                         healthTarget.decrementPounds(1);
                         Log.d("Health Value", "" + healthTarget.getHealthValue());
                         playerHeal += healthTarget.getHealthValue();
                         playerHealthTotal += healthTarget.getHealthValue();
+                        //Deletes a food item if there is no food left
                         if (healthTarget.getPounds() == 0) player.getInventory().removeItem(healthItem);
+                        //Replaces the item from the inventory with the new food item after it has been decremented
                         else player.getInventory().setItem(healthItem, healthTarget);
                     }
                 }
+                //Ends the function by healing the player
                 player.heal(playerHeal);
             }
 
+            //Is called after the player exits the shop after the first time
             if (result.getResultCode() == 2) {
                 Log.d("shopDone?", "true");
-                //player.decrementMoney(result.getData().getDoubleExtra(shopScreen.MONEYLEFT, 0));
+                //Removes the money spent from the player
+                player.decrementMoney(result.getData().getDoubleExtra(shopScreen.MONEYLEFT, 0));
+                //Gets the exported inventory from the shop
                 Inventory exportInv = (Inventory) result.getData().getSerializableExtra(shopScreen.INVEXTRA);
+                //Adds the items from the exported invenotry to the player's inventory
                 for (int i = 0; i < exportInv.getItemsLength(); i++) {
                     player.getInventory().addItem(exportInv.getItem(i));
                 }
                 shopFound = false;
             }
-
-
-            //this was commented out so it would work for the presensation, will probably need to be put back in and fixed
-            /*if (shopFound) {
-                Log.d("Shop", "Ended");
-                //Remove change from player
-                Intent intent = getIntent();
-
-                player.decrementMoney(intent.getDoubleExtra(shopScreen.MONEYLEFT, 0));
-
-                //Add Inventory from shop to the player's inventory
-                Inventory exportInv = (Inventory) intent.getSerializableExtra(shopScreen.INVEXTRA);
-                for (int i = 0; i < exportInv.getItemsLength(); i++) {
-                    player.getInventory().addItem(exportInv.getItem(i));
-                }
-
-                shopFound = false;
-            }*/
         }
     });
 

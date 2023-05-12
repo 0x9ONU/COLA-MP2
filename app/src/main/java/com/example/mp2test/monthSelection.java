@@ -39,8 +39,10 @@ public class monthSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(monthSelection.this, shopScreen.class);
-                intent.putExtra(MONTH, 3);
-                intent.putExtra(SHOP, 0);
+                Bundle bundle = new Bundle();
+                bundle.putInt(MONTH, 3);
+                bundle.putInt(SHOP, 0);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -52,8 +54,10 @@ public class monthSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(monthSelection.this, shopScreen.class);
-                intent.putExtra(MONTH, 4);
-                intent.putExtra(SHOP, 0);
+                Bundle bundle = new Bundle();
+                bundle.putInt(MONTH, 4);
+                bundle.putInt(SHOP, 0);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -65,8 +69,10 @@ public class monthSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(monthSelection.this, shopScreen.class);
-                intent.putExtra(MONTH, 5);
-                intent.putExtra(SHOP, 0);
+                Bundle bundle = new Bundle();
+                bundle.putInt(MONTH, 5);
+                bundle.putInt(SHOP, 0);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -78,8 +84,10 @@ public class monthSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(monthSelection.this, shopScreen.class);
-                intent.putExtra(MONTH, 6);
-                intent.putExtra(SHOP, 0);
+                Bundle bundle = new Bundle();
+                bundle.putInt(MONTH, 6);
+                bundle.putInt(SHOP, 0);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -91,8 +99,10 @@ public class monthSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(monthSelection.this, shopScreen.class);
-                intent.putExtra(MONTH, 7);
-                intent.putExtra(SHOP, 0);
+                Bundle bundle = new Bundle();
+                bundle.putInt(MONTH, 7);
+                bundle.putInt(SHOP, 0);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
