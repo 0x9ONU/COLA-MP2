@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class mapPlaying extends AppCompatActivity {
 
-    public final static String SHOPNUMBER = "shopNumber";
+    public final static String SHOPNUMBER = "shopNumber";                                           //sets up the variables
     public final static String PLAYERMONEY = "playerMoney";
     public final static String MAP = "map";
     public final static String RND = "RandomEvent";
@@ -33,7 +33,7 @@ public class mapPlaying extends AppCompatActivity {
 
     public static boolean healPlayer = false;
 
-    public Map mp = new Map();
+    public Map mp = new Map();                                                                      //sets up the instance classes
 
     public Date dt = new Date(3, 1, 1834);
 
@@ -49,7 +49,7 @@ public class mapPlaying extends AppCompatActivity {
                 int playerHeal = 0;
                 while (playerHealthTotal < 100) {
                     int healthItem = -1;
-                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {
+                    for (int i = 0; i < player.getInventory().getItemsLength(); i++) {              //sets up healing items
                         try {
                             Food test = (Food) player.getInventory().getItem(i);
                         } catch (Exception e) {
@@ -76,7 +76,7 @@ public class mapPlaying extends AppCompatActivity {
                         else player.getInventory().setItem(healthItem, healthTarget);
                     }
                 }
-                player.heal(playerHeal);
+                player.heal(playerHeal);                                                            //finishes the player heal
             }
 
             if (result.getResultCode() == 2) {
