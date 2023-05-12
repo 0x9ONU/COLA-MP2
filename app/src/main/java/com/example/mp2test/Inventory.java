@@ -118,7 +118,7 @@ public class Inventory implements Serializable {
         if (maxItemCount == getItemsLength())
         {
             //Splash text why inventory is full
-            return false;
+            return false;                                                                           //fails when inventory is full
         }
         Item newItem = new Item() {
             @Override

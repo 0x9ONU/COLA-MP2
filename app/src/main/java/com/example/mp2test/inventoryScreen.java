@@ -17,7 +17,7 @@ public class inventoryScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inventory_screen);
+        setContentView(R.layout.inventory_screen);                                                  //sets display to inventory screen
 
         //setup text
         final TextView items = (TextView) findViewById(R.id.editTextTextMultiLine);
@@ -46,7 +46,7 @@ public class inventoryScreen extends AppCompatActivity {
         String exportTextTitle = "";
         String exportTextDetail = "";
 
-        for (int i = 0; i < inventoryLength; i++) {
+        for (int i = 0; i < inventoryLength; i++) {                                                 //makes the list of items
             String itemType = "Item";
             exportTextTitle += playerInventory.getItem(i).getName() + "\n";
             try {
@@ -87,14 +87,14 @@ public class inventoryScreen extends AppCompatActivity {
         items.setText(exportTextTitle);
         count.setText(exportTextDetail);
 
-        back.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {                                        //returns to main screen on click
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
 
-        heal.setOnClickListener(new View.OnClickListener() {
+        heal.setOnClickListener(new View.OnClickListener() {                                        //heals the player if they have healing items
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(inventoryScreen.this, mapPlaying.class);

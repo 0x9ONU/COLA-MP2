@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class randomEventSplash extends AppCompatActivity {
+public class randomEventSplash extends AppCompatActivity {                                          //displays text for the REG
 
     final static String MAP = "map";
 

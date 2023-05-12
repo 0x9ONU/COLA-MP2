@@ -8,11 +8,11 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class monthSelection extends AppCompatActivity {
+public class monthSelection extends AppCompatActivity {                                             //buttons for month selection screen
     public static final String MONTH = "month";
     public static final String SHOP = "shop";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {                                            //sets up buttons
         super.onCreate(savedInstanceState);
         setContentView(R.layout.months_selection);
         setupMoreInfoButton();
@@ -23,7 +23,7 @@ public class monthSelection extends AppCompatActivity {
         setupJulyButton();
     }
 
-    private void setupMoreInfoButton() {
+    private void setupMoreInfoButton() {                                                            //sets up moreInfo button
         final Button moreInfoMonths = findViewById(R.id.moreInfoMonths);
         moreInfoMonths.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class monthSelection extends AppCompatActivity {
         });
     }
 
-    private void setupMarchButton() {
+    private void setupMarchButton() {                                                               //sets up the 'March' selection
         final Button marchButton = findViewById(R.id.marchButton);
         marchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +46,7 @@ public class monthSelection extends AppCompatActivity {
         });
     }
 
-    private void setupAprilButton() {
+    private void setupAprilButton() {                                                               //sets up the 'April' selection
         final Button marchButton = findViewById(R.id.aprilButton);
         marchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +59,7 @@ public class monthSelection extends AppCompatActivity {
         });
     }
 
-    private void setupMayButton() {
+    private void setupMayButton() {                                                                 //sets up the 'May' selection
         final Button marchButton = findViewById(R.id.mayButton);
         marchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +72,7 @@ public class monthSelection extends AppCompatActivity {
         });
     }
 
-    private void setupJuneButton() {
+    private void setupJuneButton() {                                                                //sets up the 'June' selection
         final Button marchButton = findViewById(R.id.juneButton);
         marchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,7 @@ public class monthSelection extends AppCompatActivity {
         });
     }
 
-    private void setupJulyButton() {
+    private void setupJulyButton() {                                                                //sets up the 'July' selection
         final Button marchButton = findViewById(R.id.julyButton);
         marchButton.setOnClickListener(new View.OnClickListener() {
             @Override
