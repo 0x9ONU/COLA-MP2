@@ -15,7 +15,7 @@ public class hattieCampbellInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hattie_campbell_info);
+        setContentView(R.layout.hattie_campbell_info);                                              //sets the display to hattie campbells info
 
         setupNextButton();
 
@@ -23,7 +23,7 @@ public class hattieCampbellInfo extends AppCompatActivity {
 
     //This function is responsible for setting up the continue button that takes the user to the next activity.
     private void setupNextButton() {
-        final Button nextHattieCampbell = findViewById(R.id.nextHattieCampbell);
+        final Button nextHattieCampbell = findViewById(R.id.nextHattieCampbell);                    //displays button and all included info
 
         nextHattieCampbell.setOnClickListener(new View.OnClickListener() {
             @Override

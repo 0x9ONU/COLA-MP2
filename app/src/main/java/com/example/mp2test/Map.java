@@ -161,39 +161,77 @@ public class Map implements Serializable {
         return -1;
     }
 
+    /**
+     * returns the previousMonument visited
+     * @return previousMonument
+     */
     public int getPreviousMonument() {
         return previousMonument;
     }
 
+    /**
+     * sets the new previousmonument
+     * @param previousMonument
+     */
     public void setPreviousMonument(int previousMonument) {
         this.previousMonument = previousMonument;
     }
 
+    /**
+     * returns the previous shop visited
+     * @return previousShop
+     */
     public int getPreviousShop() {
         return previousShop;
     }
 
+    /**
+     * sets the new previousShop
+     * @param previousShop
+     */
     public void setPreviousShop(int previousShop) {
         this.previousShop = previousShop;
     }
 
+    /**
+     * sets the previousmonument up 1
+     */
     public void incrementPreviousMonument() {
         previousMonument++;
     }
 
+    /**
+     * gets the monument title
+     * @param index
+     * @return monumentNames[index]
+     */
     public String getMonumentTitle(int index) {
         return monumentNames[index];
     }
 
+    /**
+     * gets the shop location
+     * @param index
+     * @return shopLocationX[index]
+     */
     public int getShopLocation(int index) {
         return shopLocationX[index];
     }
 
+    /**
+     * sets the new shop location
+     * @param index
+     * @param shopLocationX
+     */
     public void setShopLocationX(int index, int shopLocationX) {
         this. shopLocationX[index] = shopLocationX;
     }
 
 
+    /**
+     * checks if the player is at a shop
+     * @return the shop number if a player is at a shop
+     */
     public int checkShop() {
         int shopNumber;
         int previous = previousShop;

@@ -21,7 +21,6 @@ import java.util.Random;
 
 public class mapPlaying extends AppCompatActivity {
 
-    //Final Strings used in intents to pass data between activities
     public final static String SHOPNUMBER = "shopNumber";
     public final static String PLAYERMONEY = "playerMoney";
     public final static String MAP = "map";
@@ -30,10 +29,10 @@ public class mapPlaying extends AppCompatActivity {
     public final static String PLAYER = "player";
     public final static String MONEY = "money";
 
-    //Global Boolean used by Shop
     public static boolean shopFound = false;
 
-    //Setup all the main player classes
+    public static boolean healPlayer = false;
+
     public Map mp = new Map();
 
     public Date dt = new Date(3, 1, 1834);
@@ -70,27 +69,21 @@ public class mapPlaying extends AppCompatActivity {
                             break;
                         }
                     }
-                    //An error code that is called when the player does not have any food items to heal themselves with
                     if (healthItem == -1) {
                         Toast.makeText(getBaseContext(), "No Food Items", Toast.LENGTH_SHORT);
                         Log.d("Heal", "Failed");
                         break;
                     }
-                    //The food item is taken out of the player's inventory
                     else {
-                        //Takes the food item found in the player's inventory
                         Food healthTarget = (Food) player.getInventory().getItem(healthItem);
                         healthTarget.decrementPounds(1);
                         Log.d("Health Value", "" + healthTarget.getHealthValue());
                         playerHeal += healthTarget.getHealthValue();
                         playerHealthTotal += healthTarget.getHealthValue();
-                        //Deletes a food item if there is no food left
                         if (healthTarget.getPounds() == 0) player.getInventory().removeItem(healthItem);
-                        //Replaces the item from the inventory with the new food item after it has been decremented
                         else player.getInventory().setItem(healthItem, healthTarget);
                     }
                 }
-                //Ends the function by healing the player
                 player.heal(playerHeal);
             }
 

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class mapStart extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {                                            //changes the display state
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_start);
     }

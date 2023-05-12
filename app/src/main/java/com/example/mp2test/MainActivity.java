@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {                                               //switches to title screen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureNextButton() {
-        final Button ADVENTURE_AWAITS = findViewById(R.id.start_button);
+        final Button ADVENTURE_AWAITS = findViewById(R.id.start_button);                            //starts the game/switches to hattieCampbell screen
         ADVENTURE_AWAITS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

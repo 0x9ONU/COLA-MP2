@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class Food extends Item implements Serializable {
 
     //Member Variables
-    private final int numberOfFood = 4;
+    private final int numberOfFood = 4;                                                             //variables
     private int type;
     private int healthValue;
     private int pounds;

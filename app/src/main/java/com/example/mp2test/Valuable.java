@@ -8,7 +8,7 @@ public class Valuable extends Item{
         super(0.0, "Dohickey", false, false);
     }
 
-    Valuable (int value, String name, boolean randomizedValue, boolean indestructible) {
+    Valuable (int value, String name, boolean randomizedValue, boolean indestructible) {            //gives values to itmes
         super(value, name, randomizedValue, indestructible);
     }
 

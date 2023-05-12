@@ -13,7 +13,7 @@ public class monumentDescription extends AppCompatActivity {
     public final static String FINISHED = "finished";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {                                            //sets up all the buttons
         super.onCreate(savedInstanceState);
         setContentView(R.layout.monument_description);
 
@@ -26,10 +26,10 @@ public class monumentDescription extends AppCompatActivity {
 
         int monumentNumber = map.getPreviousMonument();
 
-        title.setText(map.getMonumentTitle(monumentNumber));
+        title.setText(map.getMonumentTitle(monumentNumber));                                        //sets up the display text
         description.setText(map.getMonumentDescription(monumentNumber));
 
-        switch (monumentNumber) {
+        switch (monumentNumber) {                                                                   //figures out which monument the player is at and what to display
             case 0:
                 break;
             case 1:

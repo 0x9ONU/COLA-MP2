@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * Acts as a class to be used for each instance of an "party" member in the group's wagon
  */
-public class Member implements Serializable {
+public class Member implements Serializable {                                                       //class is here for updates, it builds groundwork if the game gets improved
     //instance methods
     private String name;
     private int health;
