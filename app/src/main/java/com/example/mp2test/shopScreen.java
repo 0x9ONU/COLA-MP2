@@ -369,36 +369,81 @@ public class shopScreen extends AppCompatActivity {
 
                 if (item1Check.isChecked()) {
                     try {
-                        total += shop.getItem(0).getValue();
-                        exportInv.addItem(shop.getItem(0));
+                        shop.getItem(0);
+                        try {
+                            Food test = (Food) shop.getItem(0);
+                            total += test.getValue() * test.getPounds();
+                        }
+                        catch (Exception e) {
+                            total += shop.getItem(0).getValue();
+                        }
+                        finally {
+                            exportInv.addItem(shop.getItem(0));
+                        }
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item2Check.isChecked()) {
                     try {
-                        total += shop.getItem(1).getValue();
-                        exportInv.addItem(shop.getItem(1));
+                        shop.getItem(1);
+                        try {
+                            Food test = (Food) shop.getItem(1);
+                            total += test.getValue() * test.getPounds();
+                        }
+                        catch (Exception e) {
+                            total += shop.getItem(1).getValue();
+                        }
+                        finally {
+                            exportInv.addItem(shop.getItem(1));
+                        }
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item3Check.isChecked()) {
                     try {
-                        total += shop.getItem(2).getValue();
-                        exportInv.addItem(shop.getItem(2));
+                        shop.getItem(2);
+                        try {
+                            Food test = (Food) shop.getItem(2);
+                            total += test.getValue() * test.getPounds();
+                        }
+                        catch (Exception e) {
+                            total += shop.getItem(2).getValue();
+                        }
+                        finally {
+                            exportInv.addItem(shop.getItem(2));
+                        }
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item4Check.isChecked()) {
                     try {
-                        total += shop.getItem(3).getValue();
-                        exportInv.addItem(shop.getItem(3));
+                        shop.getItem(3);
+                        try {
+                            Food test = (Food) shop.getItem(3);
+                            total += test.getValue() * test.getPounds();
+                        }
+                        catch (Exception e) {
+                            total += shop.getItem(3).getValue();
+                        }
+                        finally {
+                            exportInv.addItem(shop.getItem(3));
+                        }
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }
                 if (item5Check.isChecked()) {
                     try {
-                        total += shop.getItem(4).getValue();
-                        exportInv.addItem(shop.getItem(4));
+                        shop.getItem(4);
+                        try {
+                            Food test = (Food) shop.getItem(4);
+                            total += test.getValue() * test.getPounds();
+                        }
+                        catch (Exception e) {
+                            total += shop.getItem(4).getValue();
+                        }
+                        finally {
+                            exportInv.addItem(shop.getItem(4));
+                        }
                     }
                     catch (IndexOutOfBoundsException e) {}
                 }

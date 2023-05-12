@@ -219,7 +219,7 @@ public class Member implements Serializable {                                   
             this.money = 0;
         }
         else {
-            this.money =- money;
+            this.money = this.money - money;
         }
     }
 

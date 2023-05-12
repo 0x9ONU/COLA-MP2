@@ -39,7 +39,7 @@ public class mapPlaying extends AppCompatActivity {
 
     public RandomEventGenerator rnd = new RandomEventGenerator();
 
-    public Member player = new Member(100, new Inventory(), "Jerry Clark", true, true, 0);
+    public Member player = new Member(10, new Inventory(), "Jerry Clark", true, true, 0);
 
     //The ActivityResultLauncher that calls a special function from certain activities with a result code.
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -121,7 +121,6 @@ public class mapPlaying extends AppCompatActivity {
         Wagon wagon = new Wagon(player);
 
         //DEBUG: Player Location
-
         /*
         mp.setPlayerLocationX(170);
         mp.setWagonLocationX(170);
@@ -186,14 +185,17 @@ public class mapPlaying extends AppCompatActivity {
                         } catch (ClassCastException e) {
                             continue;
                         }
-                        Food test = (Food) player.getInventory().getItem(i);
-                        int pounds = test.getPounds();
-                        test.setPounds(pounds - 5);
-                        player.getInventory().setItem(i, test);
+                        finally {
+                            Food test = (Food) player.getInventory().getItem(i);
+                            int pounds = test.getPounds();
+                            test.setPounds(pounds - 5);
+                            if (test.getPounds() == 0) player.getInventory().removeItem(i);
+                            else player.getInventory().setItem(i, test);
+                        }
                         break;
                     }
                 } else if (rndEvent.equals("broken wheel")) {
-                    if (player.getMoney() < 50) {
+                    if (player.getMoney() > 50) {
                         double tempMoney = player.getMoney();
                         player.setMoney(50 - tempMoney);
                     } else {
@@ -225,10 +227,14 @@ public class mapPlaying extends AppCompatActivity {
                         } catch (ClassCastException e) {
                             continue;
                         }
-                        Food test = (Food) player.getInventory().getItem(i);
-                        int pounds = test.getPounds();
-                        test.setPounds(pounds - 10);
-                        player.getInventory().setItem(i, test);
+                        finally {
+                            Food test = (Food) player.getInventory().getItem(i);
+                            int pounds = test.getPounds();
+                            Log.d("Pounds of Food", ""+ pounds);
+                            test.setPounds(pounds - 10);
+                            if (test.getPounds() == 0) player.getInventory().removeItem(i);
+                            else player.getInventory().setItem(i, test);
+                        }
                         break;
                     }
                 } else if (rndEvent.equals("Volcano")) {
@@ -289,7 +295,7 @@ public class mapPlaying extends AppCompatActivity {
                 //Check if the Player died
                 if (player.getHealth() <= 0) {
                     health.setText("Health: Dead");
-
+                    startActivity(new Intent(mapPlaying.this, gameOver.class));
                 }
             }
         });

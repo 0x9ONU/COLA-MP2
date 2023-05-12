@@ -109,9 +109,9 @@ public class Food extends Item implements Serializable {
      */
     public void setPounds(int pounds) {
         if(pounds <= 0) {
-            this.pounds = 1;
+            this.pounds = 0;
         }
-        else if (pounds < 1000) {
+        else if (pounds > 1000) {
             this.pounds = 1000;
         }
         else {
