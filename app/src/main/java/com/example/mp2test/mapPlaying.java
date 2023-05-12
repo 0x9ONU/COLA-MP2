@@ -153,7 +153,7 @@ public class mapPlaying extends AppCompatActivity {
         miles.setText("Miles Traveled: " + mp.getPlayerLocationX());
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {      //Rnaomd events below
+            public void onClick(View view) {      //Random events below
                 String rndEvent = rnd.GetEvent();
                 rnd.IncrementProbabilityMultiplier();
                 if (rndEvent.equals("Kiss")) ;
@@ -250,23 +250,23 @@ public class mapPlaying extends AppCompatActivity {
                         player.getInventory().removeItem(temp);
                     }
                 } else {
-                    dt.IncrementCurrentDay();
+                    dt.IncrementCurrentDay();                                                       //increments current day if no events happen
                 }
-                Random rand = new Random();
+                Random rand = new Random();                                                         //updates distance and damage etc for new day
                 int distance = rand.nextInt(11) + 15;
                 mp.MovePlayer(distance, 0);
                 mp.MoveWagon(distance, 0);
                 player.move(distance, 0);
                 player.damage(rand.nextInt(6));
                 Intent rndEventActivity = new Intent(mapPlaying.this, randomEventSplash.class);
-                rndEventActivity.putExtra(RND, rndEvent);
+                rndEventActivity.putExtra(RND, rndEvent);                                           //sets up the new random event
                 rndEventActivity.putExtra(MAP, mp);
                 startActivity(rndEventActivity);
 
-                int monument = mp.CheckMonument();
+                int monument = mp.CheckMonument();                                                  //checks if the player was at a monument
                 Log.d("Monument", "" + monument);
 
-                if (monument != -1) {
+                if (monument != -1) {                                                               //displays the monument
                     mp.setPlayerLocationX(mp.getMonumentLocationX(monument));
                     mp.setWagonLocationX(mp.getMonumentLocationX(monument));
                     player.setxCoordinate(mp.getMonumentLocationX(monument));
@@ -276,10 +276,10 @@ public class mapPlaying extends AppCompatActivity {
                 }
 
 
-                int shop = mp.checkShop();
+                int shop = mp.checkShop();                                                          //checks if the player is at a shop
                 Log.d("shop", "" + shop);
 
-                if (shop > 0) {
+                if (shop > 0) {                                                                     //displays the shop
                     //shopFound = true;
                     Intent shopActivity = new Intent(mapPlaying.this, shopScreen.class);
                     shopActivity.putExtra(MONEY, player.getMoney());
