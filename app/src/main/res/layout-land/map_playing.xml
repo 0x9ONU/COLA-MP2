@@ -66,19 +66,10 @@
         android:id="@+id/inventory_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Inventory"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/map_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:text="map location"
-        app:layout_constraintBaseline_toBaselineOf="@+id/inventory_button"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
