@@ -110,7 +110,7 @@ public class mapPlaying extends AppCompatActivity {
 
         //Receiving values from previous activities
         Intent receivingValues = getIntent();
-        int month = (int) receivingValues.getIntExtra(monthSelection.MONTH, 1);
+        int month = (int) receivingValues.getIntExtra(monthSelection.MONTH, 3);
 
         //Creating the multiple classes for the game
         dt.setCurrentMonth(month);
