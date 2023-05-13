@@ -39,7 +39,7 @@ public class mapPlaying extends AppCompatActivity {
 
     public RandomEventGenerator rnd = new RandomEventGenerator();
 
-    public Member player = new Member(10, new Inventory(), "Jerry Clark", true, true, 0);
+    public Member player = new Member(100, new Inventory(), "Jerry Clark", true, true, 0);
 
     //The ActivityResultLauncher that calls a special function from certain activities with a result code.
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
