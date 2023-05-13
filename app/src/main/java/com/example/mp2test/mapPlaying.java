@@ -35,7 +35,7 @@ public class mapPlaying extends AppCompatActivity {
 
     public Map mp = new Map();
 
-    public Date dt = new Date(3, 1, 1834);
+    public Date dt = new Date(30, 3, 1847);
 
     public RandomEventGenerator rnd = new RandomEventGenerator();
 
@@ -132,7 +132,6 @@ public class mapPlaying extends AppCompatActivity {
         //Setup Buttons
         final Button proceed = findViewById(R.id.proceed_button);
         final Button inventory = findViewById(R.id.inventory_button);
-        final Button mapLocation = findViewById(R.id.map_button);
 
         //Text Views
         final TextView health = findViewById(R.id.health);
