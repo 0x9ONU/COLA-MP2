@@ -1,3 +1,9 @@
+/**
+ * File Name: RandomEventSplash.java
+ * Author: Ethan Berei
+ * Date: 4/25/23
+ * Description: The class responsible for updating the display with the random events when they happen
+ */
 package com.example.mp2test;
 
 import androidx.appcompat.app.AppCompatActivity;

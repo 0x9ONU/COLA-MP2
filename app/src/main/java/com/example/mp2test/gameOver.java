@@ -1,3 +1,10 @@
+/**
+ * File Name: gameOver.java
+ * Author: Ethan Berei
+ * Date: 5/8/23
+ * Description: The class that displays and controls the game over screen
+ */
+
 package com.example.mp2test;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,3 +1,10 @@
+/**
+ * File Name: Valuable.java
+ * Author: Ethan Berei
+ * Date: 4/27/23
+ * Description: The class responsible for controlling the value of items
+ */
+
 package com.example.mp2test;
 
 //This funcition was made to un-abstract the Item class to prevent crashing errors when passing Items through bundles and Intents

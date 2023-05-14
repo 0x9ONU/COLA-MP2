@@ -1,3 +1,10 @@
+/**
+ * File Name: monthSelection.java
+ * Author: Ethan Berei
+ * Date: 4/16/23
+ * Description: The class responsible for controlling the month selection screen
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;

@@ -1,3 +1,10 @@
+/**
+ * File Name: citations.java
+ * Author: Ethan Berei
+ * Date: 5/6/23
+ * Description: The class responsible for the game's citations
+ */
+
 package com.example.mp2test;
 
 import android.os.Bundle;

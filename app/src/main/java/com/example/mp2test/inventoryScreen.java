@@ -1,3 +1,10 @@
+/**
+ * File Name: InventoryScreen.java
+ * Author: Ashton Beresford
+ * Date: 4/26/23
+ * Description: The class responsible displaying the player's inventory
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;

@@ -1,3 +1,10 @@
+/**
+ * File Name: mapPlaying.java
+ * Author: Ethan Berei
+ * Date: 3/31/23
+ * Description: Used to set up and control the game itself
+ */
+
 package com.example.mp2test;
 
 //Main Game Code will Go Here

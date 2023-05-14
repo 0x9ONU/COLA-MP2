@@ -1,3 +1,10 @@
+/**
+ * File Name: MainActivity.java
+ * Author: Ethan Berei
+ * Date: 3/31/23
+ * Description: Was used to test the first version of the game
+ */
+
 package com.example.mp2test;
 
 //Does Kind of Nothing Only Switches between Title Screen and Hattie Campbell

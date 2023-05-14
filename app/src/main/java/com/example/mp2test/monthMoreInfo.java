@@ -1,3 +1,10 @@
+/**
+ * File Name: monthMoreInfo.java
+ * Author: Ethan Berei
+ * Date: 4/28/23
+ * Description: The class responsible for controlling and displaying the extra information of the months
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;

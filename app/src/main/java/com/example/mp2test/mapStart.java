@@ -1,3 +1,10 @@
+/**
+ * File Name: mapStart.java
+ * Author: Ethan Berei
+ * Date: 3/31/23
+ * Description: The class responsible for controlling the start of the map
+ */
+
 package com.example.mp2test;
 
 import android.os.Bundle;

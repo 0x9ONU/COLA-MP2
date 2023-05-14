@@ -1,3 +1,10 @@
+/**
+ * File Name: monumentDescription.java
+ * Author: Ethan Berei
+ * Date: 4/03/23
+ * Description: The class responsible for keeping track of the information from each month
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;

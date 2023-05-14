@@ -1,3 +1,10 @@
+/**
+ * File Name: hattieCampbellInfo.java
+ * Author: Ethan Berei
+ * Date: 4/21/23
+ * Description: The class responsible for controlling Hattie Campbell's information and screen
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;

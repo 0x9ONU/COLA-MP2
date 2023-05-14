@@ -1,3 +1,10 @@
+/**
+ * File Name: shopScreen.java
+ * Author: Ethan Berei
+ * Date: 4/19/23
+ * Description: The class responsible for displaying the shops and their information
+ */
+
 package com.example.mp2test;
 
 import android.content.Intent;
